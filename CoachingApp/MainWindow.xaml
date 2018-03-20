@@ -1,0 +1,57 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        WindowState="Maximized"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" WindowStyle="None" Width="1920" Height="1080">
+    <Grid x:Name="Parent_Grid" HorizontalAlignment="Left" Height="1080" Margin="-0.667,-0.667,0,0" VerticalAlignment="Top" Width="1920">
+
+        <Grid x:Name="LoginGrid" Background="#FFE8E836" Margin="-10,-0.667,10,1.667" Width="1920" Height="1080">
+            <TextBlock  HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="100" Text="Enter your credentials" Foreground="#FF666666" TextAlignment="Center" Margin="0,166,0,0" Width="1025.66"/>
+            <TextBox x:Name="EmailTextBox" HorizontalAlignment="Left" Height="71" Margin="685,441,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="604" FontSize="48"/>
+            <TextBlock HorizontalAlignment="Left" Height="59" Margin="685,377,0,0" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Width="344" FontSize="36"/>
+            <TextBlock HorizontalAlignment="Left" Height="59" Margin="685,546.5,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Width="344" FontSize="36"/>
+            <PasswordBox x:Name="PasswordLogin" HorizontalAlignment="Left" Height="66" Margin="685,618.5,0,0" VerticalAlignment="Top" Width="604" FontSize="36"/>
+            <Button Content="Login" HorizontalAlignment="Left" Height="60" Margin="685,752,0,0" VerticalAlignment="Top" Width="265" FontSize="36" Click="Login"/>
+            <Button Content="Create Account" HorizontalAlignment="Left" Height="60" Margin="1024,752,0,0" VerticalAlignment="Top" Width="265" FontSize="36" Click="Create_Account_Click"/>
+
+        </Grid>
+        <Grid x:Name="CreateAccountGrid" HorizontalAlignment="Left" Height="1080" Margin="-0.667,-0.667,0,0" VerticalAlignment="Top" Width="1920" Background="#FFE8E836">
+            <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Text="Create an account" Foreground="#FF666666" TextAlignment="Center" Margin="0,58,0,0" HorizontalAlignment="Center"/>
+            <TextBox x:Name="EmailTextBox_Copy" Height="71" Margin="673,240,643,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="604" FontSize="48" HorizontalAlignment="Center"/>
+            <TextBlock Height="59" Margin="675.667,174.5,900.333,0" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Width="344" FontSize="36" HorizontalAlignment="Center"/>
+            <TextBlock Height="59" Margin="675.667,344,900.333,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Width="344" FontSize="36" HorizontalAlignment="Center"/>
+            <PasswordBox Height="66" Margin="673,417.5,643,0" VerticalAlignment="Top" Width="604" FontSize="36" HorizontalAlignment="Center"/>
+            <Button Content="Login" Height="60" Margin="842.5,963,812.5,0" VerticalAlignment="Top" Width="265" FontSize="36" Click="Login" HorizontalAlignment="Center"/>
+            <Button Content="Create Account" Height="60" Margin="842.5,963,812.5,0" VerticalAlignment="Top" Width="265" FontSize="36" Click="Create_Account_Click2" HorizontalAlignment="Center"/>
+            <TextBox x:Name="EmailTextBox_Copy1" Height="71" Margin="673,610,643,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="604" FontSize="48" HorizontalAlignment="Center"/>
+            <TextBlock Height="59" Margin="675.667,544.5,900.333,0" TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top" Width="344" FontSize="36" HorizontalAlignment="Center"/>
+            <TextBlock Height="59" Margin="675.667,746.5,900.333,0" TextWrapping="Wrap" Text="Birthday:" VerticalAlignment="Top" Width="344" FontSize="36" HorizontalAlignment="Center"/>
+            <DatePicker Height="60" Margin="675.667,833.334,645.667,0" VerticalAlignment="Top" Width="598.666" FontSize="36" HorizontalAlignment="Center"/>
+        </Grid>
+        <Grid x:Name="AccountCreatedSucGrid" Height="1080" Background="#FF2EFF00" Width="1920">
+            <TextBlock HorizontalAlignment="Center" Height="126" Margin="0,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1395" FontSize="72" Text="Your account has been created successfully"/>
+            <Button x:Name="gotoLoginPage" Content="Login&#xD;&#xA;" HorizontalAlignment="Center" Height="88" Margin="0,552,0,0" VerticalAlignment="Top" Width="301" FontSize="48" Click="loginPageButton"/>
+        </Grid>
+        <Grid x:Name="CoachMainPageGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFE8E836" Width="1920" Height="1080">
+            <Grid x:Name="titleBarGrid"  HorizontalAlignment="Center" Height="160" VerticalAlignment="Top" Margin="0,100,0,0" Background="#00000000" Width="1920" >
+                <Rectangle x:Name="BottomBoarderRect" Stroke="Black" VerticalAlignment="Bottom" Height="5" Fill="Black" Width="1500" HorizontalAlignment="Center" />
+                <Image x:Name="CoachImage" HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="176" Source="C:\Users\Admin\source\repos\481Project\CoachingApp\Photos\stockCoachPhoto.jpg"/>
+                <TextBlock x:Name="HelloTextblock" HorizontalAlignment="Left" Height="160" Margin="176,0,0,-100" TextWrapping="Wrap" Text="Hello, " VerticalAlignment="Top" Width="1068.667" FontSize="100"/>
+            </Grid>
+            <Grid x:Name="MainMenuGrid" VerticalAlignment="Center" Margin="178,287,178,90" Height="703">
+                <ScrollViewer x:Name="MainMenuScroll" VerticalScrollBarVisibility="Auto">
+                    <Grid x:Name="menuItemGrid" HorizontalAlignment="Left" Height="314" VerticalAlignment="Top" Width="354">
+                        <TextBlock x:Name="menuItem1Title" TextWrapping="Wrap" Text="My Profile" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
+                        <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
+                        <Button x:Name="menuItemButton" Content="" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}"/>
+                    </Grid>
+                </ScrollViewer>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

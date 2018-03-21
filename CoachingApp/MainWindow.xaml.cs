@@ -61,5 +61,10 @@ namespace WpfApp1
             this.AccountCreatedSucGrid.Visibility = Visibility.Hidden;
             this.LoginGrid.Visibility = Visibility.Visible;
         }
+
+        private void mainMenuExitButton(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

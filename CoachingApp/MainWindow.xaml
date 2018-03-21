@@ -16,6 +16,7 @@
             <TextBlock HorizontalAlignment="Left" Height="59" Margin="685,546.5,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Width="344" FontSize="36"/>
             <PasswordBox x:Name="PasswordLogin" HorizontalAlignment="Left" Height="66" Margin="685,618.5,0,0" VerticalAlignment="Top" Width="604" FontSize="36"/>
             <Button Content="Login" HorizontalAlignment="Left" Height="60" Margin="685,752,0,0" VerticalAlignment="Top" Width="265" FontSize="36" Click="Login"/>
+            <Button Content="Exit" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="150" Height="50" FontSize="36" Click="mainMenuExitButton"/>
             <Button Content="Create Account" HorizontalAlignment="Left" Height="60" Margin="1024,752,0,0" VerticalAlignment="Top" Width="265" FontSize="36" Click="Create_Account_Click"/>
 
         </Grid>
@@ -97,6 +98,73 @@
                     <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
                     <Button x:Name="menuItemButton8" Content="" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1"/>
                 </Grid>
+            </Grid>
+            <Button Content="Exit" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="150" Height="50" FontSize="36" Click="mainMenuExitButton"/>
+        </Grid>
+        <Grid x:Name="CalendarParentGrid" Background="#FFE8E836" OpacityMask="Black">
+            <Grid x:Name="CalendarTitleGrid" Height="100" VerticalAlignment="Top" Margin="0,75,0,0">
+                <TextBlock x:Name="CalendarTitle" TextWrapping="Wrap" FontSize="72" HorizontalAlignment="Left"><Run Text="Calendar"/><LineBreak/></TextBlock>
+            </Grid>
+            <Grid x:Name="CalendarGrid" HorizontalAlignment="Center" Height="864" VerticalAlignment="Bottom" Width="1850" Margin="0,0,0,35">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="MondayTitle0" Grid.Row="0" Grid.Column="0" FontSize="50" TextAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}">Sunday</TextBox>
+                <TextBox x:Name="MondayTitle1" Grid.Row="0" Grid.Column="1" FontSize="50" TextAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}">Monday</TextBox>
+                <TextBox x:Name="MondayTitle2" Grid.Row="0" Grid.Column="2" FontSize="50" TextAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}">Tuseday</TextBox>
+                <TextBox x:Name="MondayTitle3" Grid.Row="0" Grid.Column="3" FontSize="50" TextAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}">Wednesday</TextBox>
+                <TextBox x:Name="MondayTitle4" Grid.Row="0" Grid.Column="4" FontSize="50" TextAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}">Thursday</TextBox>
+                <TextBox x:Name="MondayTitle5" Grid.Row="0" Grid.Column="5" FontSize="50" TextAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}">Friday</TextBox>
+                <TextBox x:Name="MondayTitle6" Grid.Row="0" Grid.Column="6" FontSize="50" TextAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}">Saturday</TextBox>
+                <TextBox x:Name="dateNum1" Grid.Row="1" Grid.Column="0" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">1</TextBox>
+                <TextBox x:Name="dateNum2" Grid.Row="1" Grid.Column="1" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">2</TextBox>
+                <TextBox x:Name="dateNum3" Grid.Row="1" Grid.Column="2" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">3</TextBox>
+                <TextBox x:Name="dateNum4" Grid.Row="1" Grid.Column="3" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">4</TextBox>
+                <TextBox x:Name="dateNum5" Grid.Row="1" Grid.Column="4" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">5</TextBox>
+                <TextBox x:Name="dateNum6" Grid.Row="1" Grid.Column="5" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">6</TextBox>
+                <TextBox x:Name="dateNum7" Grid.Row="1" Grid.Column="6" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">7</TextBox>
+
+                <TextBox x:Name="dateNum8" Grid.Row="2" Grid.Column="0" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">8</TextBox>
+                <TextBox x:Name="dateNum9" Grid.Row="2" Grid.Column="1" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">9</TextBox>
+                <TextBox x:Name="dateNum10" Grid.Row="2" Grid.Column="2" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">10</TextBox>
+                <TextBox x:Name="dateNum11" Grid.Row="2" Grid.Column="3" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">11</TextBox>
+                <TextBox x:Name="dateNum12" Grid.Row="2" Grid.Column="4" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">12</TextBox>
+                <TextBox x:Name="dateNum13" Grid.Row="2" Grid.Column="5" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">13</TextBox>
+                <TextBox x:Name="dateNum14" Grid.Row="2" Grid.Column="6" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">14</TextBox>
+
+                <TextBox x:Name="dateNum15" Grid.Row="3" Grid.Column="0" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">15</TextBox>
+                <TextBox x:Name="dateNum16" Grid.Row="3" Grid.Column="1" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">16</TextBox>
+                <TextBox x:Name="dateNum17" Grid.Row="3" Grid.Column="2" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">17</TextBox>
+                <TextBox x:Name="dateNum18" Grid.Row="3" Grid.Column="3" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">18</TextBox>
+                <TextBox x:Name="dateNum19" Grid.Row="3" Grid.Column="4" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">19</TextBox>
+                <TextBox x:Name="dateNum20" Grid.Row="3" Grid.Column="5" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">20</TextBox>
+                <TextBox x:Name="dateNum21" Grid.Row="3" Grid.Column="6" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">21</TextBox>
+
+                <TextBox x:Name="dateNum22" Grid.Row="4" Grid.Column="0" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">22</TextBox>
+                <TextBox x:Name="dateNum23" Grid.Row="4" Grid.Column="1" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">23</TextBox>
+                <TextBox x:Name="dateNum24" Grid.Row="4" Grid.Column="2" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">24</TextBox>
+                <TextBox x:Name="dateNum25" Grid.Row="4" Grid.Column="3" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">25</TextBox>
+                <TextBox x:Name="dateNum26" Grid.Row="4" Grid.Column="4" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">26</TextBox>
+                <TextBox x:Name="dateNum27" Grid.Row="4" Grid.Column="5" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">27</TextBox>
+                <TextBox x:Name="dateNum28" Grid.Row="4" Grid.Column="6" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">28</TextBox>
+
+                <TextBox x:Name="dateNum29" Grid.Row="5" Grid.Column="0" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">29</TextBox>
+                <TextBox x:Name="dateNum30" Grid.Row="5" Grid.Column="1" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">30</TextBox>
+
             </Grid>
         </Grid>
     </Grid>

@@ -27,6 +27,7 @@ namespace WpfApp1
             this.CreateAccountGrid.Visibility = Visibility.Hidden;
             this.AccountCreatedSucGrid.Visibility = Visibility.Hidden;
             this.CoachMainPageGrid.Visibility = Visibility.Hidden;
+            this.CalendarParentGrid.Visibility = Visibility.Hidden;
 
 
         }
@@ -65,6 +66,11 @@ namespace WpfApp1
         private void mainMenuExitButton(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void gotoCalendar(object sender, RoutedEventArgs e)
+        {
+            this.CalendarParentGrid.Visibility = Visibility.Visible;
         }
     }
 }

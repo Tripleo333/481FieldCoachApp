@@ -69,7 +69,7 @@
                 <Grid x:Name="menuItemGrid3" Grid.Column="2" Grid.Row="0">
                     <TextBlock x:Name="menuItem3Tile"  TextWrapping="Wrap" Text="Schedules" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
                     <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
-                    <Button x:Name="menuItemButton3" Content="" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1"/>
+                    <Button x:Name="menuItemButton3" Content="" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1" Click="gotoCalendar"/>
                 </Grid>
                 <Grid x:Name="menuItemGrid4" Grid.Column="3" Grid.Row="0">
                     <TextBlock x:Name="menuItem4Tile"  TextWrapping="Wrap" Text="My Team" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
@@ -101,7 +101,7 @@
             </Grid>
             <Button Content="Exit" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="150" Height="50" FontSize="36" Click="mainMenuExitButton"/>
         </Grid>
-        <Grid x:Name="CalendarParentGrid" Background="#FFE8E836" OpacityMask="Black">
+        <Grid x:Name="CalendarParentGrid" Background="#FFE8E836" OpacityMask="Black" d:IsHidden="True">
             <Grid x:Name="CalendarTitleGrid" Height="100" VerticalAlignment="Top" Margin="0,75,0,0">
                 <TextBlock x:Name="CalendarTitle" TextWrapping="Wrap" FontSize="72" HorizontalAlignment="Left"><Run Text="Calendar"/><LineBreak/></TextBlock>
             </Grid>

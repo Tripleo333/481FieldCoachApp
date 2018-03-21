@@ -48,6 +48,7 @@
                         <TextBlock x:Name="menuItem1Title" TextWrapping="Wrap" Text="My Profile" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
                         <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
                         <Button x:Name="menuItemButton" Content="" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}"/>
+                        <Grid></Grid>
                     </Grid>
                 </ScrollViewer>
 

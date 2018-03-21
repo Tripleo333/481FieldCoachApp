@@ -31,7 +31,7 @@
             <TextBox x:Name="EmailTextBox_Copy1" Height="71" Margin="673,610,643,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="604" FontSize="48" HorizontalAlignment="Center"/>
             <TextBlock Height="59" Margin="675.667,544.5,900.333,0" TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top" Width="344" FontSize="36" HorizontalAlignment="Center"/>
             <TextBlock Height="59" Margin="675.667,746.5,900.333,0" TextWrapping="Wrap" Text="Birthday:" VerticalAlignment="Top" Width="344" FontSize="36" HorizontalAlignment="Center"/>
-            <DatePicker Height="60" Margin="675.667,833.334,645.667,0" VerticalAlignment="Top" Width="598.666" FontSize="36" HorizontalAlignment="Center"/>
+            <DatePicker Height="60" Margin="675.667,833.334,645.667,0" VerticalAlignment="Top" Width="598.666" FontSize="36" HorizontalAlignment="Center" />
         </Grid>
         <Grid x:Name="AccountCreatedSucGrid" Height="1080" Background="#FF2EFF00" Width="1920">
             <TextBlock HorizontalAlignment="Center" Height="126" Margin="0,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1395" FontSize="72" Text="Your account has been created successfully"/>
@@ -101,11 +101,11 @@
             </Grid>
             <Button Content="Exit" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="150" Height="50" FontSize="36" Click="mainMenuExitButton"/>
         </Grid>
-        <Grid x:Name="CalendarParentGrid" Background="#FFE8E836" OpacityMask="Black" d:IsHidden="True">
+        <Grid x:Name="CalendarParentGrid" Background="#FFE8E836" OpacityMask="Black">
             <Grid x:Name="CalendarTitleGrid" Height="100" VerticalAlignment="Top" Margin="0,75,0,0">
                 <TextBlock x:Name="CalendarTitle" TextWrapping="Wrap" FontSize="72" HorizontalAlignment="Left"><Run Text="Calendar"/><LineBreak/></TextBlock>
             </Grid>
-            <Grid x:Name="CalendarGrid" HorizontalAlignment="Center" Height="864" VerticalAlignment="Bottom" Width="1850" Margin="0,0,0,35">
+            <Grid x:Name="CalendarGrid" HorizontalAlignment="Center" Height="864" VerticalAlignment="Bottom" Width="1850" Margin="0,0,0,35" Background="#FFFFA9A9">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -166,6 +166,7 @@
                 <TextBox x:Name="dateNum30" Grid.Row="5" Grid.Column="1" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">30</TextBox>
 
             </Grid>
+            <Button Content="Back" HorizontalAlignment="Left" Height="64.333" Margin="4.667,10.667,0,0" VerticalAlignment="Top" Width="208" FontSize="36" Click="backToMainMenu"/>
         </Grid>
     </Grid>
 </Window>

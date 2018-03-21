@@ -72,5 +72,10 @@ namespace WpfApp1
         {
             this.CalendarParentGrid.Visibility = Visibility.Visible;
         }
+
+        private void backToMainMenu(object sender, RoutedEventArgs e)
+        {
+            this.CalendarParentGrid.Visibility = Visibility.Hidden;
+        }
     }
 }

@@ -371,6 +371,17 @@
             <Button Content="Create Group" HorizontalAlignment="Left" Height="96" Margin="1484.667,122.667,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="CreateGroup"/>
             <Button Content="Back" HorizontalAlignment="Left" Height="96" Margin="1484.667,928.595,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="BacktoMessages"/>
         </Grid>
-        <Grid x:Name="TeamStatsParenGrid" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" />
+        <Grid x:Name="TeamStatsParenGrid" Background="#FFE8E836" >
+            <Grid x:Name="backAddBar" Height="100" VerticalAlignment="Top">
+                <Button Content="Back" HorizontalAlignment="Left" Width="139" FontSize="48"/>
+                <Button Content="+ Add Stats" HorizontalAlignment="Right" Width="354" FontSize="48"/>
+            </Grid>
+            <Grid Height="975" VerticalAlignment="Bottom">
+                <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72"><Run Text="Overall "/><Run Text="Stats"/></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Height="212" Margin="80.667,191.667,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" FontSize="36"><Run Text="Total Goals:"/><LineBreak/><Run Text="Wins:"/><LineBreak/><Run Text="Losses:"/><LineBreak/><Run Text="Draws: "/><LineBreak/><Run/></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Height="212" Margin="452.667,191.667,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" FontSize="36"><Run Text="43"/><LineBreak/><Run Text="11"/><LineBreak/><Run Text="2"/><LineBreak/><Run Text="0"/></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Height="212" Margin="704.667,191.667,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" FontSize="36"><Run Text="Edit"/><LineBreak/><Run Text="Edit"/><LineBreak/><Run Text="Edit"/><LineBreak/><Run Text="Edit"/><LineBreak/><Run/></TextBlock>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>

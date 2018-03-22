@@ -317,7 +317,7 @@
             <Button x:Name="BackButtonResources" Content="Back" HorizontalAlignment="Left" Height="88.5" Margin="37,75,0,0" VerticalAlignment="Top" Width="130.5" FontSize="36" Click="BackButtonResources_Click"/>
         </Grid>
         <Grid x:Name="DMParentGrid" Background="#FFE8E836" d:IsHidden="True"/>
-        <Grid x:Name="MyTeamGrid" Margin="0,-0.667,0.667,0.667" d:IsHidden="True">
+        <Grid x:Name="MyTeamGrid" Margin="0,-0.667,0.667,0.667">
             <Grid x:Name="TeamContainer" Margin="-10,0,-10.667,0" Background="#FFE8E836">
                 <Label x:Name="LabelPlayers" Content="Players" HorizontalAlignment="Left" Height="56.647" Margin="102.267,229.84,0,0" VerticalAlignment="Top" Width="472.8" FontSize="36"/>
                 <Label x:Name="LabelCoaches" Content="Coaches" HorizontalAlignment="Left" Height="60" Margin="102.267,0,0,348.713" VerticalAlignment="Bottom" Width="472.8" FontSize="36"/>
@@ -337,15 +337,15 @@
             <Button x:Name="BackButtonTeam" Content="Back" HorizontalAlignment="Left" Height="88.5" Margin="37,75,0,0" VerticalAlignment="Top" Width="130.5" FontSize="36" Click="BackButtonTeam_Click"/>
             <Grid x:Name="BackgroundGrid" Margin="257.067,75,263.866,60.825" Background="#FF47B440">
                 <Rectangle x:Name="BackgroundDim" Fill="#FF828282" Margin="-334,-86.4,-291.6,-59.025" Opacity="0.8"/>
-                <Rectangle x:Name="ProfileDialogShape" Fill="#FF0BC021" Margin="-10.4,0,0,0.975"/>
+                <Rectangle x:Name="ProfileDialogShape" Fill="#FFEFF2F1" Margin="-10.4,0,0,0.975"/>
             </Grid>
             <Button x:Name="ExitProfile" Content="X&#xD;&#xA;" HorizontalAlignment="Right" Margin="0,75,263.866,0" Width="146.4" FontSize="72" Height="100.8" VerticalAlignment="Top" Opacity="0.49" Click="ExitProfile_Click"/>
             <Image x:Name="ProfilePhotoImage" VerticalAlignment="Top" Height="308.955" Source="generic-user-purple.png" HorizontalAlignment="Left" Width="400.6" Margin="359.267,166.339,0,0" d:LayoutOverrides="VerticalAlignment"/>
             <Button x:Name="MessageButton" Content="Message" HorizontalAlignment="Left" Height="72" Margin="407.4,0,0,308.266" VerticalAlignment="Bottom" Width="216" FontSize="24" Click="MessageButton_Click"/>
             <Button x:Name="StatisticsButton" Content="Statistics" HorizontalAlignment="Left" Height="72" Margin="407.4,0,0,207.866" VerticalAlignment="Bottom" Width="216" FontSize="24" Click="StatisticsButton_Click"/>
-            <Label x:Name="NamePlace" Content="Name" HorizontalAlignment="Left" Margin="338.4,500.434,0,512.366" Width="345.6" FontSize="42"/>
+            <Label x:Name="NamePlace" Content="Name" HorizontalAlignment="Left" Margin="338.4,500.434,0,512.366" Width="345.6" FontSize="42" Visibility="Hidden"/>
             <Grid x:Name="DefaultProfileGrid" Margin="759.867,243.334,331.866,92.666" d:IsHidden="True">
-                <Label x:Name="LabelName" Content="Name:" HorizontalAlignment="Left" Height="62.4" Margin="26,40,0,0" VerticalAlignment="Top" Width="110.4" FontSize="36"/>
+                <Label x:Name="LabelName" Content="Name:" HorizontalAlignment="Left" Height="62.4" Margin="26,40,0,0" VerticalAlignment="Top" Width="110.4" FontSize="36" Foreground="#FFF49F11"/>
                 <Label x:Name="LabelAge" Content="Age:" HorizontalAlignment="Left" Height="62.4" Margin="26,140.8,0,0" VerticalAlignment="Top" Width="110.4" FontSize="36"/>
                 <Label x:Name="LabelPhone" Content="Phone:" HorizontalAlignment="Left" Height="62.4" Margin="26,236.8,0,0" VerticalAlignment="Top" Width="132.8" FontSize="36"/>
                 <Label x:Name="LabelEmail" Content="Email:" HorizontalAlignment="Left" Margin="26,324.8,0,356.8" Width="110.4" FontSize="36"/>
@@ -354,7 +354,7 @@
                 <Label x:Name="EmailText" Content="email@here.com" Margin="145.4,324.8,0,356.8" FontSize="36"/>
                 <Label x:Name="PhoneText" Content="(123)4567-890" Margin="163.8,236.8,0,0" FontSize="36" Height="62.4" VerticalAlignment="Top"/>
                 <Label x:Name="AgeText" Content="20" Margin="127.8,140.8,36,0" FontSize="36" Height="62.4" VerticalAlignment="Top"/>
-                <Label x:Name="NamePlaceProfile" Content="Name&#xD;&#xA;" Margin="163.8,40,0,0" FontSize="36" Height="62.4" VerticalAlignment="Top"/>
+                <Label x:Name="NamePlaceProfile" Content="Name&#xD;&#xA;" Margin="163.8,40,0,0" FontSize="36" Height="62.4" VerticalAlignment="Top" Foreground="#FFF49F11"/>
             </Grid>
             <Grid x:Name="StatsGrid" Margin="759.867,243.334,331.866,92.666">
                 <Slider x:Name="SliderTeam" Height="92.8" Margin="50.8,106,0,0" Style="{DynamicResource SimpleSlider}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="316.8" Minimum="0" Maximum="5"/>

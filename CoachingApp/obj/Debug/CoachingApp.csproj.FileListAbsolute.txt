@@ -40,6 +40,8 @@ C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\Coach
 C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\CoachingApp.csproj.CoreCompileInputs.cache
 C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\CoachingApp.exe
 C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\CoachingApp.pdb
+C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\MessageElementControl.g.cs
+C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\MessageElementControl.baml
 C:\Users\vince\Desktop\481FieldCoachingApp\481FieldCoachApp\CoachingApp\bin\Debug\CoachingApp.exe.config
 C:\Users\vince\Desktop\481FieldCoachingApp\481FieldCoachApp\CoachingApp\obj\Debug\CoachingApp.exe
 C:\Users\vince\Desktop\481FieldCoachingApp\481FieldCoachApp\CoachingApp\obj\Debug\CoachingApp.pdb

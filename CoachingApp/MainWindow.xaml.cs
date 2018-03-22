@@ -12,8 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CoachingApp;
 
 namespace WpfApp1
+
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -33,6 +35,7 @@ namespace WpfApp1
             this.MyProfileGrid.Visibility = Visibility.Hidden;
             this.PlannerGrid.Visibility = Visibility.Hidden;
             this.ResourcesGrid.Visibility = Visibility.Hidden;
+            this.DMParentGrid.Visibility = Visibility.Hidden;
 
         }
 
@@ -90,6 +93,8 @@ namespace WpfApp1
         private void mainMenuMessagesButton(object sender, RoutedEventArgs e)
         {
             this.MessagesParentGrid.Visibility = Visibility.Visible;
+            MessageElementControl ME = new MessageElementControl();
+            UGDMs.Children.Add(ME);
         }
 
 

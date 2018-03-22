@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+
 using CoachingApp;
 
 namespace WpfApp1
@@ -36,6 +37,7 @@ namespace WpfApp1
             this.PlannerGrid.Visibility = Visibility.Hidden;
             this.ResourcesGrid.Visibility = Visibility.Hidden;
             this.DMParentGrid.Visibility = Visibility.Hidden;
+            this.GroupChatGrid.Visibility = Visibility.Hidden;
 
         }
 
@@ -418,7 +420,7 @@ namespace WpfApp1
                 Resource2TitleTextBox.Visibility = Visibility.Hidden;
                 EditButtonResource2.Visibility = Visibility.Visible;
                 SaveButtonResource2.Visibility = Visibility.Hidden;
-                Resource2Video.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(@"lofi.jpg", UriKind.Relative)) };
+                //Resource2Video.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(path, UriKind.Relative)) };
             }
         }
 
@@ -451,6 +453,27 @@ namespace WpfApp1
             this.NewsfeedGrid.Visibility = Visibility.Visible;
         }
 
+        private void CreateGroup(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BacktoMessages(object sender, RoutedEventArgs e)
+        {
+            this.GroupChatGrid.Visibility = Visibility.Hidden;
+            this.MessagesParentGrid.Visibility = Visibility.Visible;
+        }
+
+        private void StartGroupClick(object sender, RoutedEventArgs e)
+        {
+            this.GroupChatGrid.Visibility = Visibility.Visible;
+        }
+
+        private void startDM(object sender, RoutedEventArgs e)
+        {
+            this.DMParentGrid.Visibility = Visibility.Visible;
+        }
+
         private void SaveButtonResource1_Click(object sender, RoutedEventArgs e)
         {
             Resource1Title.Content = Resource1TitleTextBox.Text;
@@ -458,7 +481,7 @@ namespace WpfApp1
             Resource1TitleTextBox.Visibility = Visibility.Hidden;
             EditButtonResource1.Visibility = Visibility.Visible;
             SaveButtonResource1.Visibility = Visibility.Hidden;
-            Resource1Video.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(@"keem.jpg", UriKind.Relative)) };
+            //Resource1Video.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(path, UriKind.Relative)) };
         }
     }
 }

@@ -167,12 +167,18 @@
         <Grid x:Name="MessagesParentGrid" Background="#FFE8E836">
             <Grid x:Name="MessagesTitleGrid" Height="100" VerticalAlignment="Top" Margin="0,100,0,0">
                 <TextBlock FontSize="72" HorizontalAlignment="Left" Height="100" Margin="48,0,0,0" TextWrapping="Wrap" Text="Messages" VerticalAlignment="Top" Width="600"/>
-                <Button Content="+ Start Group" HorizontalAlignment="Right" VerticalAlignment="Center" Width="510" Height="100" FontSize="72"/>
+                <Button Content="+ Start Group" HorizontalAlignment="Right" VerticalAlignment="Center" Width="510" Height="100" FontSize="72" Click="StartGroupClick"/>
 
             </Grid>
             <Button Content="Back" HorizontalAlignment="Left" Height="102" Margin="0,-9.333,0,0" VerticalAlignment="Top" Width="290.667" FontSize="72" Click="backtoMainMenuFromMessages"/>
             <ScrollViewer x:Name="PreviousMessagesScrollViewer" HorizontalAlignment="Center" Height="751" VerticalAlignment="Center" Width="1725" Margin="0,152,0,0">
-                <UniformGrid x:Name="UGDMs" VerticalAlignment="Top" Columns="1"/>
+                <UniformGrid x:Name="UGDMs" VerticalAlignment="Top" Columns="1">
+                    <Grid Height="100" Width="1708">
+                        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="generic-user-purple.png"/>
+                        <TextBlock TextWrapping="Wrap" Text="Suzie Z." VerticalAlignment="Center" FontSize="36" Width="1588" HorizontalAlignment="Right"/>
+                        <Button Content="Button" Background="Black" Foreground="{x:Null}" BorderBrush="#FF707070" Opacity="0" Click="startDM"/>
+                    </Grid>
+                </UniformGrid>
             </ScrollViewer>
         </Grid>
         <Grid x:Name="NewsfeedGrid" HorizontalAlignment="Left" Height="1063" Margin="10,0,-10,0" VerticalAlignment="Top" Width="1920" Background="#FFE8E836" d:IsHidden="True">
@@ -272,7 +278,7 @@
             <Button x:Name="AddPlanButton" Content="Add Plan" HorizontalAlignment="Left" Height="88.5" Margin="1660,75,0,0" VerticalAlignment="Top" Width="223.5" FontSize="36" Click="AddPlanButton_Click"/>
             <Label Content="Planner&#xA;" HorizontalAlignment="Center" Height="117" Margin="777,80.803,786,882.197" VerticalAlignment="Center" Width="357" FontSize="72" FontWeight="Bold"/>
         </Grid>
-        <Grid x:Name="ResourcesGrid" Height="1080" Margin="10,0,0,0" VerticalAlignment="Top" Background="#FFE8E836">
+        <Grid x:Name="ResourcesGrid" Height="1080" Margin="10,0,0,0" VerticalAlignment="Top" Background="#FFE8E836" d:IsHidden="True">
             <ScrollViewer Margin="0,259.5,0,0" Background="#FFFFFDFD">
                 <Grid x:Name="ResourceContainer1" HorizontalAlignment="Left" Height="2163" VerticalAlignment="Top" Width="1900">
                     <Label x:Name="Resource1Title" Content="Pet Cat Using Toilet Properly" HorizontalAlignment="Left" Height="67.5" Margin="34.5,42,0,0" VerticalAlignment="Top" Width="1826" FontSize="36" Background="#FFBDBDBD"/>
@@ -300,7 +306,8 @@
                     <Rectangle x:Name="Resource1Video" HorizontalAlignment="Left" Height="499.5" Margin="630.5,139.5,0,0" Stroke="Black" VerticalAlignment="Top" Width="623.5">
                         <Rectangle.Fill>
                             <ImageBrush ImageSource = "cat.jpg"/>
-                        </Rectangle.Fill></Rectangle>
+                        </Rectangle.Fill>
+                    </Rectangle>
                     <Rectangle x:Name="Resource2Video" Fill="#FFE6E6E6" HorizontalAlignment="Left" Height="499.5" Margin="630.5,1116,0,0" Stroke="Black" VerticalAlignment="Top" Width="623.5" Visibility="Hidden"/>
                     <Label x:Name="Resource2Desc" Content="" HorizontalAlignment="Left" Height="499.5" Margin="34.5,1116,0,0" VerticalAlignment="Top" Width="1826" FontSize="22"/>
                     <TextBox x:Name="Resource2DescTextBox" HorizontalAlignment="Left" Height="499.5" Margin="34.5,1116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1826" FontSize="22" Visibility="Hidden"/>
@@ -309,7 +316,37 @@
             <Button x:Name="ShareButton" Content="Share" HorizontalAlignment="Left" Height="88.5" Margin="1712,75,0,0" VerticalAlignment="Top" Width="171.5" FontSize="36" Click="ShareButton_Click"/>
             <Button x:Name="BackButtonResources" Content="Back" HorizontalAlignment="Left" Height="88.5" Margin="37,75,0,0" VerticalAlignment="Top" Width="130.5" FontSize="36" Click="BackButtonResources_Click"/>
         </Grid>
-        <Grid x:Name="DMParentGrid" Background="Black" d:IsHidden="True"/>
+        <Grid x:Name="DMParentGrid" Background="#FFE8E836" d:IsHidden="True"/>
         <Grid x:Name="MyTeam" Margin="0,-0.667,0.667,0.667" d:IsHidden="True"/>
+        <Grid x:Name="ChooseGroupChatGrid" Background="#FFE8E836">
+            <Grid x:Name="ChooseGCmemGrid" Height="100" VerticalAlignment="Top" Margin="0,100,0,0">
+                <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Text="Choose Group Chat Members"/>
+            </Grid>
+            <ScrollViewer x:Name="PreviousMessagesScrollViewer_Copy" HorizontalAlignment="Center" Height="751" VerticalAlignment="Center" Width="1725" Margin="97.5,240.5,97.5,88.5">
+                <UniformGrid x:Name="UGDMs1" VerticalAlignment="Top" Columns="1">
+                    <Grid x:Name="Suzie" Height="100" Width="1708">
+                        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="generic-user-purple.png"/>
+                        <TextBlock TextWrapping="Wrap" Text="Suzie Z." VerticalAlignment="Center" FontSize="36" Width="1588" HorizontalAlignment="Right"/>
+                        <CheckBox Content="&#xA;" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24">
+                            <CheckBox.LayoutTransform>
+                                <ScaleTransform ScaleX="4" ScaleY="4"/>
+                            </CheckBox.LayoutTransform>
+                        </CheckBox>
+
+                    </Grid>
+                    <Grid x:Name="Suzie2" Height="100" Width="1708">
+                        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="generic-user-purple.png"/>
+                        <TextBlock TextWrapping="Wrap" Text="Anna B." VerticalAlignment="Center" FontSize="36" Width="1588" HorizontalAlignment="Right"/>
+                        <CheckBox Content="&#xA;" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24">
+                            <CheckBox.LayoutTransform>
+                                <ScaleTransform ScaleX="4" ScaleY="4"/>
+                            </CheckBox.LayoutTransform>
+                        </CheckBox>
+                    </Grid>
+                </UniformGrid>
+            </ScrollViewer>
+            <Button Content="Create Group" HorizontalAlignment="Left" Height="96" Margin="1484.667,122.667,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="CreateGroup"/>
+            <Button Content="Back" HorizontalAlignment="Left" Height="96" Margin="1484.667,928.595,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="BacktoMessages"/>
+        </Grid>
     </Grid>
 </Window>

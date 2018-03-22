@@ -56,42 +56,42 @@
                 </Grid.RowDefinitions>
                 <Grid x:Name="menuItemGrid" Grid.Column="0" Grid.Row="0">
                     <TextBlock x:Name="menuItem1Title" TextWrapping="Wrap" Text="My Profile" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
-                    <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
+                    <Image VerticalAlignment="Top" Height="252.5" Source="Photos\noun_283410_cc.png"/>
                     <Button Cursor="Hand" x:Name="menuItemButton" Content="" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1" Click="menuItemButton_Click" Opacity="0"/>
                 </Grid>
                 <Grid x:Name="menuItemGrid2" Grid.Column="1" Grid.Row="0">
                     <TextBlock x:Name="menuItem2Title" TextWrapping="Wrap" Text="Message" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
-                    <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
+                    <Image VerticalAlignment="Top" Height="252.5" Source="Photos\noun_367824_cc.png"/>
                     <Button Cursor="Hand"  x:Name="menuItemButton2" Content="" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1" Click="mainMenuMessagesButton" Opacity="0"/>
                 </Grid>
                 <Grid x:Name="menuItemGrid3" Grid.Column="2" Grid.Row="0">
                     <TextBlock x:Name="menuItem3Tile"  TextWrapping="Wrap" Text="Schedules" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
-                    <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
+                    <Image VerticalAlignment="Top" Height="252.5" Source="Photos\noun_861177_cc.png"/>
                     <Button Cursor="Hand" x:Name="menuItemButton3" Content="" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1" Click="gotoCalendar" Opacity="0"/>
                 </Grid>
                 <Grid x:Name="menuItemGrid4" Grid.Column="3" Grid.Row="0">
                     <TextBlock x:Name="menuItem4Tile"  TextWrapping="Wrap" Text="My Team" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
-                    <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
+                    <Image VerticalAlignment="Top" Height="252.5" Source="Photos\noun_48301_cc.png"/>
                     <Button  Cursor="Hand" x:Name="menuItemButton4" Content="" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1"/>
                 </Grid>
                 <Grid x:Name="menuItemGrid5" Grid.Column="0" Grid.Row="1">
                     <TextBlock x:Name="menuItem5Title" TextWrapping="Wrap" Text="Planner" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
-                    <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
+                    <Image VerticalAlignment="Top" Height="252.5" Source="Photos\noun_421164_cc.png"/>
                     <Button  Cursor="Hand" x:Name="menuItemButton5" Content="" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1" Click="menuItemButton5_Click" Opacity="0"/>
                 </Grid>
                 <Grid x:Name="menuItemGrid6" Grid.Column="1" Grid.Row="1">
                     <TextBlock x:Name="menuItem6Title" TextWrapping="Wrap" Text="Resources" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
-                    <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
+                    <Image VerticalAlignment="Top" Height="252.5" Source="Photos\noun_41336.png"/>
                     <Button  Cursor="Hand" x:Name="menuItemButton6" Content="" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1" Click="menuItemButton6_Click" Opacity="0"/>
                 </Grid>
                 <Grid x:Name="menuItemGrid7" Grid.Column="2" Grid.Row="1">
                     <TextBlock x:Name="menuItem7Tile"  TextWrapping="Wrap" Text="NewsFeed" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
-                    <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
+                    <Image VerticalAlignment="Top" Height="252.5" Source="Photos\noun_407526_cc.png"/>
                     <Button  Cursor="Hand" x:Name="menuItemButton7" Content="" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1" Click="menuItemButton7_Click" Opacity="0"/>
                 </Grid>
                 <Grid x:Name="menuItemGrid8" Grid.Column="3" Grid.Row="1">
                     <TextBlock x:Name="menuItem8Tile"  TextWrapping="Wrap" Text="Team Stats" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
-                    <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
+                    <Image VerticalAlignment="Top" Height="252.5" Source="Photos\noun_1348932_cc.png"/>
                     <Button  Cursor="Hand" x:Name="menuItemButton8" Content="" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1"/>
                 </Grid>
             </Grid>

@@ -413,7 +413,7 @@ namespace WpfApp1
                 Resource2TitleTextBox.Visibility = Visibility.Hidden;
                 EditButtonResource2.Visibility = Visibility.Visible;
                 SaveButtonResource2.Visibility = Visibility.Hidden;
-                //Resource2Video.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(path, UriKind.Relative)) };
+                Resource2Video.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(@"lofi.jpg", UriKind.Relative)) };
             }
         }
 
@@ -453,7 +453,7 @@ namespace WpfApp1
             Resource1TitleTextBox.Visibility = Visibility.Hidden;
             EditButtonResource1.Visibility = Visibility.Visible;
             SaveButtonResource1.Visibility = Visibility.Hidden;
-            //Resource1Video.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(path, UriKind.Relative)) };
+            Resource1Video.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(@"keem.jpg", UriKind.Relative)) };
         }
     }
 }

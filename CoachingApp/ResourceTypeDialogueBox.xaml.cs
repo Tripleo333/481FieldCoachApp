@@ -80,7 +80,7 @@ namespace WpfApp1
 
                 ResourcesHandler.SetResource(resourceType);
                 ResourcesHandler.Resource2Title.Content = ResourceTitleTextBox.Text;
-                //ResourcesHandler.Resource2Video.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(path, UriKind.Relative)) };
+                ResourcesHandler.Resource2Video.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(@"vevo.jpg", UriKind.Relative)) };
                 this.Close();
             }
 
@@ -88,7 +88,7 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //VideoPreview.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(path, UriKind.Relative)) };
+            VideoPreview.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(@"vevo.jpg", UriKind.Relative)) };
             VideoPreview.Visibility = Visibility.Visible;
         }
     }

@@ -270,7 +270,7 @@
             <Button x:Name="AddPlanButton" Content="Add Plan" HorizontalAlignment="Left" Height="88.5" Margin="1660,75,0,0" VerticalAlignment="Top" Width="223.5" FontSize="36" Click="AddPlanButton_Click"/>
             <Label Content="Planner&#xA;" HorizontalAlignment="Center" Height="117" Margin="777,80.803,786,882.197" VerticalAlignment="Center" Width="357" FontSize="72" FontWeight="Bold"/>
         </Grid>
-        <Grid x:Name="ResourcesGrid" Height="1080" Margin="10,0,0,0" VerticalAlignment="Top" Background="#FFE8E836" d:IsHidden="True">
+        <Grid x:Name="ResourcesGrid" Height="1080" Margin="10,0,0,0" VerticalAlignment="Top" Background="#FFE8E836">
             <ScrollViewer Margin="0,259.5,0,0" Background="#FFFFFDFD">
                 <Grid x:Name="ResourceContainer1" HorizontalAlignment="Left" Height="2163" VerticalAlignment="Top" Width="1900">
                     <Label x:Name="Resource1Title" Content="Pet Cat Using Toilet Properly" HorizontalAlignment="Left" Height="67.5" Margin="34.5,42,0,0" VerticalAlignment="Top" Width="1826" FontSize="36" Background="#FFBDBDBD"/>
@@ -295,7 +295,10 @@
                     <TextBox x:Name="Resource2TitleTextBox" HorizontalAlignment="Left" Height="45.5" Margin="34.5,1020.653,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="824" FontSize="36" Visibility="Hidden"/>
                     <Button x:Name="SaveButtonResource1" Content="Save" HorizontalAlignment="Left" Height="45.5" Margin="896.5,53.988,0,0" VerticalAlignment="Top" Width="88.5" FontSize="22" Visibility="Hidden" Click="SaveButtonResource1_Click"/>
                     <Button x:Name="SaveButtonResource2" Content="Save" HorizontalAlignment="Left" Height="45.5" Margin="896.5,1015,0,0" VerticalAlignment="Top" Width="88.5" FontSize="22" Click="SaveButtonResource2_Click" Visibility="Hidden"/>
-                    <Rectangle x:Name="Resource1Video" Fill="#FFE6E6E6" HorizontalAlignment="Left" Height="499.5" Margin="630.5,139.5,0,0" Stroke="Black" VerticalAlignment="Top" Width="623.5"/>
+                    <Rectangle x:Name="Resource1Video" HorizontalAlignment="Left" Height="499.5" Margin="630.5,139.5,0,0" Stroke="Black" VerticalAlignment="Top" Width="623.5">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource = "cat.jpg"/>
+                        </Rectangle.Fill></Rectangle>
                     <Rectangle x:Name="Resource2Video" Fill="#FFE6E6E6" HorizontalAlignment="Left" Height="499.5" Margin="630.5,1116,0,0" Stroke="Black" VerticalAlignment="Top" Width="623.5" Visibility="Hidden"/>
                     <Label x:Name="Resource2Desc" Content="" HorizontalAlignment="Left" Height="499.5" Margin="34.5,1116,0,0" VerticalAlignment="Top" Width="1826" FontSize="22"/>
                     <TextBox x:Name="Resource2DescTextBox" HorizontalAlignment="Left" Height="499.5" Margin="34.5,1116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1826" FontSize="22" Visibility="Hidden"/>
@@ -304,5 +307,6 @@
             <Button x:Name="ShareButton" Content="Share" HorizontalAlignment="Left" Height="88.5" Margin="1712,75,0,0" VerticalAlignment="Top" Width="171.5" FontSize="36" Click="ShareButton_Click"/>
             <Button x:Name="BackButtonResources" Content="Back" HorizontalAlignment="Left" Height="88.5" Margin="37,75,0,0" VerticalAlignment="Top" Width="130.5" FontSize="36" Click="BackButtonResources_Click"/>
         </Grid>
+        <Grid x:Name="MyTeam" Margin="0,-0.667,0.667,0.667" d:IsHidden="True"/>
     </Grid>
 </Window>

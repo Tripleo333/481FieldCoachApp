@@ -13,6 +13,6 @@
         <TextBox x:Name="Description_TextBox" HorizontalAlignment="Left" Height="373.139" Margin="45.186,434.465,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1222.982" FontSize="48"/>
         <Button x:Name="AddPlanButton" Content="Add" HorizontalAlignment="Left" Height="115.093" Margin="847.094,866.907,0,0" VerticalAlignment="Top" Width="215.096" FontSize="48" Click="AddPlanButton_Click" FontWeight="Bold"/>
         <Rectangle x:Name="UploadPhotoPlan" Stroke="Black" Margin="1374.234,444.465,48.517,272.396"/>
-        <Button x:Name="UploadPlanPhoto" Content="Upload Photo" HorizontalAlignment="Left" Height="58.351" Margin="1477.951,866.907,0,0" VerticalAlignment="Top" Width="300.557" FontSize="36" Click="UploadPlanPhoto_Click"/>
+        <Button x:Name="UploadPlanPhoto" Content="Upload Photo" HorizontalAlignment="Left" Height="58.351" Margin="1466.807,866.907,0,0" VerticalAlignment="Top" Width="300.557" FontSize="36" Click="UploadPlanPhoto_Click"/>
     </Grid>
 </Window>

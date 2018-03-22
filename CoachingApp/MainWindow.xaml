@@ -167,7 +167,7 @@
         <Grid x:Name="MessagesParentGrid" Background="#FFE8E836">
             <Grid x:Name="MessagesTitleGrid" Height="100" VerticalAlignment="Top" Margin="0,100,0,0">
                 <TextBlock FontSize="72" HorizontalAlignment="Left" Height="100" Margin="48,0,0,0" TextWrapping="Wrap" Text="Messages" VerticalAlignment="Top" Width="600"/>
-                <Button Content="+ Start Group" HorizontalAlignment="Right" VerticalAlignment="Center" Width="510" Height="100" FontSize="72" Click="StartGroupClick"/>
+                <Button Content="+ Start Chat" HorizontalAlignment="Right" VerticalAlignment="Center" Width="510" Height="100" FontSize="72" Click="StartGroupClick" Margin="0,0,11,0"/>
 
             </Grid>
             <Button Content="Back" HorizontalAlignment="Left" Height="102" Margin="0,-9.333,0,0" VerticalAlignment="Top" Width="290.667" FontSize="72" Click="backtoMainMenuFromMessages"/>
@@ -177,6 +177,7 @@
                         <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="generic-user-purple.png"/>
                         <TextBlock TextWrapping="Wrap" Text="Suzie Z." VerticalAlignment="Center" FontSize="36" Width="1588" HorizontalAlignment="Right"/>
                         <Button Content="Button" Background="Black" Foreground="{x:Null}" BorderBrush="#FF707070" Opacity="0" Click="startDM"/>
+                        <TextBlock x:Name="DMNotification" HorizontalAlignment="Right" Height="44" Margin="0,0,22,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Center" Width="44" FontSize="36"/>
                     </Grid>
                 </UniformGrid>
             </ScrollViewer>
@@ -321,11 +322,21 @@
             <Grid x:Name="DMGrid" HorizontalAlignment="Center" Height="805" Margin="0,0,0,40" VerticalAlignment="Bottom" Width="1784">
                 <Grid x:Name="SendGrid" HorizontalAlignment="Left" Height="91.833" VerticalAlignment="Bottom" Width="1784">
                     <TextBox x:Name="SndMessageBox" TextWrapping="Wrap" FontSize="36" Margin="0,0,157,0"/>
-                    <Button x:Name="SendButton" Content="Send" HorizontalAlignment="Right" Height="91" Margin="0" VerticalAlignment="Top" Width="157" FontSize="48"/>
+                    <Button x:Name="SendButton" Content="Send" HorizontalAlignment="Right" Height="91" Margin="0" VerticalAlignment="Top" Width="157" FontSize="48" Click="DMSendMess1"/>
                 </Grid>
                 <Grid x:Name="RecvGrid" HorizontalAlignment="Center" Height="686" Margin="0" VerticalAlignment="Top" Width="1782">
-                    <Grid x:Name="RecvMess1Grid" HorizontalAlignment="Left" Height="127.667" Margin="0" VerticalAlignment="Top" Width="1781.333"/>
+                    <Grid x:Name="RecvMess1Grid" HorizontalAlignment="Left" Height="127.667" Margin="0" VerticalAlignment="Top" Width="1781.333">
+                        <Rectangle Fill="#FF6A6AEE" HorizontalAlignment="Left" Height="107.667" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="1323.667"/>
+                        <TextBlock HorizontalAlignment="Left" Height="66" Margin="42.667,29.667,0,0" TextWrapping="Wrap" Text="Hello!" VerticalAlignment="Top" Width="1268" FontSize="48"/>
+                    </Grid>
+                    <Grid x:Name="sendMess1Grid" HorizontalAlignment="Left" Height="127.667" Margin="0,146,0,0" VerticalAlignment="Top" Width="1781.333">
+                        <Rectangle Fill="#FFEE6A6A" HorizontalAlignment="Right" Height="107.667" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="1323.667"/>
+                        <TextBlock HorizontalAlignment="Right" Height="66" Margin="0,29.667,25,0" TextWrapping="Wrap" Text="How are you?" VerticalAlignment="Top" Width="1268" FontSize="48"/>
+                    </Grid>
                 </Grid>
+            </Grid>
+            <Grid x:Name="DMTitle" HorizontalAlignment="Center" Height="96" Margin="0,87,0,0" VerticalAlignment="Top" Width="1769.333">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Suzie Z." VerticalAlignment="Top" FontSize="72"/>
             </Grid>
 
         </Grid>

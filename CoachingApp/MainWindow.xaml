@@ -316,9 +316,21 @@
             <Button x:Name="ShareButton" Content="Share" HorizontalAlignment="Left" Height="88.5" Margin="1712,75,0,0" VerticalAlignment="Top" Width="171.5" FontSize="36" Click="ShareButton_Click"/>
             <Button x:Name="BackButtonResources" Content="Back" HorizontalAlignment="Left" Height="88.5" Margin="37,75,0,0" VerticalAlignment="Top" Width="130.5" FontSize="36" Click="BackButtonResources_Click"/>
         </Grid>
-        <Grid x:Name="DMParentGrid" Background="#FFE8E836" d:IsHidden="True"/>
+        <Grid x:Name="DMParentGrid" Background="#FFE8E836">
+            <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="73" FontSize="48" Click="BacktoMessagesFromDM"/>
+            <Grid x:Name="DMGrid" HorizontalAlignment="Center" Height="805" Margin="0,0,0,40" VerticalAlignment="Bottom" Width="1784">
+                <Grid x:Name="SendGrid" HorizontalAlignment="Left" Height="91.833" VerticalAlignment="Bottom" Width="1784">
+                    <TextBox x:Name="SndMessageBox" TextWrapping="Wrap" FontSize="36" Margin="0,0,157,0"/>
+                    <Button x:Name="SendButton" Content="Send" HorizontalAlignment="Right" Height="91" Margin="0" VerticalAlignment="Top" Width="157" FontSize="48"/>
+                </Grid>
+                <Grid x:Name="RecvGrid" HorizontalAlignment="Center" Height="686" Margin="0" VerticalAlignment="Top" Width="1782">
+                    <Grid x:Name="RecvMess1Grid" HorizontalAlignment="Left" Height="127.667" Margin="0" VerticalAlignment="Top" Width="1781.333"/>
+                </Grid>
+            </Grid>
+
+        </Grid>
         <Grid x:Name="MyTeam" Margin="0,-0.667,0.667,0.667" d:IsHidden="True"/>
-        <Grid x:Name="ChooseGroupChatGrid" Background="#FFE8E836">
+        <Grid x:Name="ChooseGroupChatGrid" Background="#FFE8E836" d:IsHidden="True">
             <Grid x:Name="ChooseGCmemGrid" Height="100" VerticalAlignment="Top" Margin="0,100,0,0">
                 <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Text="Choose Group Chat Members"/>
             </Grid>
@@ -345,7 +357,7 @@
                     </Grid>
                 </UniformGrid>
             </ScrollViewer>
-            <Button Content="Create Group" HorizontalAlignment="Left" Height="96" Margin="1484.667,122.667,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="CreateGroupChat"/>
+            <Button Content="Create Group" HorizontalAlignment="Left" Height="96" Margin="1484.667,122.667,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="CreateGroup"/>
             <Button Content="Back" HorizontalAlignment="Left" Height="96" Margin="1484.667,928.595,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="BacktoMessages"/>
         </Grid>
     </Grid>

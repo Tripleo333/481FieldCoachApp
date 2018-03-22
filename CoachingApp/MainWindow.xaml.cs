@@ -479,6 +479,12 @@ namespace WpfApp1
             //TODO:
         }
 
+        private void BacktoMessagesFromDM(object sender, RoutedEventArgs e)
+        {
+            this.DMParentGrid.Visibility = Visibility.Hidden;
+            this.MessagesParentGrid.Visibility = Visibility.Visible;
+        }
+
         private void SaveButtonResource1_Click(object sender, RoutedEventArgs e)
         {
             Resource1Title.Content = Resource1TitleTextBox.Text;

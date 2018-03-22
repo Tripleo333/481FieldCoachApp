@@ -37,7 +37,7 @@ namespace WpfApp1
             this.PlannerGrid.Visibility = Visibility.Hidden;
             this.ResourcesGrid.Visibility = Visibility.Hidden;
             this.DMParentGrid.Visibility = Visibility.Hidden;
-            this.GroupChatGrid.Visibility = Visibility.Hidden;
+            this.ChooseGroupChatGrid.Visibility = Visibility.Hidden;
 
         }
 
@@ -460,18 +460,23 @@ namespace WpfApp1
 
         private void BacktoMessages(object sender, RoutedEventArgs e)
         {
-            this.GroupChatGrid.Visibility = Visibility.Hidden;
+            this.ChooseGroupChatGrid.Visibility = Visibility.Hidden;
             this.MessagesParentGrid.Visibility = Visibility.Visible;
         }
 
         private void StartGroupClick(object sender, RoutedEventArgs e)
         {
-            this.GroupChatGrid.Visibility = Visibility.Visible;
+            this.ChooseGroupChatGrid.Visibility = Visibility.Visible;
         }
 
         private void startDM(object sender, RoutedEventArgs e)
         {
             this.DMParentGrid.Visibility = Visibility.Visible;
+        }
+
+        private void CreateGroupChat(object sender, RoutedEventArgs e)
+        {
+            //TODO:
         }
 
         private void SaveButtonResource1_Click(object sender, RoutedEventArgs e)

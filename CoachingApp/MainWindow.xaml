@@ -345,7 +345,7 @@
                     </Grid>
                 </UniformGrid>
             </ScrollViewer>
-            <Button Content="Create Group" HorizontalAlignment="Left" Height="96" Margin="1484.667,122.667,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="CreateGroup"/>
+            <Button Content="Create Group" HorizontalAlignment="Left" Height="96" Margin="1484.667,122.667,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="CreateGroupChat"/>
             <Button Content="Back" HorizontalAlignment="Left" Height="96" Margin="1484.667,928.595,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="BacktoMessages"/>
         </Grid>
     </Grid>

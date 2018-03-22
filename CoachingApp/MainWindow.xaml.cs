@@ -492,6 +492,124 @@ namespace WpfApp1
             this.sendMess1Grid.Visibility = Visibility.Visible;
         }
 
+        private void BackButtonTeam_Click(object sender, RoutedEventArgs e)
+        {
+            this.MyTeamGrid.Visibility = Visibility.Visible;
+        }
+
+        private void ExitProfile_Click(object sender, RoutedEventArgs e)
+        {
+            BackgroundGrid.Visibility = Visibility.Hidden;
+
+            DefaultProfileGrid.Visibility = Visibility.Hidden;
+            StatsGrid.Visibility = Visibility.Hidden;
+            MessageGrid.Visibility = Visibility.Hidden;
+
+            ProfileButton.Visibility = Visibility.Hidden;
+            StatisticsButton.Visibility = Visibility.Hidden;
+            MessageButton.Visibility = Visibility.Hidden;
+            ProfilePhotoImage.Visibility = Visibility.Hidden;
+            NamePlace.Visibility = Visibility.Hidden;
+
+            ExitProfile.Visibility = Visibility.Hidden;
+        }
+
+        private void Player1Button_Click(object sender, RoutedEventArgs e)
+        {
+            BackgroundGrid.Visibility = Visibility.Visible;
+
+            DefaultProfileGrid.Visibility = Visibility.Visible;
+            StatsGrid.Visibility = Visibility.Hidden;
+            MessageGrid.Visibility = Visibility.Hidden;
+
+            ProfileButton.Visibility = Visibility.Visible;
+            StatisticsButton.Visibility = Visibility.Visible;
+            MessageButton.Visibility = Visibility.Visible;
+            ProfilePhotoImage.Visibility = Visibility.Visible;
+            NamePlace.Visibility = Visibility.Visible;
+
+            NamePlaceProfile.Content = "Sarah Graham";
+            AgeText.Content = "19";
+            EmailText.Content = "sarahgman@ucalgary.ca";
+            PhoneText.Content = "(403)223-5721";
+            BioText.Content = "This is my third year playing field hockey. I'm enjoying it so far!";
+
+            SliderTeam.Value = 4;
+            SliderEffort.Value = 4;
+            SliderTechnique.Value = 1;
+            SliderPower.Value = 2;
+            ProfileNotes.Text = "She could use some assistance with her technique. -Tina";
+
+            ExitProfile.Visibility = Visibility.Visible;
+        }
+
+        private void Coach1Button_Click(object sender, RoutedEventArgs e)
+        {
+            BackgroundGrid.Visibility = Visibility.Visible;
+
+            DefaultProfileGrid.Visibility = Visibility.Visible;
+            StatsGrid.Visibility = Visibility.Hidden;
+            MessageGrid.Visibility = Visibility.Hidden;
+
+            ProfileButton.Visibility = Visibility.Visible;
+            StatisticsButton.Visibility = Visibility.Hidden;
+            MessageButton.Visibility = Visibility.Visible;
+            ProfilePhotoImage.Visibility = Visibility.Visible;
+            NamePlace.Visibility = Visibility.Visible;
+
+            NamePlaceProfile.Content = "Tina Ermin";
+            AgeText.Content = "24";
+            EmailText.Content = "terminator@ucalgary.ca";
+            PhoneText.Content = "(403)412-2242";
+            BioText.Content = "Your #1 junior coach!";
+
+            ExitProfile.Visibility = Visibility.Visible;
+        }
+
+        private void Coach2Button_Click(object sender, RoutedEventArgs e)
+        {
+            BackgroundGrid.Visibility = Visibility.Visible;
+
+            DefaultProfileGrid.Visibility = Visibility.Visible;
+            StatsGrid.Visibility = Visibility.Hidden;
+            MessageGrid.Visibility = Visibility.Hidden;
+
+            ProfileButton.Visibility = Visibility.Visible;
+            StatisticsButton.Visibility = Visibility.Hidden;
+            MessageButton.Visibility = Visibility.Visible;
+            ProfilePhotoImage.Visibility = Visibility.Visible;
+            NamePlace.Visibility = Visibility.Visible;
+
+            NamePlaceProfile.Content = "Brenda Muier";
+            AgeText.Content = "49";
+            EmailText.Content = "brenma@ucalgary.ca";
+            PhoneText.Content = "(587)343-1431";
+            BioText.Content = "20 years of field hockey experience";
+
+            ExitProfile.Visibility = Visibility.Visible;
+        }
+
+        private void ProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            DefaultProfileGrid.Visibility = Visibility.Visible;
+            StatsGrid.Visibility = Visibility.Hidden;
+            MessageGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void MessageButton_Click(object sender, RoutedEventArgs e)
+        {
+            DefaultProfileGrid.Visibility = Visibility.Hidden;
+            StatsGrid.Visibility = Visibility.Hidden;
+            MessageGrid.Visibility = Visibility.Visible;
+        }
+
+        private void StatisticsButton_Click(object sender, RoutedEventArgs e)
+        {
+            DefaultProfileGrid.Visibility = Visibility.Hidden;
+            StatsGrid.Visibility = Visibility.Visible;
+            MessageGrid.Visibility = Visibility.Hidden;
+        }
+
         private void SaveButtonResource1_Click(object sender, RoutedEventArgs e)
         {
             Resource1Title.Content = Resource1TitleTextBox.Text;

@@ -64,3 +64,5 @@ C:\Users\vince\Desktop\481FieldCoachingApp\481FieldCoachApp\CoachingApp\obj\Debu
 C:\Users\vince\Desktop\481FieldCoachingApp\481FieldCoachApp\CoachingApp\obj\Debug\CoachingApp.csproj.GenerateResource.Cache
 C:\Users\vince\Desktop\481FieldCoachingApp\481FieldCoachApp\CoachingApp\obj\Debug\Simple Styles.baml
 C:\Users\vince\Desktop\481FieldCoachingApp\481FieldCoachApp\CoachingApp\obj\Debug\MessageElementControl.g.cs
+C:\Users\vince\Desktop\481FieldCoachingApp\481FieldCoachApp\CoachingApp\obj\Debug\App.baml
+C:\Users\vince\Desktop\481FieldCoachingApp\481FieldCoachApp\CoachingApp\obj\Debug\MessageElementControl.baml

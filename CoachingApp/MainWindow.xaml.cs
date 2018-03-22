@@ -39,6 +39,7 @@ namespace WpfApp1
             this.DMParentGrid.Visibility = Visibility.Hidden;
             this.ChooseGroupChatGrid.Visibility = Visibility.Hidden;
             this.sendMess1Grid.Visibility = Visibility.Hidden;
+            this.MyTeamGrid.Visibility = Visibility.Hidden;
 
         }
 
@@ -494,7 +495,7 @@ namespace WpfApp1
 
         private void BackButtonTeam_Click(object sender, RoutedEventArgs e)
         {
-            this.MyTeamGrid.Visibility = Visibility.Visible;
+            this.MyTeamGrid.Visibility = Visibility.Hidden;
         }
 
         private void ExitProfile_Click(object sender, RoutedEventArgs e)
@@ -532,7 +533,7 @@ namespace WpfApp1
             AgeText.Content = "19";
             EmailText.Content = "sarahgman@ucalgary.ca";
             PhoneText.Content = "(403)223-5721";
-            BioText.Content = "This is my third year playing field hockey. I'm enjoying it so far!";
+            BioText.Content = "This is my third year playing field hockey.";
 
             SliderTeam.Value = 4;
             SliderEffort.Value = 4;
@@ -608,6 +609,30 @@ namespace WpfApp1
             DefaultProfileGrid.Visibility = Visibility.Hidden;
             StatsGrid.Visibility = Visibility.Visible;
             MessageGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void SendMessageButton_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.MessageBox.Show("Successfully Sent!", "Message");
+            MessageBox.Text = "Say Something...";
+        }
+
+        private void menuItemButton4_Click(object sender, RoutedEventArgs e)
+        {
+            this.MyTeamGrid.Visibility = Visibility.Visible;
+            BackgroundGrid.Visibility = Visibility.Hidden;
+
+            DefaultProfileGrid.Visibility = Visibility.Hidden;
+            StatsGrid.Visibility = Visibility.Hidden;
+            MessageGrid.Visibility = Visibility.Hidden;
+
+            ProfileButton.Visibility = Visibility.Hidden;
+            StatisticsButton.Visibility = Visibility.Hidden;
+            MessageButton.Visibility = Visibility.Hidden;
+            ProfilePhotoImage.Visibility = Visibility.Hidden;
+            NamePlace.Visibility = Visibility.Hidden;
+
+            ExitProfile.Visibility = Visibility.Hidden;
         }
 
         private void SaveButtonResource1_Click(object sender, RoutedEventArgs e)

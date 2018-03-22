@@ -61,7 +61,7 @@ namespace WpfApp1
             }
             else
             {
-                System.Windows.MessageBox.Show("Error", "Plan requires a photo");
+                System.Windows.MessageBox.Show("Plan requires a photo", "Error");
             }
 
         }

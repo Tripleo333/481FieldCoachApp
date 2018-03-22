@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="ResourceTypeDialogBox" Height="1080" Width="1920">
-    <Grid Margin="0,0,2,-21">
-        <Label Content="What do you want to share?" HorizontalAlignment="Left" Height="93.573" Margin="94,68,0,0" VerticalAlignment="Top" Width="745.712" FontSize="48"/>
+    <Grid Margin="0,0,2,-21" Background="#FFEFF2F1">
+        <Label Content="What do you want to share?" HorizontalAlignment="Left" Height="93.573" Margin="94,68,0,0" VerticalAlignment="Top" Width="745.712" FontSize="48" Foreground="#FFF49F11"/>
         <Button x:Name="VideoResourceButton" Content="Video&#xD;&#xA;" HorizontalAlignment="Left" Height="68.595" Margin="958,166.573,0,0" VerticalAlignment="Top" Width="838.696" FontSize="45" Click="VideoResourceButton_Click"/>
         <Button x:Name="TextResourceButton" Content="Text&#xA;" HorizontalAlignment="Left" Height="68.595" Margin="94,166.573,0,0" VerticalAlignment="Top" Width="788.696" FontSize="45" Click="TextResourceButton_Click"/>
         <Button x:Name="ShareResourceButton" Content="Share" HorizontalAlignment="Left" Margin="817.354,929.302,0,58.698" Width="204.586" FontSize="48" FontWeight="Bold" Click="ShareResourceButton_Click" IsEnabled="False"/>

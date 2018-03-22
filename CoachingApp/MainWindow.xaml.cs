@@ -39,6 +39,7 @@ namespace WpfApp1
             this.DMParentGrid.Visibility = Visibility.Hidden;
             this.ChooseGroupChatGrid.Visibility = Visibility.Hidden;
             this.sendMess1Grid.Visibility = Visibility.Hidden;
+            this.TeamStatsParenGrid.Visibility = Visibility.Hidden;
 
         }
 
@@ -490,6 +491,17 @@ namespace WpfApp1
         private void DMSendMess1(object sender, RoutedEventArgs e)
         {
             this.sendMess1Grid.Visibility = Visibility.Visible;
+        }
+
+        private void OpenTeamStats(object sender, RoutedEventArgs e)
+        {
+            this.TeamStatsParenGrid.Visibility = Visibility.Visible;
+        }
+
+        private void backtoMMfromStats(object sender, RoutedEventArgs e)
+        {
+            this.TeamStatsParenGrid.Visibility = Visibility.Hidden;
+
         }
 
         private void SaveButtonResource1_Click(object sender, RoutedEventArgs e)

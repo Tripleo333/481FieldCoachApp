@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfApp1.NewsDialogBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="NewsDialogBox" Height="1080" Width="1920">
+    <Grid Width="1920" Height="1080" Background="#FF2EFF00">
+        <Label Content="Enter Title&#xD;&#xA;" HorizontalAlignment="Left" Height="77.651" Margin="45.186,73,0,0" VerticalAlignment="Top" Width="1826.297" FontSize="48"/>
+        <Label Content="Enter Description&#xA;" HorizontalAlignment="Left" Height="89.651" Margin="45.186,339.814,0,0" VerticalAlignment="Top" Width="1826.297" FontSize="48"/>
+        <TextBox x:Name="TitleTextBox" HorizontalAlignment="Left" Height="149.209" Margin="45.186,150.651,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1826.297" FontSize="48" RenderTransformOrigin="0.495,0.545"/>
+        <TextBox x:Name="Description_TextBox" HorizontalAlignment="Left" Height="373.139" Margin="45.186,434.465,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1826.297" FontSize="48"/>
+        <Button Content="Add" HorizontalAlignment="Left" Height="115.093" Margin="847.094,866.907,0,0" VerticalAlignment="Top" Width="215.096" FontSize="48" Click="Button_Click" FontWeight="Bold"/>
+    </Grid>
+</Window>

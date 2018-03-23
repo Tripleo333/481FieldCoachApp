@@ -317,7 +317,7 @@
             <Button x:Name="BackButtonResources" Content="Back" HorizontalAlignment="Left" Height="88.5" Margin="37,75,0,0" VerticalAlignment="Top" Width="130.5" FontSize="36" Click="BackButtonResources_Click"/>
         </Grid>
         <Grid x:Name="DMParentGrid" Background="#FFE8E836" d:IsHidden="True"/>
-        <Grid x:Name="MyTeamGrid" Margin="0,-0.667,0.667,0.667">
+        <Grid x:Name="MyTeamGrid" Margin="0,-0.667,0.667,0.667" d:IsHidden="True">
             <Grid x:Name="TeamContainer" Margin="-10,0,-10.667,0" Background="#FFE8E836">
                 <Label x:Name="LabelPlayers" Content="Players" HorizontalAlignment="Left" Height="56.647" Margin="102.267,229.84,0,0" VerticalAlignment="Top" Width="472.8" FontSize="36"/>
                 <Label x:Name="LabelCoaches" Content="Coaches" HorizontalAlignment="Left" Height="60" Margin="102.267,0,0,348.713" VerticalAlignment="Bottom" Width="472.8" FontSize="36"/>

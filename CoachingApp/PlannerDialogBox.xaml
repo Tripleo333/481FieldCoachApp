@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="PlannerDialogBox" Height="1079.5" Width="1920">
-    <Grid Width="1920" Height="1080" Background="#FF2EFF00">
-        <Label Content="Enter Title&#xD;&#xA;" HorizontalAlignment="Left" Height="77.651" Margin="45.186,73,0,0" VerticalAlignment="Top" Width="1826.297" FontSize="48"/>
-        <Label Content="Enter Description&#xA;" HorizontalAlignment="Left" Height="89.651" Margin="45.186,339.814,0,0" VerticalAlignment="Top" Width="815.297" FontSize="48"/>
+    <Grid Width="1920" Height="1080" Background="#FFEFF2F1">
+        <Label Content="Enter Title&#xD;&#xA;" HorizontalAlignment="Left" Height="77.651" Margin="45.186,73,0,0" VerticalAlignment="Top" Width="1826.297" FontSize="48" Foreground="#FFF49F11"/>
+        <Label Content="Enter Description&#xA;" HorizontalAlignment="Left" Height="89.651" Margin="45.186,339.814,0,0" VerticalAlignment="Top" Width="815.297" FontSize="48" Foreground="#FFF49F11"/>
         <TextBox x:Name="TitleTextBox" HorizontalAlignment="Left" Height="149.209" Margin="45.186,150.651,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1826.297" FontSize="48" RenderTransformOrigin="0.495,0.545"/>
         <TextBox x:Name="Description_TextBox" HorizontalAlignment="Left" Height="373.139" Margin="45.186,434.465,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1222.982" FontSize="48"/>
         <Button x:Name="AddPlanButton" Content="Add" HorizontalAlignment="Left" Height="115.093" Margin="847.094,866.907,0,0" VerticalAlignment="Top" Width="215.096" FontSize="48" Click="AddPlanButton_Click" FontWeight="Bold"/>

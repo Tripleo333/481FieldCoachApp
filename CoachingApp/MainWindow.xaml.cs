@@ -193,68 +193,6 @@ namespace WpfApp1
             pdb.Show();
         }
 
-        private void EditButton1_Click(object sender, RoutedEventArgs e)
-        {
-            News1TextBox.Text = News1.Content.ToString();
-            Title1TextBox.Text = Title1Label.Content.ToString();
-            Title1Label.Visibility = Visibility.Hidden;
-            Title1TextBox.Visibility = Visibility.Visible;
-            News1TextBox.Visibility = Visibility.Visible;
-            EditButton1.Visibility = Visibility.Hidden;
-            SaveButton1.Visibility = Visibility.Visible;
-        }
-
-        private void SaveButton1_Click(object sender, RoutedEventArgs e)
-        {
-            News1.Content = News1TextBox.Text;
-            Title1Label.Content = Title1TextBox.Text;
-            Title1Label.Visibility = Visibility.Visible;
-            Title1TextBox.Visibility = Visibility.Hidden;
-            News1TextBox.Visibility = Visibility.Hidden;
-            EditButton1.Visibility = Visibility.Visible;
-            SaveButton1.Visibility = Visibility.Hidden;
-        }
-
-        private void EditButton2_Click(object sender, RoutedEventArgs e)
-        {
-            News2TextBox.Text = News2.Content.ToString();
-            Title2TextBox.Text = Title2Label.Content.ToString();
-            Title2Label.Visibility = Visibility.Hidden;
-            Title2TextBox.Visibility = Visibility.Visible;
-            News2TextBox.Visibility = Visibility.Visible;
-            EditButton2.Visibility = Visibility.Hidden;
-            SaveButton2.Visibility = Visibility.Visible;
-        }
-
-        private void SaveButton2_Click(object sender, RoutedEventArgs e)
-        {
-            News2.Content = News2TextBox.Text;
-            Title2Label.Content = Title2TextBox.Text;
-            Title2Label.Visibility = Visibility.Visible;
-            Title2TextBox.Visibility = Visibility.Hidden;
-            News2TextBox.Visibility = Visibility.Hidden;
-            EditButton2.Visibility = Visibility.Visible;
-            SaveButton2.Visibility = Visibility.Hidden;
-        }
-
-        private void CommentButton1_Click(object sender, RoutedEventArgs e)
-        {
-            Comment1.Content = CommentBox1.Text;
-            Comment1.Visibility = Visibility.Visible;
-            YourCommentBox1.Visibility = Visibility.Visible;
-            News1CommentPic.Visibility = Visibility.Visible;
-            Comment1You.Visibility = Visibility.Visible;
-        }
-
-        private void CommentButton2_Click(object sender, RoutedEventArgs e)
-        {
-            Comment2.Content = CommentBox2.Text;
-            Comment2.Visibility = Visibility.Visible;
-            YourCommentBox2.Visibility = Visibility.Visible;
-            News2CommentPic.Visibility = Visibility.Visible;
-            Comment2You.Visibility = Visibility.Visible;
-        }
-
         private void CommentButton1Plan_Click(object sender, RoutedEventArgs e)
         {
             Comment1Plan.Content = CommentBox1Plan.Text;
@@ -281,7 +219,6 @@ namespace WpfApp1
             Plan1Title.Visibility = Visibility.Hidden;
             Plan1TitleTextBox.Visibility = Visibility.Visible;
             Plan1DescTextBox.Visibility = Visibility.Visible;
-            EditButton1.Visibility = Visibility.Hidden;
             ChangePhotoPlan1Button.Visibility = Visibility.Visible;
             SaveButtonPlan1.Visibility = Visibility.Visible;
         }
@@ -293,7 +230,6 @@ namespace WpfApp1
             Plan2Title.Visibility = Visibility.Hidden;
             Plan2TitleTextBox.Visibility = Visibility.Visible;
             Plan2DescTextBox.Visibility = Visibility.Visible;
-            EditButton2.Visibility = Visibility.Hidden;
             ChangePhotoPlan2Button.Visibility = Visibility.Visible;
             SaveButtonPlan2.Visibility = Visibility.Visible;
         }

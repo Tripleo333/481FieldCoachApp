@@ -11,6 +11,6 @@
         <Label Content="Enter Description&#xA;" HorizontalAlignment="Left" Height="89.651" Margin="45.186,339.814,0,0" VerticalAlignment="Top" Width="1826.297" FontSize="48" Foreground="#FFF49F11"/>
         <TextBox x:Name="TitleTextBox" HorizontalAlignment="Left" Height="149.209" Margin="45.186,150.651,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1826.297" FontSize="48" RenderTransformOrigin="0.495,0.545"/>
         <TextBox x:Name="Description_TextBox" HorizontalAlignment="Left" Height="373.139" Margin="45.186,434.465,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1826.297" FontSize="48"/>
-        <Button Content="Add" HorizontalAlignment="Left" Height="115.093" Margin="847.094,866.907,0,0" VerticalAlignment="Top" Width="215.096" FontSize="48" Click="Button_Click" FontWeight="Bold"/>
+        <Button x:Name="AddButton" Content="Add" HorizontalAlignment="Left" Height="115.093" Margin="847.094,866.907,0,0" VerticalAlignment="Top" Width="215.096" FontSize="48" Click="AddButton_Click_1" FontWeight="Bold"/>
     </Grid>
 </Window>

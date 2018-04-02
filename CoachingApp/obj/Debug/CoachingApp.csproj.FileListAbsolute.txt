@@ -68,3 +68,5 @@ C:\Users\vince\Desktop\481FieldCoachingApp\481FieldCoachApp\CoachingApp\obj\Debu
 C:\Users\vince\Desktop\481FieldCoachingApp\481FieldCoachApp\CoachingApp\obj\Debug\MessageElementControl.baml
 C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\Simple Styles.baml
 C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\App.baml
+C:\Users\vince\Desktop\481FieldCoachingApp\481FieldCoachApp\CoachingApp\obj\Debug\NewsPageControl.g.cs
+C:\Users\vince\Desktop\481FieldCoachingApp\481FieldCoachApp\CoachingApp\obj\Debug\NewsPageControl.baml

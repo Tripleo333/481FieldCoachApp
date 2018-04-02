@@ -58,6 +58,9 @@
     <Compile Include="MessageElementControl.xaml.cs">
       <DependentUpon>MessageElementControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NewsPageControl.xaml.cs">
+      <DependentUpon>NewsPageControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ResourceTypeDialogueBox.xaml.cs">
       <DependentUpon>ResourceTypeDialogueBox.xaml</DependentUpon>
     </Compile>
@@ -78,6 +81,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="NewsDialogBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewsPageControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

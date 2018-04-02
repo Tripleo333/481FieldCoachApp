@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using CoachingApp;
 
 namespace WpfApp1
 {
@@ -27,19 +28,14 @@ namespace WpfApp1
 
         private MainWindow NewsHandler;
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void AddButton_Click_1(object sender, RoutedEventArgs e)
         {
-            NewsHandler.Title2Label.Content = this.TitleTextBox.Text;
-            NewsHandler.News2.Content = this.Description_TextBox.Text;
-            NewsHandler.Title2Label.Visibility = Visibility.Visible;
-            NewsHandler.News2.Visibility = Visibility.Visible;
-            NewsHandler.CommentButton2.Visibility = Visibility.Visible;
-            NewsHandler.EditButton2.Visibility = Visibility.Visible;
-            NewsHandler.CommentBox2.Visibility = Visibility.Visible;
-            NewsHandler.CommentBoxShape2.Visibility = Visibility.Visible;
+            NewsPageControl newspage = new NewsPageControl();
+            newspage.TitleLabel.Content = TitleTextBox.Text;
+            newspage.NewsLabel.Content = Description_TextBox.Text;
+            NewsHandler.NewsStackPanel.Children.Add(newspage);
             this.Close();
         }
-
 
     }
 }

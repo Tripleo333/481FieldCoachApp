@@ -40,8 +40,8 @@ namespace WpfApp1
             this.ChooseGroupChatGrid.Visibility = Visibility.Hidden;
             //this.sendMess1Grid.Visibility = Visibility.Hidden;
             this.MyTeamGrid.Visibility = Visibility.Hidden;
-            this.sendMess1Grid.Visibility = Visibility.Hidden;
-            this.TeamStatsParenGrid.Visibility = Visibility.Hidden;
+            //this.sendMess1Grid.Visibility = Visibility.Hidden;
+            //this.TeamStatsParenGrid.Visibility = Visibility.Hidden;
 
         }
 
@@ -639,12 +639,12 @@ namespace WpfApp1
 
         private void OpenTeamStats(object sender, RoutedEventArgs e)
         {
-            this.TeamStatsParenGrid.Visibility = Visibility.Visible;
+            //this.TeamStatsParenGrid.Visibility = Visibility.Visible;
         }
 
         private void backtoMMfromStats(object sender, RoutedEventArgs e)
         {
-            this.TeamStatsParenGrid.Visibility = Visibility.Hidden;
+            //this.TeamStatsParenGrid.Visibility = Visibility.Hidden;
 
         }
 

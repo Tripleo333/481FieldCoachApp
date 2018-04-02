@@ -7,9 +7,9 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" WindowStyle="None" Width="1920" Height="1080">
-    <Grid x:Name="Parent_Grid" HorizontalAlignment="Left" Height="1080" Margin="-0.667,-0.667,0,0" VerticalAlignment="Top" Width="1920">
+    <Grid x:Name="Parent_Grid" HorizontalAlignment="Left" Height="1080" Margin="0,0,0,0" VerticalAlignment="Top" Width="1920">
 
-        <Grid x:Name="LoginGrid" Background="#FFE8E836" Margin="-10,-0.667,10,1.667" Width="1920" Height="1080" d:IsHidden="True">
+        <Grid x:Name="LoginGrid" Background="#FFE8E836" Margin="-10,-0.667,10,1.667" Width="1920" Height="1080">
             <TextBlock  HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="100" Text="Enter your credentials" Foreground="#FF666666" TextAlignment="Center" Margin="0,166,0,0" Width="1025.66"/>
             <TextBox x:Name="EmailTextBox" HorizontalAlignment="Left" Height="71" Margin="685,441,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="604" FontSize="48"/>
             <TextBlock HorizontalAlignment="Left" Height="59" Margin="685,377,0,0" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Width="344" FontSize="36"/>
@@ -20,7 +20,7 @@
             <Button Content="Create Account" HorizontalAlignment="Left" Height="60" Margin="1024,752,0,0" VerticalAlignment="Top" Width="265" FontSize="36" Click="Create_Account_Click"/>
 
         </Grid>
-        <Grid x:Name="CreateAccountGrid" HorizontalAlignment="Left" Height="1080" Margin="-0.667,-0.667,0,0" VerticalAlignment="Top" Width="1920" Background="#FFE8E836" d:IsHidden="True">
+        <Grid x:Name="CreateAccountGrid" HorizontalAlignment="Left" Height="1080" Margin="0,0,0,0" VerticalAlignment="Top" Width="1920" Background="#FFE8E836" d:IsHidden="True">
             <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Text="Create an account" Foreground="#FF666666" TextAlignment="Center" Margin="0,58,0,0" HorizontalAlignment="Center"/>
             <TextBox x:Name="EmailTextBox_Copy" Height="71" Margin="673,240,643,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="604" FontSize="48" HorizontalAlignment="Center"/>
             <TextBlock Height="59" Margin="675.667,174.5,900.333,0" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Width="344" FontSize="36" HorizontalAlignment="Center"/>
@@ -37,7 +37,7 @@
             <TextBlock HorizontalAlignment="Center" Height="126" Margin="0,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1395" FontSize="72" Text="Your account has been created successfully"/>
             <Button x:Name="gotoLoginPage" Content="Login&#xD;&#xA;" HorizontalAlignment="Center" Height="88" Margin="0,552,0,0" VerticalAlignment="Top" Width="301" FontSize="48" Click="loginPageButton"/>
         </Grid>
-        <Grid x:Name="CoachMainPageGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFE8E836" Width="1920" Height="1080">
+        <Grid x:Name="CoachMainPageGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFE8E836" Width="1920" Height="1080" d:IsHidden="True">
             <Grid x:Name="titleBarGrid"  HorizontalAlignment="Center" Height="160" VerticalAlignment="Top" Margin="0,100,0,0" Background="#00000000" Width="1920" >
                 <Rectangle x:Name="BottomBoarderRect" Stroke="Black" VerticalAlignment="Bottom" Height="5" Fill="Black" Width="1500" HorizontalAlignment="Center" />
                 <Image x:Name="CoachImage" HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="176" Source="C:\Users\Admin\source\repos\481Project\CoachingApp\Photos\stockCoachPhoto.jpg"/>
@@ -162,7 +162,7 @@
                 <TextBox x:Name="dateNum30" Grid.Row="5" Grid.Column="1" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}">30</TextBox>
 
             </Grid>
-            <Button Content="Back" HorizontalAlignment="Left" Height="64.333" Margin="4.667,10.667,0,0" VerticalAlignment="Top" Width="208" FontSize="36" Click="backToMainMenu"/>
+            <Button Content="Back" HorizontalAlignment="Left" Height="64.333" Margin="0,0,0,0" VerticalAlignment="Top" Width="208" FontSize="36" Click="backToMainMenu"/>
         </Grid>
         <Grid x:Name="MessagesParentGrid" Background="#FFE8E836" d:IsHidden="True">
             <Grid x:Name="MessagesTitleGrid" Height="100" VerticalAlignment="Top" Margin="0,100,0,0">
@@ -181,7 +181,7 @@
                 </UniformGrid>
             </ScrollViewer>
         </Grid>
-        <Grid x:Name="NewsfeedGrid" HorizontalAlignment="Left" Height="1063" Margin="10,0,-10,0" VerticalAlignment="Top" Width="1920" Background="#FFE8E836" d:IsHidden="True">
+        <Grid x:Name="NewsfeedGrid" HorizontalAlignment="Left" Height="1063" Margin="0,0,0,0" VerticalAlignment="Top" Width="1920" Background="#FFE8E836" d:IsHidden="True">
             <ScrollViewer Margin="0,259.5,10,44" Background="#FFFFFDFD">
                 <Grid x:Name="NewsContainer" HorizontalAlignment="Left" Height="1835" VerticalAlignment="Top" Width="1900">
                     <Label x:Name="Title1Label" Content="1/1/18 - New Year's Event" HorizontalAlignment="Left" Height="67.5" Margin="34.5,42,0,0" VerticalAlignment="Top" Width="1826" FontSize="36" Background="#FFBDBDBD"/>
@@ -216,7 +216,7 @@
             <Button x:Name="AddNewsButton" Content="Add News" HorizontalAlignment="Left" Height="88.5" Margin="1660,75,0,0" VerticalAlignment="Top" Width="223.5" FontSize="36" Click="AddNewsButton_Click"/>
             <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Left" Height="88.5" Margin="37,75,0,0" VerticalAlignment="Top" Width="130.5" FontSize="36" Click="BackButton_Click"/>
         </Grid>
-        <Grid x:Name="MyProfileGrid" HorizontalAlignment="Left" Height="1080" Margin="10,0,-10,0" VerticalAlignment="Top" Width="1920" Background="#FFE8E836" d:IsHidden="True">
+        <Grid x:Name="MyProfileGrid" HorizontalAlignment="Left" Height="1080" Margin="0,0,0,0" VerticalAlignment="Top" Width="1920" Background="#FFE8E836" d:IsHidden="True">
             <Button x:Name="UploadProfPhoto" HorizontalAlignment="Left" Height="42" Margin="134,640,0,0" VerticalAlignment="Top" Width="192" Click="UploadProfPhoto_Click" Background="#FFDDDDDD" Content="Upload Photo" FontSize="20"/>
             <Button x:Name="BackButtonProfile" Content="Back" HorizontalAlignment="Left" Height="88.5" Margin="37,75,0,0" VerticalAlignment="Top" Width="130.5" FontSize="36" Click="BackButtonProfile_Click"/>
             <Label x:Name="NameLabel" Content="Name:" HorizontalAlignment="Left" Height="75" Margin="486,255,0,0" VerticalAlignment="Top" Width="114" FontSize="36"/>
@@ -278,7 +278,7 @@
             <Button x:Name="AddPlanButton" Content="Add Plan" HorizontalAlignment="Left" Height="88.5" Margin="1660,75,0,0" VerticalAlignment="Top" Width="223.5" FontSize="36" Click="AddPlanButton_Click"/>
             <Label Content="Planner&#xA;" HorizontalAlignment="Center" Height="117" Margin="777,80.803,786,882.197" VerticalAlignment="Center" Width="357" FontSize="72" FontWeight="Bold"/>
         </Grid>
-        <Grid x:Name="ResourcesGrid" Height="1080" Margin="10,0,0,0" VerticalAlignment="Top" Background="#FFE8E836" d:IsHidden="True">
+        <Grid x:Name="ResourcesGrid" Height="1080" Margin="0,0,0,0" VerticalAlignment="Top" Background="#FFE8E836" d:IsHidden="True">
             <ScrollViewer Margin="0,259.5,0,0" Background="#FFFFFDFD">
                 <Grid x:Name="ResourceContainer1" HorizontalAlignment="Left" Height="2163" VerticalAlignment="Top" Width="1900">
                     <Label x:Name="Resource1Title" Content="Pet Cat Using Toilet Properly" HorizontalAlignment="Left" Height="67.5" Margin="34.5,42,0,0" VerticalAlignment="Top" Width="1826" FontSize="36" Background="#FFBDBDBD"/>

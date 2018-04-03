@@ -10,7 +10,7 @@
     <Grid x:Name="Parent_Grid" HorizontalAlignment="Left" Height="1070" Margin="0" VerticalAlignment="Top" Width="1910" d:LayoutOverrides="TopMargin, BottomMargin">
 
         <Grid x:Name="LoginGrid" Background="#FFEFF2F1" Margin="-10,-0.667,10,1.667" Width="1920" Height="1080" d:IsHidden="True">
-            <TextBlock  HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="100" Text="Enter your credentials" Foreground="#FF666666" TextAlignment="Center" Margin="0,166,0,0" Width="1025.66"/>
+            <TextBlock  HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="100" Text="Enter your credentials" Foreground="#FFF49F11" TextAlignment="Center" Margin="0,166,0,0" Width="1025.66"/>
             <TextBox x:Name="EmailTextBox" HorizontalAlignment="Left" Height="71" Margin="685,441,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="604" FontSize="48"/>
             <TextBlock HorizontalAlignment="Left" Height="59" Margin="685,377,0,0" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Width="344" FontSize="36"/>
             <TextBlock HorizontalAlignment="Left" Height="59" Margin="685,546.5,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Width="344" FontSize="36"/>
@@ -20,8 +20,8 @@
             <Button Content="Create Account" HorizontalAlignment="Left" Height="60" Margin="1024,752,0,0" VerticalAlignment="Top" Width="265" FontSize="36" Click="Create_Account_Click"/>
 
         </Grid>
-        <Grid x:Name="CreateAccountGrid" HorizontalAlignment="Left" Height="1080" Margin="0,0,0,0" VerticalAlignment="Top" Width="1920" Background="#FFE8E836" d:IsHidden="True">
-            <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Text="Create an account" Foreground="#FF666666" TextAlignment="Center" Margin="0,58,0,0" HorizontalAlignment="Center"/>
+        <Grid x:Name="CreateAccountGrid" HorizontalAlignment="Left" Height="1080" Margin="0,0,0,0" VerticalAlignment="Top" Width="1920" Background="#FFEFF2F1" d:IsHidden="True">
+            <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Text="Create an account" Foreground="#FFF49F11" TextAlignment="Center" Margin="0,58,0,0" HorizontalAlignment="Center"/>
             <TextBox x:Name="EmailTextBox_Copy" Height="71" Margin="673,240,643,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="604" FontSize="48" HorizontalAlignment="Center"/>
             <TextBlock Height="59" Margin="675.667,174.5,900.333,0" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Width="344" FontSize="36" HorizontalAlignment="Center"/>
             <TextBlock Height="59" Margin="675.667,344,900.333,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Width="344" FontSize="36" HorizontalAlignment="Center"/>
@@ -33,15 +33,15 @@
             <TextBlock Height="59" Margin="675.667,746.5,900.333,0" TextWrapping="Wrap" Text="Birthday:" VerticalAlignment="Top" Width="344" FontSize="36" HorizontalAlignment="Center"/>
             <DatePicker Height="60" Margin="675.667,833.334,645.667,0" VerticalAlignment="Top" Width="598.666" FontSize="36" HorizontalAlignment="Center" />
         </Grid>
-        <Grid x:Name="AccountCreatedSucGrid" Height="1080" Background="#FF2EFF00" Width="1920" d:IsHidden="True">
-            <TextBlock HorizontalAlignment="Center" Height="126" Margin="0,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1395" FontSize="72" Text="Your account has been created successfully"/>
+        <Grid x:Name="AccountCreatedSucGrid" Height="1080" Background="#FFEFF2F1" Width="1920" d:IsHidden="True">
+            <TextBlock HorizontalAlignment="Center" Height="126" Margin="0,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1395" FontSize="72" Text="Your account has been created successfully" Foreground="#FFF49F11"/>
             <Button x:Name="gotoLoginPage" Content="Login&#xD;&#xA;" HorizontalAlignment="Center" Height="88" Margin="0,552,0,0" VerticalAlignment="Top" Width="301" FontSize="48" Click="loginPageButton"/>
         </Grid>
-        <Grid x:Name="CoachMainPageGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFE8E836" Width="1920" Height="1080" d:IsHidden="True">
+        <Grid x:Name="CoachMainPageGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFEFF2F1" Width="1920" Height="1080">
             <Grid x:Name="titleBarGrid"  HorizontalAlignment="Center" Height="160" VerticalAlignment="Top" Margin="0,100,0,0" Background="#00000000" Width="1920" >
                 <Rectangle x:Name="BottomBoarderRect" Stroke="Black" VerticalAlignment="Bottom" Height="5" Fill="Black" Width="1500" HorizontalAlignment="Center" />
                 <Image x:Name="CoachImage" HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="176" Source="C:\Users\Admin\source\repos\481Project\CoachingApp\Photos\stockCoachPhoto.jpg"/>
-                <TextBlock x:Name="HelloTextblock" HorizontalAlignment="Left" Height="160" Margin="176,0,0,-100" TextWrapping="Wrap" Text="Hello, " VerticalAlignment="Top" Width="1068.667" FontSize="100"/>
+                <TextBlock x:Name="HelloTextblock" HorizontalAlignment="Left" Height="160" Margin="176,0,0,-100" TextWrapping="Wrap" Text="Hello, " VerticalAlignment="Top" Width="1068.667" FontSize="100" Foreground="#FFF49F11"/>
             </Grid>
             <Grid x:Name="MainMenuGrid" VerticalAlignment="Center" Margin="178,287,178,90" Height="703" Grid.RowSpan="4" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
@@ -56,42 +56,42 @@
                 </Grid.RowDefinitions>
                 <Grid x:Name="menuItemGrid" Grid.Column="0" Grid.Row="0">
                     <TextBlock x:Name="menuItem1Title" TextWrapping="Wrap" Text="My Profile" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
-                    <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
+                    <Image VerticalAlignment="Top" Height="252.5" Source="Photos\noun_283410_cc.png"/>
                     <Button x:Name="menuItemButton" Content="" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1" Click="menuItemButton_Click" Opacity="0"/>
                 </Grid>
                 <Grid x:Name="menuItemGrid2" Grid.Column="1" Grid.Row="0">
                     <TextBlock x:Name="menuItem2Title" TextWrapping="Wrap" Text="Message" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
-                    <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
+                    <Image VerticalAlignment="Top" Height="252.5" Source="Photos\noun_367824_cc.png"/>
                     <Button x:Name="menuItemButton2" Content="" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1" Click="mainMenuMessagesButton" Opacity="0"/>
                 </Grid>
                 <Grid x:Name="menuItemGrid3" Grid.Column="2" Grid.Row="0">
                     <TextBlock x:Name="menuItem3Tile"  TextWrapping="Wrap" Text="Schedules" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
-                    <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
+                    <Image VerticalAlignment="Top" Height="252.5" Source="Photos\noun_861177_cc.png"/>
                     <Button x:Name="menuItemButton3" Content="" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1" Click="gotoCalendar" Opacity="0"/>
                 </Grid>
                 <Grid x:Name="menuItemGrid4" Grid.Column="3" Grid.Row="0">
                     <TextBlock x:Name="menuItem4Tile"  TextWrapping="Wrap" Text="My Team" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
-                    <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
+                    <Image VerticalAlignment="Top" Height="252.5" Source="Photos\noun_48301_cc.png"/>
                     <Button x:Name="menuItemButton4" Content="" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1" Click="menuItemButton4_Click" Opacity="0"/>
                 </Grid>
                 <Grid x:Name="menuItemGrid5" Grid.Column="0" Grid.Row="1">
                     <TextBlock x:Name="menuItem5Title" TextWrapping="Wrap" Text="Planner" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
-                    <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
+                    <Image VerticalAlignment="Top" Height="252.5" Source="Photos\noun_421164_cc.png"/>
                     <Button x:Name="menuItemButton5" Content="" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1" Click="menuItemButton5_Click" Opacity="0"/>
                 </Grid>
                 <Grid x:Name="menuItemGrid6" Grid.Column="1" Grid.Row="1">
                     <TextBlock x:Name="menuItem6Title" TextWrapping="Wrap" Text="Resources" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
-                    <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
+                    <Image VerticalAlignment="Top" Height="252.5" Source="Photos\noun_41336.png"/>
                     <Button x:Name="menuItemButton6" Content="" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1" Click="menuItemButton6_Click" Opacity="0"/>
                 </Grid>
                 <Grid x:Name="menuItemGrid7" Grid.Column="2" Grid.Row="1">
                     <TextBlock x:Name="menuItem7Tile"  TextWrapping="Wrap" Text="NewsFeed" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
-                    <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
+                    <Image VerticalAlignment="Top" Height="252.5" Source="Photos\noun_407526_cc.png"/>
                     <Button x:Name="menuItemButton7" Content="" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1" Click="menuItemButton7_Click" Opacity="0"/>
                 </Grid>
                 <Grid x:Name="menuItemGrid8" Grid.Column="3" Grid.Row="1">
                     <TextBlock x:Name="menuItem8Tile"  TextWrapping="Wrap" Text="Team Stats" VerticalAlignment="Bottom" TextAlignment="Center" Height="56.5" FontSize="36" FontWeight="Bold"/>
-                    <Image VerticalAlignment="Top" Height="252.5" Source="generic-user-purple.png"/>
+                    <Image VerticalAlignment="Top" Height="252.5" Source="Photos\noun_1348932_cc.png"/>
                     <Button x:Name="menuItemButton8" Content="" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1"/>
                 </Grid>
             </Grid>
@@ -259,7 +259,7 @@
             </Grid>
         </Grid>
         <Grid x:Name="DMParentGrid" Background="#FFE8E836" d:IsHidden="True"/>
-        <Grid x:Name="MyTeamGrid" Margin="0,-0.667,0.667,0.667">
+        <Grid x:Name="MyTeamGrid" Margin="0,-0.667,0.667,0.667" Width="1920" Height="1080" d:IsHidden="True">
             <Grid x:Name="TeamContainer" Margin="-10,0,-10.667,0" Background="White">
                 <Label x:Name="LabelPlayers" Content="Players" HorizontalAlignment="Left" Height="56.647" Margin="102.267,229.84,0,0" VerticalAlignment="Top" Width="472.8" FontSize="36"/>
                 <Label x:Name="LabelCoaches" Content="Coaches" HorizontalAlignment="Left" Height="60" Margin="102.267,0,0,348.713" VerticalAlignment="Bottom" Width="472.8" FontSize="36"/>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-\\cs-fs01\Profiles\ug\vincealfonso.delaroc\Desktop\481FieldCoachingApp\481FieldCoachApp\CoachingApp\obj\Debug\
+C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\
 CoachingApp
 none
 false
 DEBUG;TRACE
-\\cs-fs01\Profiles\ug\vincealfonso.delaroc\Desktop\481FieldCoachingApp\481FieldCoachApp\CoachingApp\App.xaml
+C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\App.xaml
 7165313159
 
-14-277146321
+141503833557
 14-1609446650
 CommentUserControl.xaml;MainWindow.xaml;MessageElementControl.xaml;NewsPageControl.xaml;PlannerUserControl.xaml;ResourcesPhotoControl.xaml;Simple Styles.xaml;
 
-True
+False
 

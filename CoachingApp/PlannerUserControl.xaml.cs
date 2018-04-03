@@ -12,19 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfApp1;
 
 namespace CoachingApp
 {
     /// <summary>
-    /// Interaction logic for NewsPageControl.xaml
+    /// Interaction logic for PlannerUserControl.xaml
     /// </summary>
-    public partial class NewsPageControl : UserControl
+    public partial class PlannerUserControl : UserControl
     {
-        public NewsPageControl()
+        public PlannerUserControl()
         {
             InitializeComponent();
         }
+
+        string PlannerPath;
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
@@ -33,23 +34,23 @@ namespace CoachingApp
             NewsTextBlock.Visibility = Visibility.Hidden;
             NewsTextBox.Visibility = Visibility.Visible;
             TitleTextBox.Visibility = Visibility.Visible;
-            NewsScrollViewLabel.Visibility = Visibility.Hidden;
             NewsScrollViewTextBox.Visibility = Visibility.Visible;
             EditButton.Visibility = Visibility.Hidden;
             SaveButton.Visibility = Visibility.Visible;
+            ChangePhotoButton.Visibility = Visibility.Visible;
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-                NewsTextBlock.Text = NewsTextBox.Text;
-                TitleLabel.Content = TitleTextBox.Text;
-                NewsTextBlock.Visibility = Visibility.Visible;
-                NewsTextBox.Visibility = Visibility.Hidden;
-                TitleTextBox.Visibility = Visibility.Hidden;
-                NewsScrollViewLabel.Visibility = Visibility.Visible;
-                NewsScrollViewTextBox.Visibility = Visibility.Hidden;
-                EditButton.Visibility = Visibility.Visible;
-                SaveButton.Visibility = Visibility.Hidden;
+            NewsTextBlock.Text = NewsTextBox.Text;
+            TitleLabel.Content = TitleTextBox.Text;
+            NewsTextBlock.Visibility = Visibility.Visible;
+            NewsTextBox.Visibility = Visibility.Hidden;
+            TitleTextBox.Visibility = Visibility.Hidden;
+            NewsScrollViewTextBox.Visibility = Visibility.Hidden;
+            EditButton.Visibility = Visibility.Visible;
+            SaveButton.Visibility = Visibility.Hidden;
+            ChangePhotoButton.Visibility = Visibility.Hidden;
         }
 
         private void PostComment_Click(object sender, RoutedEventArgs e)
@@ -57,6 +58,18 @@ namespace CoachingApp
             CommentUserControl comment = new CommentUserControl();
             comment.Comment.Text = CommentTextBox.Text;
             CommentSection.Children.Add(comment);
+        }
+
+        private void ChangePhotoButton_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dfg = new Microsoft.Win32.OpenFileDialog();
+            dfg.Filter = "JPG | *.jpg; PNG | *.png; GIF | *.gif";
+            if (dfg.ShowDialog() == true)
+            {
+                Console.WriteLine(dfg.FileName);
+                PlanPhoto.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(dfg.FileName, UriKind.Relative)) };
+                PlannerPath = dfg.FileName;
+            }
         }
     }
 }

@@ -55,15 +55,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CommentUserControl.xaml.cs">
+      <DependentUpon>CommentUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MessageElementControl.xaml.cs">
       <DependentUpon>MessageElementControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="NewsPageControl.xaml.cs">
       <DependentUpon>NewsPageControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ResourceTypeDialogueBox.xaml.cs">
-      <DependentUpon>ResourceTypeDialogueBox.xaml</DependentUpon>
+    <Compile Include="PlannerUserControl.xaml.cs">
+      <DependentUpon>PlannerUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ResourcesPhotoControl.xaml.cs">
+      <DependentUpon>ResourcesPhotoControl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CommentUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -80,19 +90,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="NewsDialogBox.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="NewsPageControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PlannerDialogBox.xaml">
+    <Page Include="PlannerUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ResourceTypeDialogueBox.xaml">
+    <Page Include="ResourcesPhotoControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -102,12 +108,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NewsDialogBox.xaml.cs">
-      <DependentUpon>NewsDialogBox.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PlannerDialogBox.xaml.cs">
-      <DependentUpon>PlannerDialogBox.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

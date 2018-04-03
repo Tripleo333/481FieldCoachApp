@@ -23,7 +23,7 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        String LoginName, resourceType;
+        String LoginName, resourceType, PlannerPath, ResourcePath;
         public MainWindow()
         {
             InitializeComponent();
@@ -106,8 +106,10 @@ namespace WpfApp1
 
         private void AddNewsButton_Click(object sender, RoutedEventArgs e)
         {
-            NewsDialogBox ndb = new NewsDialogBox(this);
-            ndb.Show();
+            NewsDialogBox.Visibility = Visibility.Visible;
+            AddNewsButton.Visibility = Visibility.Hidden;
+            BackButton.Visibility = Visibility.Hidden;
+            NewsfeedLabel.Visibility = Visibility.Hidden;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -189,103 +191,18 @@ namespace WpfApp1
 
         private void AddPlanButton_Click(object sender, RoutedEventArgs e)
         {
-            PlannerDialogBox pdb = new PlannerDialogBox(this);
-            pdb.Show();
-        }
-
-        private void CommentButton1Plan_Click(object sender, RoutedEventArgs e)
-        {
-            Comment1Plan.Content = CommentBox1Plan.Text;
-            Comment1Plan.Visibility = Visibility.Visible;
-            YourCommentBox1Plan.Visibility = Visibility.Visible;
-            Plan1CommentPic.Visibility = Visibility.Visible;
-            Comment1YouPlan.Visibility = Visibility.Visible;
-
-        }
-
-        private void CommentButton2Plan_Click(object sender, RoutedEventArgs e)
-        {
-            Comment2Plan.Content = CommentBox2Plan.Text;
-            Comment2Plan.Visibility = Visibility.Visible;
-            YourCommentBox2Plan.Visibility = Visibility.Visible;
-            Plan2CommentPic.Visibility = Visibility.Visible;
-            Comment2YouPlan.Visibility = Visibility.Visible;
-        }
-
-        private void EditButtonPlan1_Click(object sender, RoutedEventArgs e)
-        {
-            Plan1DescTextBox.Text = Plan1Desc.Content.ToString();
-            Plan1TitleTextBox.Text = Plan1Title.Content.ToString();
-            Plan1Title.Visibility = Visibility.Hidden;
-            Plan1TitleTextBox.Visibility = Visibility.Visible;
-            Plan1DescTextBox.Visibility = Visibility.Visible;
-            ChangePhotoPlan1Button.Visibility = Visibility.Visible;
-            SaveButtonPlan1.Visibility = Visibility.Visible;
-        }
-
-        private void EditButtonPlan2_Click(object sender, RoutedEventArgs e)
-        {
-            Plan2DescTextBox.Text = Plan2Desc.Content.ToString();
-            Plan2TitleTextBox.Text = Plan2Title.Content.ToString();
-            Plan2Title.Visibility = Visibility.Hidden;
-            Plan2TitleTextBox.Visibility = Visibility.Visible;
-            Plan2DescTextBox.Visibility = Visibility.Visible;
-            ChangePhotoPlan2Button.Visibility = Visibility.Visible;
-            SaveButtonPlan2.Visibility = Visibility.Visible;
-        }
-
-        private void SaveButtonPlan1_Click(object sender, RoutedEventArgs e)
-        {
-            Plan1Desc.Content = Plan1DescTextBox.Text;
-            Plan1Title.Content = Plan1TitleTextBox.Text;
-            Plan1Title.Visibility = Visibility.Visible;
-            Plan1TitleTextBox.Visibility = Visibility.Hidden;
-            Plan1DescTextBox.Visibility = Visibility.Hidden;
-            Plan1Desc.Visibility = Visibility.Visible;
-            EditButtonPlan1.Visibility = Visibility.Visible;
-            ChangePhotoPlan1Button.Visibility = Visibility.Hidden;
-            SaveButtonPlan1.Visibility = Visibility.Hidden;
-        }
-
-        private void SaveButtonPlan2_Click(object sender, RoutedEventArgs e)
-        {
-            Plan2Desc.Content = Plan2DescTextBox.Text;
-            Plan2Title.Content = Plan2TitleTextBox.Text;
-            Plan2Title.Visibility = Visibility.Visible;
-            Plan2TitleTextBox.Visibility = Visibility.Hidden;
-            Plan2DescTextBox.Visibility = Visibility.Hidden;
-            Plan2Desc.Visibility = Visibility.Visible;
-            EditButtonPlan2.Visibility = Visibility.Visible;
-            ChangePhotoPlan2Button.Visibility = Visibility.Hidden;
-            SaveButtonPlan2.Visibility = Visibility.Hidden;
-        }
-
-        private void ChangePhotoPlan1Button_Click(object sender, RoutedEventArgs e)
-        {
-            Microsoft.Win32.OpenFileDialog dfg = new Microsoft.Win32.OpenFileDialog();
-            dfg.Filter = "JPG | *.jpg; PNG | *.png; GIF | *.gif";
-            if (dfg.ShowDialog() == true)
-            {
-                Console.WriteLine(dfg.FileName);
-                Plan1Image.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(dfg.FileName, UriKind.Relative)) };
-            }
-        }
-
-        private void ChangePhotoPlan2Button_Click(object sender, RoutedEventArgs e)
-        {
-            Microsoft.Win32.OpenFileDialog dfg = new Microsoft.Win32.OpenFileDialog();
-            dfg.Filter = "JPG | *.jpg; PNG | *.png; GIF | *.gif";
-            if (dfg.ShowDialog() == true)
-            {
-                Console.WriteLine(dfg.FileName);
-                Plan2Image.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(dfg.FileName, UriKind.Relative)) };
-            }
+            PlannerLabel.Visibility = Visibility.Hidden;
+            BackButtonPlanner.Visibility = Visibility.Hidden;
+            AddPlanButton.Visibility = Visibility.Hidden;
+            PlannerDialogBox.Visibility = Visibility.Visible;
         }
 
         private void ShareButton_Click(object sender, RoutedEventArgs e)
         {
-            ResourceTypeDialogBox rtdb = new ResourceTypeDialogBox(this);
-            rtdb.Show();
+            ResourcesDialogBox.Visibility = Visibility.Visible;
+            ResourcesLabel.Visibility = Visibility.Hidden;
+            ShareButton.Visibility = Visibility.Hidden;
+            BackButtonResources.Visibility = Visibility.Hidden;
         }
 
         private void BackButtonResources_Click(object sender, RoutedEventArgs e)
@@ -293,84 +210,9 @@ namespace WpfApp1
             ResourcesGrid.Visibility = Visibility.Hidden;
         }
 
-        private void CommentButtonResource1_Click(object sender, RoutedEventArgs e)
-        {
-            CommentResource1.Content = CommentBoxResource1.Text;
-            CommentResource1.Visibility = Visibility.Visible;
-            YourCommentBoxResource1.Visibility = Visibility.Visible;
-            Resource1CommentPic.Visibility = Visibility.Visible;
-            CommentYouResource1.Visibility = Visibility.Visible;
-        }
-
-        private void CommentButtonResource2_Click(object sender, RoutedEventArgs e)
-        {
-            CommentResource2.Content = CommentBoxResource2.Text;
-            CommentResource2.Visibility = Visibility.Visible;
-            YourCommentBoxResource2.Visibility = Visibility.Visible;
-            Resource2CommentPic.Visibility = Visibility.Visible;
-            CommentYouResource2.Visibility = Visibility.Visible;
-        }
-
         public void SetResource(string resourceType)
         {
             this.resourceType = resourceType;
-        }
-
-        private void EditButtonResource2_Click(object sender, RoutedEventArgs e)
-        {
-            if (resourceType == "Text")
-            {
-                Resource2DescTextBox.Text = Resource2Desc.Content.ToString();
-                Resource2TitleTextBox.Text = Resource2Title.Content.ToString();
-                Resource2Title.Visibility = Visibility.Hidden;
-                Resource2Desc.Visibility = Visibility.Hidden;
-                Resource2TitleTextBox.Visibility = Visibility.Visible;
-                Resource2DescTextBox.Visibility = Visibility.Visible;
-                EditButtonResource2.Visibility = Visibility.Hidden;
-                SaveButtonResource2.Visibility = Visibility.Visible;
-
-            }
-            else if (resourceType == "Video")
-            {
-                Resource2TitleTextBox.Text = "URL: " + Resource2Title.Content.ToString();
-                Resource2Title.Visibility = Visibility.Hidden;
-                Resource2TitleTextBox.Visibility = Visibility.Visible;
-                EditButtonResource2.Visibility = Visibility.Hidden;
-                SaveButtonResource2.Visibility = Visibility.Visible;
-            }
-        }
-
-        private void SaveButtonResource2_Click(object sender, RoutedEventArgs e)
-        {
-            if (resourceType == "Text")
-            {
-                Resource2Desc.Content = Resource2DescTextBox.Text;
-                Resource2Title.Content = Resource2TitleTextBox.Text;
-                Resource2Title.Visibility = Visibility.Visible;
-                Resource2Desc.Visibility = Visibility.Visible;
-                Resource2TitleTextBox.Visibility = Visibility.Hidden;
-                Resource2DescTextBox.Visibility = Visibility.Hidden;
-                EditButtonResource2.Visibility = Visibility.Visible;
-                SaveButtonResource2.Visibility = Visibility.Hidden;
-            }
-            else if (resourceType == "Video")
-            {
-                Resource2Title.Content = Resource2TitleTextBox.Text;
-                Resource2Title.Visibility = Visibility.Visible;
-                Resource2TitleTextBox.Visibility = Visibility.Hidden;
-                EditButtonResource2.Visibility = Visibility.Visible;
-                SaveButtonResource2.Visibility = Visibility.Hidden;
-                //Resource2Video.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(path, UriKind.Relative)) };
-            }
-        }
-
-        private void EditButtonResource1_Click(object sender, RoutedEventArgs e)
-        {
-            Resource1TitleTextBox.Text = "URL: " + Resource1Title.Content.ToString();
-            Resource1Title.Visibility = Visibility.Hidden;
-            Resource1TitleTextBox.Visibility = Visibility.Visible;
-            EditButtonResource1.Visibility = Visibility.Hidden;
-            SaveButtonResource1.Visibility = Visibility.Visible;
         }
 
         private void menuItemButton5_Click(object sender, RoutedEventArgs e)
@@ -467,6 +309,7 @@ namespace WpfApp1
             ProfilePhotoImage.Visibility = Visibility.Visible;
             NamePlace.Visibility = Visibility.Visible;
 
+            NamePlace.Content = "Sarah Graham";
             NamePlaceProfile.Content = "Sarah Graham";
             AgeText.Content = "19";
             EmailText.Content = "sarahgman@ucalgary.ca";
@@ -496,6 +339,7 @@ namespace WpfApp1
             ProfilePhotoImage.Visibility = Visibility.Visible;
             NamePlace.Visibility = Visibility.Visible;
 
+            NamePlace.Content = "Tina Ermin";
             NamePlaceProfile.Content = "Tina Ermin";
             AgeText.Content = "24";
             EmailText.Content = "terminator@ucalgary.ca";
@@ -519,6 +363,7 @@ namespace WpfApp1
             ProfilePhotoImage.Visibility = Visibility.Visible;
             NamePlace.Visibility = Visibility.Visible;
 
+            NamePlace.Content = "Brenda Muier";
             NamePlaceProfile.Content = "Brenda Muier";
             AgeText.Content = "49";
             EmailText.Content = "brenma@ucalgary.ca";
@@ -533,6 +378,10 @@ namespace WpfApp1
             DefaultProfileGrid.Visibility = Visibility.Visible;
             StatsGrid.Visibility = Visibility.Hidden;
             MessageGrid.Visibility = Visibility.Hidden;
+
+            ProfileButton.IsEnabled = false;
+            MessageButton.IsEnabled = true;
+            StatisticsButton.IsEnabled = true;
         }
 
         private void MessageButton_Click(object sender, RoutedEventArgs e)
@@ -540,6 +389,10 @@ namespace WpfApp1
             DefaultProfileGrid.Visibility = Visibility.Hidden;
             StatsGrid.Visibility = Visibility.Hidden;
             MessageGrid.Visibility = Visibility.Visible;
+
+            ProfileButton.IsEnabled = true;
+            MessageButton.IsEnabled = true;
+            StatisticsButton.IsEnabled = false;
         }
 
         private void StatisticsButton_Click(object sender, RoutedEventArgs e)
@@ -547,6 +400,10 @@ namespace WpfApp1
             DefaultProfileGrid.Visibility = Visibility.Hidden;
             StatsGrid.Visibility = Visibility.Visible;
             MessageGrid.Visibility = Visibility.Hidden;
+
+            ProfileButton.IsEnabled = true;
+            MessageButton.IsEnabled = true;
+            StatisticsButton.IsEnabled = false;
         }
 
         private void SendMessageButton_Click(object sender, RoutedEventArgs e)
@@ -584,14 +441,170 @@ namespace WpfApp1
 
         }
 
-        private void SaveButtonResource1_Click(object sender, RoutedEventArgs e)
+        private void AddButton_Click_1(object sender, RoutedEventArgs e)
         {
-            Resource1Title.Content = Resource1TitleTextBox.Text;
-            Resource1Title.Visibility = Visibility.Visible;
-            Resource1TitleTextBox.Visibility = Visibility.Hidden;
-            EditButtonResource1.Visibility = Visibility.Visible;
-            SaveButtonResource1.Visibility = Visibility.Hidden;
-            //Resource1Video.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(path, UriKind.Relative)) };
+            NewsPageControl newspage = new NewsPageControl();
+            newspage.TitleLabel.Content = TitleTextBox.Text;
+            newspage.NewsTextBlock.Text = Description_TextBox.Text;
+            NewsUniGrid.Children.Insert(0, newspage);
+            Description_TextBox.Text = "";
+            TitleTextBox.Text = "";
+            NewsDialogBox.Visibility = Visibility.Hidden;
+            NewsfeedLabel.Visibility = Visibility.Visible;
+            AddNewsButton.Visibility = Visibility.Visible;
+            BackButton.Visibility = Visibility.Visible;
+        }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            NewsDialogBox.Visibility = Visibility.Hidden;
+            Description_TextBox.Text = "";
+            TitleTextBox.Text = "";
+            NewsfeedLabel.Visibility = Visibility.Visible;
+            AddNewsButton.Visibility = Visibility.Visible;
+            BackButton.Visibility = Visibility.Visible;
+        }
+
+        private void PlannerDialogCloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            PlannerDialogBox.Visibility = Visibility.Hidden;
+            PlannerTitleTextBox.Text = "";
+            PlannerDescTextBox.Text = "";
+            AddPlanButton.Visibility = Visibility.Visible;
+            PlannerLabel.Visibility = Visibility.Visible;
+            BackButtonPlanner.Visibility = Visibility.Visible;
+        }
+
+        private void PlannerDialogAddPlan_Click(object sender, RoutedEventArgs e)
+        {
+            if (PlannerPath != null)
+            {
+                PlannerUserControl planner = new PlannerUserControl();
+                planner.TitleLabel.Content = PlannerTitleTextBox.Text;
+                planner.NewsTextBlock.Text = PlannerDescTextBox.Text;
+                planner.PlanPhoto.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(PlannerPath, UriKind.Relative)) };
+                PlannerUniGrid.Children.Insert(0, planner);
+                PlannerTitleTextBox.Text = "";
+                PlannerDescTextBox.Text = "";
+                AddPlanButton.Visibility = Visibility.Visible;
+                BackButtonPlanner.Visibility = Visibility.Visible;
+                PlannerLabel.Visibility = Visibility.Visible;
+                PlannerDialogBox.Visibility = Visibility.Hidden;
+            } else
+            {
+                System.Windows.MessageBox.Show("Plan requires a photo", "Error");
+            }
+        }
+
+        private void ResourceDialogCloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            ResourcesDialogBox.Visibility = Visibility.Hidden;
+            ResourceTextBox.Text = "";
+            ResourceTitleTextBox.Text = "";
+            ResourceVideoURLBox.Text = "";
+            ShareButton.Visibility = Visibility.Visible;
+            ResourcesLabel.Visibility = Visibility.Visible;
+            BackButtonResources.Visibility = Visibility.Visible;
+
+            ResourceTitleTextBox.Visibility = Visibility.Hidden;
+            VideoPreview.Visibility = Visibility.Hidden;
+            ResourceVideoURLBox.Visibility = Visibility.Hidden;
+            ResourceTextBox.Visibility = Visibility.Hidden;
+            PreviewURLButton.Visibility = Visibility.Hidden;
+        }
+
+        private void TextResourceButton_Click(object sender, RoutedEventArgs e)
+        {
+            ResourceTitleTextBox.Visibility = Visibility.Visible;
+            VideoPreview.Visibility = Visibility.Hidden;
+            ResourceVideoURLBox.Visibility = Visibility.Hidden;
+            ResourceTextBox.Visibility = Visibility.Visible;
+            PreviewURLButton.Visibility = Visibility.Hidden;
+            ShareResourceButton.IsEnabled = true;
+            resourceType = "Text";
+        }
+
+        private void PreviewURLButton_Click(object sender, RoutedEventArgs e)
+        {
+            // TEMPORARY
+            Microsoft.Win32.OpenFileDialog dfg = new Microsoft.Win32.OpenFileDialog();
+            dfg.Filter = "JPG | *.jpg; PNG | *.png; GIF | *.gif";
+            if (dfg.ShowDialog() == true)
+            {
+                Console.WriteLine(dfg.FileName);
+                UploadPhotoPlan.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(dfg.FileName, UriKind.Relative)) };
+                ResourcePath = dfg.FileName;
+            }
+        }
+
+        private void VideoResourceButton_Click(object sender, RoutedEventArgs e)
+        {
+            ResourceTitleTextBox.Visibility = Visibility.Visible;
+            VideoPreview.Visibility = Visibility.Hidden;
+            ResourceVideoURLBox.Visibility = Visibility.Visible;
+            ResourceTextBox.Visibility = Visibility.Hidden;
+            PreviewURLButton.Visibility = Visibility.Visible;
+            ShareResourceButton.IsEnabled = true;
+            resourceType = "Video";
+        }
+
+        private void ShareResourceButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (resourceType == "Text")
+            {
+                NewsPageControl text = new NewsPageControl();
+                text.TitleLabel.Content = ResourceTitleTextBox.Text;
+                text.NewsTextBlock.Text = ResourceTextBox.Text;
+                ResourcesUniGrid.Children.Insert(0, text);
+                ResourceTextBox.Text = "";
+                ResourceTitleTextBox.Text = "";
+                ResourceVideoURLBox.Text = "";
+                ResourceTitleTextBox.Visibility = Visibility.Hidden;
+                VideoPreview.Visibility = Visibility.Hidden;
+                ResourceVideoURLBox.Visibility = Visibility.Hidden;
+                ResourceTextBox.Visibility = Visibility.Hidden;
+                PreviewURLButton.Visibility = Visibility.Hidden;
+                ResourcesDialogBox.Visibility = Visibility.Hidden;
+
+                ResourcesLabel.Visibility = Visibility.Visible;
+                BackButtonResources.Visibility = Visibility.Visible;
+                ShareButton.Visibility = Visibility.Visible;
+            }
+            else if (resourceType == "Video" && ResourcePath != null)
+            {
+                ResourcesPhotoControl video = new ResourcesPhotoControl();
+                video.TitleLabel.Content = ResourceTitleTextBox.Text;
+                video.ResourcePhoto.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(ResourcePath, UriKind.Relative)) };
+                ResourcesUniGrid.Children.Insert(0, video);
+                ResourceTextBox.Text = "";
+                ResourceTitleTextBox.Text = "";
+                ResourceVideoURLBox.Text = "";
+                ResourceTitleTextBox.Visibility = Visibility.Hidden;
+                VideoPreview.Visibility = Visibility.Hidden;
+                ResourceVideoURLBox.Visibility = Visibility.Hidden;
+                ResourceTextBox.Visibility = Visibility.Hidden;
+                PreviewURLButton.Visibility = Visibility.Hidden;
+                ResourcesDialogBox.Visibility = Visibility.Hidden;
+                ResourcesLabel.Visibility = Visibility.Visible;
+                BackButtonResources.Visibility = Visibility.Visible;
+                ShareButton.Visibility = Visibility.Visible;
+            } else if (resourceType == "Video" && ResourcePath == null)
+
+            {
+                System.Windows.MessageBox.Show("No video specified", "Error");
+            }
+        }
+
+        private void UploadPlanButton_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dfg = new Microsoft.Win32.OpenFileDialog();
+            dfg.Filter = "JPG | *.jpg; PNG | *.png; GIF | *.gif";
+            if (dfg.ShowDialog() == true)
+            {
+                Console.WriteLine(dfg.FileName);
+                UploadPhotoPlan.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(dfg.FileName, UriKind.Relative)) };
+                PlannerPath = dfg.FileName;
+            }
         }
     }
 }

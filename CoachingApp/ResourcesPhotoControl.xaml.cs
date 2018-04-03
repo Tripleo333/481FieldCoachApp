@@ -12,44 +12,34 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfApp1;
 
 namespace CoachingApp
 {
     /// <summary>
-    /// Interaction logic for NewsPageControl.xaml
+    /// Interaction logic for ResourcesPhotoControl.xaml
     /// </summary>
-    public partial class NewsPageControl : UserControl
+    public partial class ResourcesPhotoControl : UserControl
     {
-        public NewsPageControl()
+        public ResourcesPhotoControl()
         {
             InitializeComponent();
         }
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
-            NewsTextBox.Text = NewsTextBlock.Text;
             TitleTextBox.Text = TitleLabel.Content.ToString();
-            NewsTextBlock.Visibility = Visibility.Hidden;
-            NewsTextBox.Visibility = Visibility.Visible;
             TitleTextBox.Visibility = Visibility.Visible;
-            NewsScrollViewLabel.Visibility = Visibility.Hidden;
-            NewsScrollViewTextBox.Visibility = Visibility.Visible;
             EditButton.Visibility = Visibility.Hidden;
             SaveButton.Visibility = Visibility.Visible;
+
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-                NewsTextBlock.Text = NewsTextBox.Text;
-                TitleLabel.Content = TitleTextBox.Text;
-                NewsTextBlock.Visibility = Visibility.Visible;
-                NewsTextBox.Visibility = Visibility.Hidden;
-                TitleTextBox.Visibility = Visibility.Hidden;
-                NewsScrollViewLabel.Visibility = Visibility.Visible;
-                NewsScrollViewTextBox.Visibility = Visibility.Hidden;
-                EditButton.Visibility = Visibility.Visible;
-                SaveButton.Visibility = Visibility.Hidden;
+            TitleLabel.Content = TitleTextBox.Text;
+            TitleTextBox.Visibility = Visibility.Hidden;
+            EditButton.Visibility = Visibility.Visible;
+            SaveButton.Visibility = Visibility.Hidden;
         }
 
         private void PostComment_Click(object sender, RoutedEventArgs e)

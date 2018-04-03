@@ -263,12 +263,12 @@
             <Button x:Name="DMbackToMessagesList" Content="Back" HorizontalAlignment="Left" Height="99" Margin="-0.5,-1,0,0" VerticalAlignment="Top" Width="314" FontSize="36" Click="DMtoMessagesList"/>
             <TextBlock HorizontalAlignment="Left" Height="107" Margin="106,103,0,0" TextWrapping="Wrap" Text="Suzie Z." VerticalAlignment="Top" Width="1704" FontSize="72" Foreground="#FFF49F11"/>
             <ScrollViewer x:Name="messagesScrollViewer" HorizontalAlignment="Left" Height="732" Margin="98,206,0,0" VerticalAlignment="Top" Width="1712">
-                <UniformGrid x:Name="MessagesUniformGrid"/>
+                <UniformGrid x:Name="MessagesUniformGrid" Columns="1"/>
             </ScrollViewer>
             <Grid x:Name="currentMessageGrid" Height="100" Margin="0,926,0,0" Width="1718">
-                <TextBox x:Name="currentMessageTextBox" TextWrapping="Wrap" Text="TextBox" Width="1604" HorizontalAlignment="Left" FontSize="36"/>
+                <TextBox x:Name="currentMessageTextBox" TextWrapping="Wrap" Text="" Width="1604" HorizontalAlignment="Left" FontSize="36"/>
+                <Button x:Name="SendButton" Content="Send" Height="100" Margin="0" Width="114" FontSize="36" Click="Send_Button_Click" Background="#FF80AEFF" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
             </Grid>
-            <Button Content="Send" HorizontalAlignment="Left" Height="100" Margin="1698,948,0,0" VerticalAlignment="Top" Width="114" FontSize="36"/>
         </Grid>
         <Grid x:Name="MyTeamGrid" Margin="0,-0.667,0.667,0.667" Width="1920" Height="1080" d:IsHidden="True">
             <Grid x:Name="TeamContainer" Margin="-10,0,-10.667,0" Background="White">

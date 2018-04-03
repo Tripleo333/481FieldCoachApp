@@ -73,6 +73,9 @@
     <Compile Include="ResourcesPhotoControl.xaml.cs">
       <DependentUpon>ResourcesPhotoControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="sendMessageUserControl.xaml.cs">
+      <DependentUpon>sendMessageUserControl.xaml</DependentUpon>
+    </Compile>
     <Page Include="CommentUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -106,6 +109,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ResourcesPhotoControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="sendMessageUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

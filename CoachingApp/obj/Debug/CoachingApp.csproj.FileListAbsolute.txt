@@ -99,3 +99,7 @@ C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\Comme
 C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\NewsPageControl.baml
 C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\PlannerUserControl.baml
 C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\ResourcesPhotoControl.baml
+C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\messageUserControl.g.cs
+C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\sendMessageUserControl.g.cs
+C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\messageUserControl.baml
+C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\sendMessageUserControl.baml

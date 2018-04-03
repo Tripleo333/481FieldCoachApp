@@ -542,6 +542,14 @@ namespace WpfApp1
             this.DMParentGrid.Visibility = Visibility.Hidden;
         }
 
+        private void Send_Button_Click(object sender, RoutedEventArgs e)
+        {
+            sendMessageUserControl sentMessage = new sendMessageUserControl();
+            sentMessage.sendMessageTextBox.Text = currentMessageTextBox.Text;
+            currentMessageTextBox.Text = "";
+            MessagesUniformGrid.Children.Add(sentMessage);
+        }
+
         private void VideoResourceButton_Click(object sender, RoutedEventArgs e)
         {
             ResourceTitleTextBox.Visibility = Visibility.Visible;

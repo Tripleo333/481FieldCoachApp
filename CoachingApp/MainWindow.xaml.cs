@@ -537,6 +537,11 @@ namespace WpfApp1
             }
         }
 
+        private void DMtoMessagesList(object sender, RoutedEventArgs e)
+        {
+            this.DMParentGrid.Visibility = Visibility.Hidden;
+        }
+
         private void VideoResourceButton_Click(object sender, RoutedEventArgs e)
         {
             ResourceTitleTextBox.Visibility = Visibility.Visible;

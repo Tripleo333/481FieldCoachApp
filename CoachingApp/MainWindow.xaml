@@ -37,7 +37,7 @@
             <TextBlock HorizontalAlignment="Center" Height="126" Margin="0,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1395" FontSize="72" Text="Your account has been created successfully" Foreground="#FFF49F11"/>
             <Button x:Name="gotoLoginPage" Content="Login&#xD;&#xA;" HorizontalAlignment="Center" Height="88" Margin="0,552,0,0" VerticalAlignment="Top" Width="301" FontSize="48" Click="loginPageButton"/>
         </Grid>
-        <Grid x:Name="CoachMainPageGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFEFF2F1" Width="1920" Height="1080">
+        <Grid x:Name="CoachMainPageGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFEFF2F1" Width="1920" Height="1080" d:IsHidden="True">
             <Grid x:Name="titleBarGrid"  HorizontalAlignment="Center" Height="160" VerticalAlignment="Top" Margin="0,100,0,0" Background="#00000000" Width="1920" >
                 <Rectangle x:Name="BottomBoarderRect" Stroke="Black" VerticalAlignment="Bottom" Height="5" Fill="Black" Width="1500" HorizontalAlignment="Center" />
                 <Image x:Name="CoachImage" HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="176" Source="C:\Users\Admin\source\repos\481Project\CoachingApp\Photos\stockCoachPhoto.jpg"/>
@@ -97,11 +97,11 @@
             </Grid>
             <Button Content="Exit" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="150" Height="50" FontSize="36" Click="mainMenuExitButton"/>
         </Grid>
-        <Grid x:Name="CalendarParentGrid" Background="#FFE8E836" OpacityMask="Black" d:IsHidden="True">
+        <Grid x:Name="CalendarParentGrid" Background="#FFF49F11" OpacityMask="Black" d:IsHidden="True">
             <Grid x:Name="CalendarTitleGrid" Height="100" VerticalAlignment="Top" Margin="0,75,0,0">
-                <TextBlock x:Name="CalendarTitle" TextWrapping="Wrap" FontSize="72" HorizontalAlignment="Left"><Run Text="Calendar"/><LineBreak/></TextBlock>
+                <TextBlock x:Name="CalendarTitle" TextWrapping="Wrap" FontSize="72" HorizontalAlignment="Left" Foreground="Black" Margin="36,0,0,0"><Run Text="Calendar"/><LineBreak/></TextBlock>
             </Grid>
-            <Grid x:Name="CalendarGrid" HorizontalAlignment="Center" Height="864" VerticalAlignment="Bottom" Width="1850" Margin="0,0,0,35" Background="#FFFFA9A9">
+            <Grid x:Name="CalendarGrid" HorizontalAlignment="Center" Height="864" VerticalAlignment="Bottom" Width="1850" Margin="0,0,0,35" Background="#FFEFF2F1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -164,9 +164,9 @@
             </Grid>
             <Button Content="Back" HorizontalAlignment="Left" Height="64.333" Margin="0,0,0,0" VerticalAlignment="Top" Width="208" FontSize="36" Click="backToMainMenu"/>
         </Grid>
-        <Grid x:Name="MessagesParentGrid" Background="#FFE8E836" d:IsHidden="True">
+        <Grid x:Name="MessagesParentGrid" Background="#FFEFF2F1">
             <Grid x:Name="MessagesTitleGrid" Height="100" VerticalAlignment="Top" Margin="0,100,0,0">
-                <TextBlock FontSize="72" HorizontalAlignment="Left" Height="100" Margin="48,0,0,0" TextWrapping="Wrap" Text="Messages" VerticalAlignment="Top" Width="600"/>
+                <TextBlock FontSize="72" HorizontalAlignment="Left" Height="100" Margin="48,0,0,0" TextWrapping="Wrap" Text="Messages" VerticalAlignment="Top" Width="600" Foreground="#FFF49F11"/>
                 <Button Content="+ Start Group" HorizontalAlignment="Right" VerticalAlignment="Center" Width="510" Height="100" FontSize="72" Click="StartGroupClick"/>
 
             </Grid>

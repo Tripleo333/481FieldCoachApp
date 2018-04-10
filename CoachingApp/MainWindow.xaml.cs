@@ -259,7 +259,8 @@ namespace WpfApp1
 
         private void CreateGroupChat(object sender, RoutedEventArgs e)
         {
-            //TODO:
+            this.ChooseGroupChatGrid.Visibility = Visibility.Hidden;
+            this.DMParentGrid.Visibility = Visibility.Visible;
         }
 
         private void BacktoMessagesFromDM(object sender, RoutedEventArgs e)
@@ -548,6 +549,16 @@ namespace WpfApp1
             sentMessage.sendMessageTextBox.Text = currentMessageTextBox.Text;
             currentMessageTextBox.Text = "";
             MessagesUniformGrid.Children.Add(sentMessage);
+        }
+
+        private void ExitCreateEvent_Click(object sender, RoutedEventArgs e)
+        {
+            this.AddEventParentGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void AddNewCalendarEvent_Click(object sender, RoutedEventArgs e)
+        {
+            this.AddEventParentGrid.Visibility = Visibility.Visible;
         }
 
         private void VideoResourceButton_Click(object sender, RoutedEventArgs e)

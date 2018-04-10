@@ -76,6 +76,9 @@
     <Compile Include="sendMessageUserControl.xaml.cs">
       <DependentUpon>sendMessageUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StartChatControl.xaml.cs">
+      <DependentUpon>StartChatControl.xaml</DependentUpon>
+    </Compile>
     <Page Include="CommentUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -119,6 +122,10 @@
     <Page Include="Simple Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StartChatControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

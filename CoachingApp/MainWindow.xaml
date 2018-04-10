@@ -8,7 +8,7 @@
         WindowState="Maximized"
         mc:Ignorable="d"
         Title="MainWindow" WindowStyle="None" Width="1920" Height="1080">
-    <Grid x:Name="Parent_Grid" HorizontalAlignment="Left" Height="1070" Margin="0" VerticalAlignment="Top" Width="1910" d:LayoutOverrides="TopMargin, BottomMargin">
+    <Grid x:Name="Parent_Grid" HorizontalAlignment="Left" Height="1080" Margin="0" VerticalAlignment="Top" Width="1920">
 
         <Grid x:Name="LoginGrid" Background="#FFEFF2F1" Margin="0,0,0,0" Width="1920" Height="1080">
             <TextBlock  HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="100" Text="Enter your credentials" Foreground="#FFF49F11" TextAlignment="Center" Margin="0,166,0,0" Width="1025.66"/>
@@ -34,7 +34,7 @@
             <TextBlock Height="59" Margin="675.667,746.5,900.333,0" TextWrapping="Wrap" Text="Birthday:" VerticalAlignment="Top" Width="344" FontSize="36" HorizontalAlignment="Center"/>
             <DatePicker Height="60" Margin="675.667,833.334,645.667,0" VerticalAlignment="Top" Width="598.666" FontSize="36" HorizontalAlignment="Center" />
         </Grid>
-        <Grid x:Name="AccountCreatedSucGrid" Height="1080" Background="#FFEFF2F1" Width="1920" d:IsHidden="True">
+        <Grid x:Name="AccountCreatedSucGrid" Height="1080" Background="#FFEFF2F1" Width="1920">
             <TextBlock HorizontalAlignment="Center" Height="126" Margin="0,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1395" FontSize="72" Text="Your account has been created successfully" Foreground="#FFF49F11"/>
             <Button x:Name="gotoLoginPage" Content="Login&#xA;" HorizontalAlignment="Center" Height="88" Margin="0,552,0,0" VerticalAlignment="Top" Width="301" FontSize="48" Click="loginPageButton"/>
         </Grid>
@@ -98,74 +98,7 @@
             </Grid>
             <Button Content="Exit" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="150" Height="50" FontSize="36" Click="mainMenuExitButton"/>
         </Grid>
-        <Grid x:Name="CalendarParentGrid" Background="#FFF49F11" OpacityMask="Black">
-            <Grid x:Name="CalendarTitleGrid" Height="100" VerticalAlignment="Top" Margin="0,75,0,0">
-                <TextBlock x:Name="CalendarTitle" TextWrapping="Wrap" FontSize="72" HorizontalAlignment="Left" Foreground="Black" Margin="36,0,0,0"><Run Text="Calendar"/><LineBreak/></TextBlock>
-            </Grid>
-            <Grid x:Name="CalendarGrid" HorizontalAlignment="Center" Height="864" VerticalAlignment="Bottom" Width="1850" Margin="0,0,0,35" Background="#FFEFF2F1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBox x:Name="MondayTitle0" Grid.Row="0" Grid.Column="0" FontSize="50" TextAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Text="Sunday"/>
-                <TextBox x:Name="MondayTitle1" Grid.Row="0" Grid.Column="1" FontSize="50" TextAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Text="Monday"/>
-                <TextBox x:Name="MondayTitle2" Grid.Row="0" Grid.Column="2" FontSize="50" TextAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Text="Tuseday"/>
-                <TextBox x:Name="MondayTitle3" Grid.Row="0" Grid.Column="3" FontSize="50" TextAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Text="Wednesday"/>
-                <TextBox x:Name="MondayTitle4" Grid.Row="0" Grid.Column="4" FontSize="50" TextAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Text="Thursday"/>
-                <TextBox x:Name="MondayTitle5" Grid.Row="0" Grid.Column="5" FontSize="50" TextAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Text="Friday"/>
-                <TextBox x:Name="MondayTitle6" Grid.Row="0" Grid.Column="6" FontSize="50" TextAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Text="Saturday"/>
-                <TextBox x:Name="dateNum1" Grid.Row="1" Grid.Column="0" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="1"/>
-                <TextBox x:Name="dateNum2" Grid.Row="1" Grid.Column="1" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="2"/>
-                <TextBox x:Name="dateNum3" Grid.Row="1" Grid.Column="2" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="3"/>
-                <TextBox x:Name="dateNum4" Grid.Row="1" Grid.Column="3" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="4"/>
-                <TextBox x:Name="dateNum5" Grid.Row="1" Grid.Column="4" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="5"/>
-                <TextBox x:Name="dateNum6" Grid.Row="1" Grid.Column="5" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="6"/>
-                <TextBox x:Name="dateNum7" Grid.Row="1" Grid.Column="6" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="7"/>
-
-                <TextBox x:Name="dateNum8" Grid.Row="2" Grid.Column="0" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="8"/>
-                <TextBox x:Name="dateNum9" Grid.Row="2" Grid.Column="1" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="9"/>
-                <TextBox x:Name="dateNum10" Grid.Row="2" Grid.Column="2" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="10"/>
-                <TextBox x:Name="dateNum11" Grid.Row="2" Grid.Column="3" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="11"/>
-                <TextBox x:Name="dateNum12" Grid.Row="2" Grid.Column="4" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="12"/>
-                <TextBox x:Name="dateNum13" Grid.Row="2" Grid.Column="5" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="13"/>
-                <TextBox x:Name="dateNum14" Grid.Row="2" Grid.Column="6" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="14"/>
-
-                <TextBox x:Name="dateNum15" Grid.Row="3" Grid.Column="0" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="15"/>
-                <TextBox x:Name="dateNum16" Grid.Row="3" Grid.Column="1" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="16"/>
-                <TextBox x:Name="dateNum17" Grid.Row="3" Grid.Column="2" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="17"/>
-                <TextBox x:Name="dateNum18" Grid.Row="3" Grid.Column="3" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="18"/>
-                <TextBox x:Name="dateNum19" Grid.Row="3" Grid.Column="4" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="19"/>
-                <TextBox x:Name="dateNum20" Grid.Row="3" Grid.Column="5" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="20"/>
-                <TextBox x:Name="dateNum21" Grid.Row="3" Grid.Column="6" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="21"/>
-
-                <TextBox x:Name="dateNum22" Grid.Row="4" Grid.Column="0" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="22"/>
-                <TextBox x:Name="dateNum23" Grid.Row="4" Grid.Column="1" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="23"/>
-                <TextBox x:Name="dateNum24" Grid.Row="4" Grid.Column="2" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="24"/>
-                <TextBox x:Name="dateNum25" Grid.Row="4" Grid.Column="3" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="25"/>
-                <TextBox x:Name="dateNum26" Grid.Row="4" Grid.Column="4" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="26"/>
-                <TextBox x:Name="dateNum27" Grid.Row="4" Grid.Column="5" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="27"/>
-                <TextBox x:Name="dateNum28" Grid.Row="4" Grid.Column="6" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="28"/>
-
-                <TextBox x:Name="dateNum29" Grid.Row="5" Grid.Column="0" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="29"/>
-                <TextBox x:Name="dateNum30" Grid.Row="5" Grid.Column="1" FontSize="35" TextAlignment="Left" VerticalContentAlignment="Top" Background="{x:Null}" Text="30"/>
-
-            </Grid>
-            <Button Content="Back" HorizontalAlignment="Left" Height="64.333" Margin="0,0,0,0" VerticalAlignment="Top" Width="208" FontSize="36" Click="backToMainMenu"/>
-        </Grid>
-        <Grid x:Name="MessagesParentGrid" Background="#FFEFF2F1">
+        <Grid x:Name="MessagesParentGrid" Background="#FFEFF2F1" d:IsHidden="True">
             <Grid x:Name="MessagesTitleGrid" Height="100" VerticalAlignment="Top" Margin="0,100,0,0">
                 <TextBlock FontSize="72" HorizontalAlignment="Left" Height="100" Margin="48,0,0,0" TextWrapping="Wrap" Text="Messages" VerticalAlignment="Top" Width="600" Foreground="#FFF49F11"/>
                 <Button Content="+ Start Group" HorizontalAlignment="Right" VerticalAlignment="Center" Width="510" Height="100" FontSize="72" Click="StartGroupClick"/>
@@ -182,7 +115,7 @@
                 </UniformGrid>
             </ScrollViewer>
         </Grid>
-        <Grid x:Name="NewsfeedGrid" HorizontalAlignment="Left" Height="1080" Margin="0,0,-5,-10" VerticalAlignment="Top" Width="1915" Background="#FFF49F11">
+        <Grid x:Name="NewsfeedGrid" HorizontalAlignment="Left" Height="1080" Margin="0,0,-5,-10" VerticalAlignment="Top" Width="1915" Background="#FFF49F11" d:IsHidden="True">
             <ScrollViewer x:Name="NewsfeedScrollView" Margin="0,146.703,0,0" Background="#FFFFFDFD">
                 <UniformGrid x:Name="NewsUniGrid" Height="Auto" Width="1908.5" Columns="1"/>
             </ScrollViewer>
@@ -198,7 +131,7 @@
             <Button x:Name="AddNewsButton" Content="Add News" HorizontalAlignment="Left" Height="68.5" Margin="1660,45.798,0,0" VerticalAlignment="Top" Width="223.5" FontSize="24" Click="AddNewsButton_Click" FontWeight="Bold"/>
             <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Left" Height="68.5" Margin="48,45.798,0,0" VerticalAlignment="Top" Width="130.5" FontSize="24" Click="BackButton_Click" FontWeight="Bold"/>
         </Grid>
-        <Grid x:Name="MyProfileGrid" HorizontalAlignment="Left" Height="1080" Margin="0,0,0,0" VerticalAlignment="Top" Width="1920" Background="White">
+        <Grid x:Name="MyProfileGrid" HorizontalAlignment="Left" Height="1080" Margin="0,0,0,0" VerticalAlignment="Top" Width="1920" Background="White" d:IsHidden="True">
             <Button x:Name="UploadProfPhoto" HorizontalAlignment="Left" Height="42" Margin="134,640,0,0" VerticalAlignment="Top" Width="192" Click="UploadProfPhoto_Click" Background="#FFDDDDDD" Content="Upload Photo" FontSize="20"/>
             <Button x:Name="BackButtonProfile" Content="Back" HorizontalAlignment="Left" Height="88.5" Margin="37,75,0,0" VerticalAlignment="Top" Width="130.5" FontSize="36" Click="BackButtonProfile_Click"/>
             <Label x:Name="NameLabel" Content="Name:" HorizontalAlignment="Left" Height="75" Margin="486,255,0,0" VerticalAlignment="Top" Width="114" FontSize="36" Foreground="#FFF49F11"/>
@@ -221,14 +154,14 @@
             <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Height="54" Margin="486,951,0,0" VerticalAlignment="Top" Width="158" FontSize="36" Visibility="Hidden" Click="SaveButton_Click"/>
             <Rectangle x:Name="ProfilePhoto" Stroke="Black" Margin="37,255,1467,457"/>
         </Grid>
-        <Grid x:Name="PlannerGrid" HorizontalAlignment="Left" Height="1080" VerticalAlignment="Top" Width="1920" Background="#FFF49F11">
+        <Grid x:Name="PlannerGrid" HorizontalAlignment="Left" Height="1080" VerticalAlignment="Top" Width="1920" Background="#FFF49F11" d:IsHidden="True">
             <ScrollViewer x:Name="PlannerScrollView" Margin="0,146.5,10,10" Background="#FFFFFDFD">
                 <UniformGrid x:Name="PlannerUniGrid" Height="Auto" Width="1910" Columns="1"/>
             </ScrollViewer>
             <Button x:Name="BackButtonPlanner" Content="Back" HorizontalAlignment="Left" Height="68.5" Margin="47.333,44.5,0,0" VerticalAlignment="Top" Width="130.5" FontSize="24" Click="BackButtonPlanner_Click" FontWeight="Bold"/>
             <Button x:Name="AddPlanButton" Content="Add Plan" HorizontalAlignment="Left" Height="68.5" Margin="1658.75,37.833,0,0" VerticalAlignment="Top" Width="223.5" FontSize="24" Click="AddPlanButton_Click" FontWeight="Bold"/>
             <Label x:Name="PlannerLabel" Content="Planner&#xA;" Height="117" Margin="819,37.833,744,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" Foreground="White"/>
-            <Grid x:Name="PlannerDialogBox" Margin="0,0,10,0.667" Background="White" d:IsHidden="True" Visibility="Hidden">
+            <Grid x:Name="PlannerDialogBox" Margin="0,0,10,0.667" Background="White" Visibility="Hidden">
                 <Label x:Name="EnterTitleLabel" Content="Enter Title&#xA;" HorizontalAlignment="Left" Height="77.651" Margin="45.186,73,0,0" VerticalAlignment="Top" Width="1826.297" FontSize="48" Foreground="#FFF49F11"/>
                 <Label x:Name="EnterDescLabel" Content="Enter Description&#xA;" HorizontalAlignment="Left" Height="89.651" Margin="45.186,339.814,0,0" VerticalAlignment="Top" Width="815.297" FontSize="48" Foreground="#FFF49F11"/>
                 <TextBox x:Name="PlannerTitleTextBox" HorizontalAlignment="Left" Height="149.209" Margin="45.186,150.651,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1826.297" FontSize="48" RenderTransformOrigin="0.495,0.545"/>
@@ -239,7 +172,7 @@
                 <Button x:Name="PlannerDialogCloseButton" Content="x" Height="60" VerticalAlignment="Top" HorizontalAlignment="Right" Width="58.767" FontSize="30" Background="#FFB0B0B0" Click="PlannerDialogCloseButton_Click"/>
             </Grid>
         </Grid>
-        <Grid x:Name="ResourcesGrid" Height="1080" Margin="0,0,-10,-10" VerticalAlignment="Top" Background="#FFF49F11" Width="1920">
+        <Grid x:Name="ResourcesGrid" Height="1080" Margin="0,0,-10,-10" VerticalAlignment="Top" Background="#FFF49F11" Width="1920" d:IsHidden="True">
             <ScrollViewer x:Name="ResourcesScrollView" Margin="0,146.5,0,0" Background="#FFFFFDFD">
                 <UniformGrid x:Name="ResourcesUniGrid" Height="Auto" Width="1920" Columns="1"/>
             </ScrollViewer>
@@ -259,7 +192,7 @@
                 <Button x:Name="ResourceDialogCloseButton" Content="x" Height="60" VerticalAlignment="Top" HorizontalAlignment="Right" Width="58.767" FontSize="30" Background="#FFB0B0B0" Click="ResourceDialogCloseButton_Click"/>
             </Grid>
         </Grid>
-        <Grid x:Name="DMParentGrid" Background="#FFEFF2F1">
+        <Grid x:Name="DMParentGrid" Background="#FFEFF2F1" d:IsHidden="True">
             <Button x:Name="DMbackToMessagesList" Content="Back" HorizontalAlignment="Left" Height="99" Margin="-0.5,-1,0,0" VerticalAlignment="Top" Width="314" FontSize="36" Click="DMtoMessagesList"/>
             <TextBlock HorizontalAlignment="Left" Height="107" Margin="106,103,0,0" TextWrapping="Wrap" Text="Suzie Z." VerticalAlignment="Top" Width="1704" FontSize="72" Foreground="#FFF49F11"/>
             <ScrollViewer x:Name="messagesScrollViewer" HorizontalAlignment="Left" Height="732" Margin="98,206,0,0" VerticalAlignment="Top" Width="1712">
@@ -270,7 +203,7 @@
                 <Button x:Name="SendButton" Content="Send" Height="100" Margin="0" Width="114" FontSize="36" Click="Send_Button_Click" Background="#FF80AEFF" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
             </Grid>
         </Grid>
-        <Grid x:Name="MyTeamGrid" Margin="0,0,0,0" Width="1920" Height="1080">
+        <Grid x:Name="MyTeamGrid" Margin="0,0,0,0" Width="1920" Height="1080" d:IsHidden="True">
             <Grid x:Name="TeamContainer" Background="White">
                 <Label x:Name="LabelPlayers" Content="Players" HorizontalAlignment="Left" Height="56.647" Margin="102.267,229.84,0,0" VerticalAlignment="Top" Width="472.8" FontSize="36"/>
                 <Label x:Name="LabelCoaches" Content="Coaches" HorizontalAlignment="Left" Height="60" Margin="102.267,0,0,348.713" VerticalAlignment="Bottom" Width="472.8" FontSize="36"/>
@@ -297,7 +230,7 @@
             <Button x:Name="MessageButton" Content="Message" HorizontalAlignment="Left" Height="72" Margin="407.4,0,0,308.266" VerticalAlignment="Bottom" Width="216" FontSize="24" Click="MessageButton_Click"/>
             <Button x:Name="StatisticsButton" Content="Statistics" HorizontalAlignment="Left" Height="72" Margin="407.4,0,0,207.866" VerticalAlignment="Bottom" Width="216" FontSize="24" Click="StatisticsButton_Click"/>
             <Label x:Name="NamePlace" Content="Name" HorizontalAlignment="Left" Margin="338.4,500.434,0,512.366" Width="345.6" FontSize="42" Visibility="Hidden"/>
-            <Grid x:Name="DefaultProfileGrid" Margin="759.867,243.334,331.866,92.666" d:IsHidden="True">
+            <Grid x:Name="DefaultProfileGrid" Margin="759.867,243.334,331.866,92.666">
                 <Label x:Name="LabelName" Content="Name:" HorizontalAlignment="Left" Height="62.4" Margin="26,40,0,0" VerticalAlignment="Top" Width="110.4" FontSize="36" Foreground="#FFF49F11"/>
                 <Label x:Name="LabelAge" Content="Age:" HorizontalAlignment="Left" Height="62.4" Margin="26,140.8,0,0" VerticalAlignment="Top" Width="110.4" FontSize="36" Foreground="#FFF49F11"/>
                 <Label x:Name="LabelPhone" Content="Phone:" HorizontalAlignment="Left" Height="62.4" Margin="26,236.8,0,0" VerticalAlignment="Top" Width="132.8" FontSize="36" Foreground="#FFF49F11"/>
@@ -327,35 +260,103 @@
             </Grid>
             <Button x:Name="ProfileButton" Content="Profile" HorizontalAlignment="Left" Height="72" Margin="407.4,0,0,409.766" VerticalAlignment="Bottom" Width="216" FontSize="24" Click="ProfileButton_Click"/>
         </Grid>
-        <Grid x:Name="ChooseGroupChatGrid" Background="#FFEFF2F1" Width="1920" Height="1080">
+        <Grid x:Name="ChooseGroupChatGrid" Background="#FFEFF2F1" Width="1920" Height="1080" d:IsHidden="True">
             <Grid x:Name="ChooseGCmemGrid" Height="100" VerticalAlignment="Top" Margin="0,100,0,0">
                 <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Foreground="#FFF49F11"><Run Text="     "/><Run Text="Choose Group Chat Members"/></TextBlock>
             </Grid>
             <ScrollViewer x:Name="PreviousMessagesScrollViewer_Copy" HorizontalAlignment="Center" Height="751" VerticalAlignment="Center" Width="1725" Margin="97.5,240.5,97.5,88.5">
                 <UniformGrid x:Name="UGDMs1" VerticalAlignment="Top" Columns="1">
                     <Grid x:Name="Suzie" Height="100" Width="1708">
-                        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="generic-user-purple.png"/>
-                        <TextBlock TextWrapping="Wrap" Text="Suzie Z." VerticalAlignment="Center" FontSize="36" Width="1588" HorizontalAlignment="Right"/>
-                        <CheckBox Content="&#xA;" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24">
+                        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="generic-user-purple.png" Margin="100,0,0,0"/>
+                        <TextBlock TextWrapping="Wrap" Text="Suzie Z." VerticalAlignment="Center" FontSize="36" Width="1479" HorizontalAlignment="Right" Margin="0,26.058"/>
+                        <CheckBox Content="" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" Margin="0,17,0,0">
                             <CheckBox.LayoutTransform>
                                 <ScaleTransform ScaleX="4" ScaleY="4"/>
                             </CheckBox.LayoutTransform>
                         </CheckBox>
+                        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="1" Stroke="Black" VerticalAlignment="Bottom" Width="1250" Margin="0,0,0,1" StrokeThickness="5"/>
 
-                    </Grid>
-                    <Grid x:Name="Suzie2" Height="100" Width="1708">
-                        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="generic-user-purple.png"/>
-                        <TextBlock TextWrapping="Wrap" Text="Anna B." VerticalAlignment="Center" FontSize="36" Width="1588" HorizontalAlignment="Right"/>
-                        <CheckBox Content="&#xA;" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24">
-                            <CheckBox.LayoutTransform>
-                                <ScaleTransform ScaleX="4" ScaleY="4"/>
-                            </CheckBox.LayoutTransform>
-                        </CheckBox>
                     </Grid>
                 </UniformGrid>
             </ScrollViewer>
             <Button Content="Create Group" HorizontalAlignment="Left" Height="96" Margin="1484.667,122.667,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="CreateGroupChat"/>
             <Button Content="Back" HorizontalAlignment="Left" Height="96" Margin="1484.667,928.595,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="BacktoMessages"/>
+        </Grid>
+        <Grid x:Name="CalendarParentGrid" Background="#FFF49F11" OpacityMask="Black">
+            <Grid x:Name="CalendarTitleGrid" Height="100" VerticalAlignment="Top" Margin="0,75,0,0">
+                <TextBlock x:Name="CalendarTitle" TextWrapping="Wrap" FontSize="72" HorizontalAlignment="Left" Foreground="Black" Margin="36,0,0,0"><Run Text="Calendar"/><LineBreak/></TextBlock>
+                <Button x:Name="AddNewCalendarEvent" Content="Add Event" Width="293" Margin="0,0,33,0" FontSize="48" Height="90" HorizontalAlignment="Right" Click="AddNewCalendarEvent_Click"/>
+            </Grid>
+            <Grid x:Name="CalendarGrid" HorizontalAlignment="Center" Height="864" VerticalAlignment="Bottom" Width="1850" Margin="0,0,0,35" Background="#FFEFF2F1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="MondayTitle0" Grid.Row="0" Grid.Column="0" FontSize="50" TextAlignment="Center"  Background="{x:Null}" Text="Sunday"/>
+                <TextBlock x:Name="MondayTitle1" Grid.Row="0" Grid.Column="1" FontSize="50" TextAlignment="Center"  Background="{x:Null}" Text="Monday"/>
+                <TextBlock x:Name="MondayTitle2" Grid.Row="0" Grid.Column="2" FontSize="50" TextAlignment="Center"  Background="{x:Null}" Text="Tuseday"/>
+                <TextBlock x:Name="MondayTitle3" Grid.Row="0" Grid.Column="3" FontSize="50" TextAlignment="Center" Background="{x:Null}" Text="Wednesday"/>
+                <TextBlock x:Name="MondayTitle4" Grid.Row="0" Grid.Column="4" FontSize="50" TextAlignment="Center" Background="{x:Null}" Text="Thursday"/>
+                <TextBlock x:Name="MondayTitle5" Grid.Row="0" Grid.Column="5" FontSize="50" TextAlignment="Center" Background="{x:Null}" Text="Friday"/>
+                <TextBlock x:Name="MondayTitle6" Grid.Row="0" Grid.Column="6" FontSize="50" TextAlignment="Center" Background="{x:Null}" Text="Saturday"/>
+                <Grid x:Name="DayGrid1"  Grid.Row="1" Grid.Column="0">
+                    <Rectangle Stroke="Black" StrokeThickness="2"/>
+                    <TextBlock x:Name="dateNum1" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text=" 1"/>
+                    <Grid x:Name="AllDayEventsGrid" VerticalAlignment="Bottom" Height="95"/>
+                </Grid>
+                <TextBlock x:Name="dateNum2" Grid.Row="1" Grid.Column="1" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="2"/>
+                <TextBlock x:Name="dateNum3" Grid.Row="1" Grid.Column="2" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="3"/>
+                <TextBlock x:Name="dateNum4" Grid.Row="1" Grid.Column="3" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="4"/>
+                <TextBlock x:Name="dateNum5" Grid.Row="1" Grid.Column="4" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="5"/>
+                <TextBlock x:Name="dateNum6" Grid.Row="1" Grid.Column="5" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="6"/>
+                <TextBlock x:Name="dateNum7" Grid.Row="1" Grid.Column="6" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="7"/>
+
+                <TextBlock x:Name="dateNum8" Grid.Row="2" Grid.Column="0" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="8"/>
+                <TextBlock x:Name="dateNum9" Grid.Row="2" Grid.Column="1" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="9"/>
+                <TextBlock x:Name="dateNum10" Grid.Row="2" Grid.Column="2" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="10"/>
+                <TextBlock x:Name="dateNum11" Grid.Row="2" Grid.Column="3" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="11"/>
+                <TextBlock x:Name="dateNum12" Grid.Row="2" Grid.Column="4" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="12"/>
+                <TextBlock x:Name="dateNum13" Grid.Row="2" Grid.Column="5" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="13"/>
+                <TextBlock x:Name="dateNum14" Grid.Row="2" Grid.Column="6" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="14"/>
+
+                <TextBlock x:Name="dateNum15" Grid.Row="3" Grid.Column="0" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="15"/>
+                <TextBlock x:Name="dateNum16" Grid.Row="3" Grid.Column="1" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="16"/>
+                <TextBlock x:Name="dateNum17" Grid.Row="3" Grid.Column="2" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="17"/>
+                <TextBlock x:Name="dateNum18" Grid.Row="3" Grid.Column="3" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="18"/>
+                <TextBlock x:Name="dateNum19" Grid.Row="3" Grid.Column="4" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="19"/>
+                <TextBlock x:Name="dateNum20" Grid.Row="3" Grid.Column="5" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="20"/>
+                <TextBlock x:Name="dateNum21" Grid.Row="3" Grid.Column="6" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="21"/>
+
+                <TextBlock x:Name="dateNum22" Grid.Row="4" Grid.Column="0" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="22"/>
+                <TextBlock x:Name="dateNum23" Grid.Row="4" Grid.Column="1" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="23"/>
+                <TextBlock x:Name="dateNum24" Grid.Row="4" Grid.Column="2" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="24"/>
+                <TextBlock x:Name="dateNum25" Grid.Row="4" Grid.Column="3" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="25"/>
+                <TextBlock x:Name="dateNum26" Grid.Row="4" Grid.Column="4" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="26"/>
+                <TextBlock x:Name="dateNum27" Grid.Row="4" Grid.Column="5" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="27"/>
+                <TextBlock x:Name="dateNum28" Grid.Row="4" Grid.Column="6" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="28"/>
+
+                <TextBlock x:Name="dateNum29" Grid.Row="5" Grid.Column="0" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="29"/>
+                <TextBlock x:Name="dateNum30" Grid.Row="5" Grid.Column="1" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="30"/>
+            </Grid>
+            <Button Content="Back" HorizontalAlignment="Left" Height="64.333" Margin="0,0,0,0" VerticalAlignment="Top" Width="208" FontSize="36" Click="backToMainMenu"/>
+        </Grid>
+        <Grid x:Name="AddEventParentGrid" Background="#B2EFF2F1" d:IsHidden="True">
+            <Grid x:Name="AddEventGrid" Height="900" Width="1500" Background="White">
+                <Button x:Name="ExitCreateEvent" Content="X" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Height="75" FontSize="36" Click="ExitCreateEvent_Click"/>
+            </Grid>
         </Grid>
     </Grid>
 </Window>

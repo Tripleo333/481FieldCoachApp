@@ -42,6 +42,7 @@ namespace WpfApp1
             this.MyTeamGrid.Visibility = Visibility.Hidden;
             //this.sendMess1Grid.Visibility = Visibility.Hidden;
             //this.TeamStatsParenGrid.Visibility = Visibility.Hidden;
+            this.AddEventParentGrid.Visibility = Visibility.Hidden;
 
         }
 

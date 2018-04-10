@@ -10,7 +10,7 @@
         Title="MainWindow" WindowStyle="None" Width="1920" Height="1080">
     <Grid x:Name="Parent_Grid" HorizontalAlignment="Left" Height="1080" Margin="0" VerticalAlignment="Top" Width="1920">
 
-        <Grid x:Name="LoginGrid" Background="#FFEFF2F1" Margin="0,0,0,0" Width="1920" Height="1080">
+        <Grid x:Name="LoginGrid" Background="#FFEFF2F1" Margin="0,0,0,0" Width="1920" Height="1080" d:IsHidden="True">
             <TextBlock  HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="100" Text="Enter your credentials" Foreground="#FFF49F11" TextAlignment="Center" Margin="0,166,0,0" Width="1025.66"/>
             <TextBox x:Name="EmailTextBox" HorizontalAlignment="Left" Height="71" Margin="685,441,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="604" FontSize="48"/>
             <TextBlock HorizontalAlignment="Left" Height="59" Margin="685,377,0,0" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Width="344" FontSize="36"/>
@@ -21,7 +21,7 @@
             <Button Content="Create Account" HorizontalAlignment="Left" Height="60" Margin="1024,752,0,0" VerticalAlignment="Top" Width="265" FontSize="36" Click="Create_Account_Click"/>
 
         </Grid>
-        <Grid x:Name="CreateAccountGrid" HorizontalAlignment="Left" Height="1080" Margin="0,0,0,0" VerticalAlignment="Top" Width="1920" Background="#FFEFF2F1">
+        <Grid x:Name="CreateAccountGrid" HorizontalAlignment="Left" Height="1080" Margin="0,0,0,0" VerticalAlignment="Top" Width="1920" Background="#FFEFF2F1" d:IsHidden="True">
             <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Text="Create an account" Foreground="#FFF49F11" TextAlignment="Center" Margin="0,58,0,0" HorizontalAlignment="Center"/>
             <TextBox x:Name="EmailTextBox_Copy" Height="71" Margin="673,240,643,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="604" FontSize="48" HorizontalAlignment="Center"/>
             <TextBlock Height="59" Margin="675.667,174.5,900.333,0" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Width="344" FontSize="36" HorizontalAlignment="Center"/>
@@ -34,11 +34,11 @@
             <TextBlock Height="59" Margin="675.667,746.5,900.333,0" TextWrapping="Wrap" Text="Birthday:" VerticalAlignment="Top" Width="344" FontSize="36" HorizontalAlignment="Center"/>
             <DatePicker Height="60" Margin="675.667,833.334,645.667,0" VerticalAlignment="Top" Width="598.666" FontSize="36" HorizontalAlignment="Center" />
         </Grid>
-        <Grid x:Name="AccountCreatedSucGrid" Height="1080" Background="#FFEFF2F1" Width="1920">
+        <Grid x:Name="AccountCreatedSucGrid" Height="1080" Background="#FFEFF2F1" Width="1920" d:IsHidden="True">
             <TextBlock HorizontalAlignment="Center" Height="126" Margin="0,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1395" FontSize="72" Text="Your account has been created successfully" Foreground="#FFF49F11"/>
             <Button x:Name="gotoLoginPage" Content="Login&#xA;" HorizontalAlignment="Center" Height="88" Margin="0,552,0,0" VerticalAlignment="Top" Width="301" FontSize="48" Click="loginPageButton"/>
         </Grid>
-        <Grid x:Name="CoachMainPageGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFEFF2F1" Width="1920" Height="1080">
+        <Grid x:Name="CoachMainPageGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFEFF2F1" Width="1920" Height="1080" d:IsHidden="True">
             <Grid x:Name="titleBarGrid"  HorizontalAlignment="Center" Height="160" VerticalAlignment="Top" Margin="0,100,0,0" Background="#00000000" Width="1920" >
                 <Rectangle x:Name="BottomBoarderRect" Stroke="Black" VerticalAlignment="Bottom" Height="5" Fill="Black" Width="1500" HorizontalAlignment="Center" />
                 <Image x:Name="CoachImage" HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="176" Source="C:\Users\Admin\source\repos\481Project\CoachingApp\Photos\stockCoachPhoto.jpg"/>
@@ -282,7 +282,7 @@
             <Button Content="Create Group" HorizontalAlignment="Left" Height="96" Margin="1484.667,122.667,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="CreateGroupChat"/>
             <Button Content="Back" HorizontalAlignment="Left" Height="96" Margin="1484.667,928.595,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="BacktoMessages"/>
         </Grid>
-        <Grid x:Name="CalendarParentGrid" Background="#FFF49F11" OpacityMask="Black">
+        <Grid x:Name="CalendarParentGrid" Background="#FFF49F11" OpacityMask="Black" d:IsHidden="True">
             <Grid x:Name="CalendarTitleGrid" Height="100" VerticalAlignment="Top" Margin="0,75,0,0">
                 <TextBlock x:Name="CalendarTitle" TextWrapping="Wrap" FontSize="72" HorizontalAlignment="Left" Foreground="Black" Margin="36,0,0,0"><Run Text="Calendar"/><LineBreak/></TextBlock>
                 <Button x:Name="AddNewCalendarEvent" Content="Add Event" Width="293" Margin="0,0,33,0" FontSize="48" Height="90" HorizontalAlignment="Right" Click="AddNewCalendarEvent_Click"/>
@@ -353,9 +353,11 @@
             </Grid>
             <Button Content="Back" HorizontalAlignment="Left" Height="64.333" Margin="0,0,0,0" VerticalAlignment="Top" Width="208" FontSize="36" Click="backToMainMenu"/>
         </Grid>
-        <Grid x:Name="AddEventParentGrid" Background="#B2EFF2F1" d:IsHidden="True">
+        <Grid x:Name="AddEventParentGrid" Background="#B2EFF2F1">
             <Grid x:Name="AddEventGrid" Height="900" Width="1500" Background="White">
                 <Button x:Name="ExitCreateEvent" Content="X" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Height="75" FontSize="36" Click="ExitCreateEvent_Click"/>
+                <TextBlock x:Name="AddEventTitle" HorizontalAlignment="Left" Height="88" Margin="15,75,0,0" TextWrapping="Wrap" Text="Add an Event" VerticalAlignment="Top" Width="1262" FontSize="72" Foreground="#FFF49F11"/>
+                <Grid x:Name="NewEventFormGrid" HorizontalAlignment="Center" Height="650" VerticalAlignment="Center" Width="1350" Margin="0,115,0,0"/>
             </Grid>
         </Grid>
     </Grid>

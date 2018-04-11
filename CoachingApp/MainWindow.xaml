@@ -315,9 +315,8 @@
                 <Grid x:Name="DayGrid1"  Grid.Row="1" Grid.Column="0">
                     <Rectangle Stroke="Black" StrokeThickness="2"/>
                     <TextBlock x:Name="dateNum1" FontSize="35" TextAlignment="Left" Background="{x:Null}"><Run Text=" 1"/></TextBlock>
-                    <Grid x:Name="EventsUniformGridDay1" Margin="0" VerticalAlignment="Bottom" Height="97">
-                        <Button Height="35" Width="263" Background="#FFFF5959" ></Button>
-                    </Grid>
+                    <UniformGrid x:Name="EventsUniformGridDay1" Margin="0" VerticalAlignment="Bottom" Height="97" Columns="1">
+                    </UniformGrid>
                 </Grid>
                 <TextBlock x:Name="dateNum2" Grid.Row="1" Grid.Column="1" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="2"/>
                 <TextBlock x:Name="dateNum3" Grid.Row="1" Grid.Column="2" FontSize="35" TextAlignment="Left" Background="{x:Null}" Text="3"/>
@@ -365,7 +364,7 @@
                     <TextBox x:Name = "NewEventTitleBox"  HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="&#xD;&#xA;&#xD;&#xA;" VerticalAlignment="Top" Width="1100" FontSize="24" Margin="198,12,0,0"/>
                     <TextBox x:Name="NewEventPlaceBox" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="&#xA;&#xA;" VerticalAlignment="Top" Width="1100" FontSize="24" Margin="198,77.534,0,0"/>
                     <TextBlock x:Name="NewEventDateTitle" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" Margin="16,151.687,0,0" Height="55.767" Text="Date:"/>
-                    <TextBox x:Name="Date" Text="DD/MM/YY" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="1100" FontSize="24" Margin="198,151.687,0,0"/>
+                    <TextBox x:Name="EventDateInput" Text="DD/MM/YY" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="1100" FontSize="24" Margin="198,151.687,0,0"/>
                     <TextBlock x:Name="NewEventDescriptionTitle" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" Margin="14,226.687,0,0" Height="55.767" Text="Details:"/>
                     <TextBox x:Name="NewEventDetailsBox" HorizontalAlignment="Left" Height="113" TextWrapping="Wrap" Text="&#xA;&#xA;" VerticalAlignment="Top" Width="1100" FontSize="24" Margin="198,235,0,0"/>
                 </Grid>

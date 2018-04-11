@@ -105,3 +105,6 @@ C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\messa
 C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\sendMessageUserControl.baml
 C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\StartChatControl.g.cs
 C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\StartChatControl.baml
+C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\EventUserControl.g.cs
+C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\EventUserControl.baml

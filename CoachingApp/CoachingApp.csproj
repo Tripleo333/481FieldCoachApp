@@ -58,6 +58,9 @@
     <Compile Include="CommentUserControl.xaml.cs">
       <DependentUpon>CommentUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EventUserControl.xaml.cs">
+      <DependentUpon>EventUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MessageElementControl.xaml.cs">
       <DependentUpon>MessageElementControl.xaml</DependentUpon>
     </Compile>
@@ -80,6 +83,10 @@
       <DependentUpon>StartChatControl.xaml</DependentUpon>
     </Compile>
     <Page Include="CommentUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EventUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

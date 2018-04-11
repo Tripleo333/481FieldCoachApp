@@ -566,6 +566,8 @@ namespace WpfApp1
         {
             this.AddEventParentGrid.Visibility = Visibility.Hidden;
             //TODO: more stuff here
+            EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text);
+            EventsUniformGridDay1.Children.Add(EUC);
         }
 
         private void VideoResourceButton_Click(object sender, RoutedEventArgs e)

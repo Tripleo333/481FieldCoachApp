@@ -562,6 +562,12 @@ namespace WpfApp1
             this.AddEventParentGrid.Visibility = Visibility.Visible;
         }
 
+        private void AddEventClick(object sender, RoutedEventArgs e)
+        {
+            this.AddEventParentGrid.Visibility = Visibility.Hidden;
+            //TODO: more stuff here
+        }
+
         private void VideoResourceButton_Click(object sender, RoutedEventArgs e)
         {
             ResourceTitleTextBox.Visibility = Visibility.Visible;

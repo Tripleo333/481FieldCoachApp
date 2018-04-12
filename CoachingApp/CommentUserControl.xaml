@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CoachingApp"
              mc:Ignorable="d" d:DesignWidth="300" Height="82.764" Width="1912.8">
-    <Grid x:Name="CommentGrid" Margin="0,0,0,5" Background="#FFECE2E2">
+    <Grid x:Name="CommentGrid" Margin="0,0,0,5" Background="#FFF7F7F7">
         <Label x:Name="Name" Content="You said" HorizontalAlignment="Left" Margin="20,16.5,0,18.264" Width="95.5" FontSize="20" FontWeight="Bold"/>
         <TextBlock x:Name="Comment" Margin="109.5,21.5,79.8,13.264" TextWrapping="Wrap" Text="hi" FontSize="20"/>
 

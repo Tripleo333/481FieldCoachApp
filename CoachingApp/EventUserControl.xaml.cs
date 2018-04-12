@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1;
 
 namespace CoachingApp
 {
@@ -25,14 +26,30 @@ namespace CoachingApp
         String Description = "";
         String Title = "";
         String Place = "";
-        public EventUserControl(String DateI, String DescriptionI, String TitleI, String PlaceI)
+        String Time = "";
+        public EventUserControl(String DateI, String DescriptionI, String TitleI, String PlaceI, String TimeI, MainWindow EventDetails)
         {
             InitializeComponent();
             Date = DateI;
             Description = DescriptionI;
             Title = TitleI;
             Place = PlaceI;
+            Time = TimeI;
             EventButton.Content = Title;
+            DetailsHandler = EventDetails;
+
+        }
+
+        private MainWindow DetailsHandler;
+
+        private void EventButton_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            DetailsHandler.BackgroundGridEvent.Visibility = Visibility.Visible;
+            DetailsHandler.EventDetailsGrid.Visibility = Visibility.Visible;
+            DetailsHandler.EventTitleLabel.Content = Title;
+            DetailsHandler.EventDateLabel.Content = Time;
+            DetailsHandler.EventPlaceLabel.Text = Place;
+            DetailsHandler.EventDetailsLabel.Content = Description;
         }
     }
 }

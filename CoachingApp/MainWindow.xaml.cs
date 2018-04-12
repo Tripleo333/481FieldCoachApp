@@ -24,6 +24,11 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         String LoginName, resourceType, PlannerPath, ResourcePath;
+        int day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, day11;
+        int day12, day13, day14, day15, day16, day17, day18, day19, day20, day21;
+        int day22, day23, day24, day25, day26, day27, day28, day29, day30, day31;
+        int bdayyear = 1994, matches = 5;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -128,16 +133,60 @@ namespace WpfApp1
             PhoneTextBox.Visibility = Visibility.Visible;
             PhoneInput.Visibility = Visibility.Hidden;
 
-            EmailTextBox.Text = EmailInput.Content.ToString();
-            EmailTextBox.Visibility = Visibility.Visible;
+            EmailTextBox1.Text = EmailInput.Content.ToString();
+            EmailTextBox1.Visibility = Visibility.Visible;
             EmailInput.Visibility = Visibility.Hidden;
 
             BiographyTextBox.Text = BiographyInput.Content.ToString();
             BiographyTextBox.Visibility = Visibility.Visible;
             BiographyInput.Visibility = Visibility.Hidden;
 
-            BirthdayPicker.Visibility = Visibility.Visible;
             BirthdayInput.Visibility = Visibility.Hidden;
+
+            string bday = BirthdayInput.Content.ToString();
+            int count = 0;
+            for(int i = 0; i < bday.Length; i++)
+            {
+                if (count == 0)
+                {
+                    if (bday[i] != '/')
+                    {
+                        BdayDayTextBox.Text += bday[i].ToString();
+                    }
+                    else
+                    {
+                        count++;
+                    }
+                }
+
+                else if (count == 1)
+                {
+                    if (bday[i] != '/')
+                    {
+                        BdayMonthTextBox.Text += bday[i].ToString();
+                    }
+                    else
+                    {
+                        count++;
+                    }
+                }
+
+                else if (count == 2)
+                {
+                    if (bday[i] != '/')
+                    {
+                        BdayYearTextBox.Text += bday[i].ToString();
+                    }
+                    else
+                    {
+                        count++;
+                    }
+                }
+            }
+                
+            BdayDayTextBox.Visibility = Visibility.Visible;
+            BdayMonthTextBox.Visibility = Visibility.Visible;
+            BdayYearTextBox.Visibility = Visibility.Visible;
 
             EditButton.Visibility = Visibility.Hidden;
             SaveButton.Visibility = Visibility.Visible;
@@ -153,17 +202,23 @@ namespace WpfApp1
             PhoneTextBox.Visibility = Visibility.Hidden;
             PhoneInput.Visibility = Visibility.Visible;
 
-            EmailInput.Content = EmailTextBox.Text;
-            EmailTextBox.Visibility = Visibility.Hidden;
+            EmailInput.Content = EmailTextBox1.Text;
+            EmailTextBox1.Visibility = Visibility.Hidden;
             EmailInput.Visibility = Visibility.Visible;
 
             BiographyInput.Content = BiographyTextBox.Text;
             BiographyTextBox.Visibility = Visibility.Hidden;
             BiographyInput.Visibility = Visibility.Visible;
 
-            BirthdayInput.Content = BirthdayPicker.Text;
-            BirthdayPicker.Visibility = Visibility.Hidden;
             BirthdayInput.Visibility = Visibility.Visible;
+            BirthdayInput.Content = BdayDayTextBox.Text + '/' + BdayMonthTextBox.Text + '/' + BdayYearTextBox.Text;
+            BdayDayTextBox.Visibility = Visibility.Hidden;
+            BdayMonthTextBox.Visibility = Visibility.Hidden;
+            BdayYearTextBox.Visibility = Visibility.Hidden;
+            bdayyear = int.Parse(BdayYearTextBox.Text);
+            BdayDayTextBox.Text = "";
+            BdayMonthTextBox.Text = "";
+            BdayYearTextBox.Text = "";
 
             EditButton.Visibility = Visibility.Visible;
             SaveButton.Visibility = Visibility.Hidden;
@@ -252,10 +307,148 @@ namespace WpfApp1
             this.ChooseGroupChatGrid.Visibility = Visibility.Visible;
         }
 
+        private void BackButtonStats_Click(object sender, RoutedEventArgs e)
+        {
+            TeamStatsGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void menuItemButton8_Click(object sender, RoutedEventArgs e)
+        {
+            TeamStatsGrid.Visibility = Visibility.Visible;
+        }
+
+        private void AddStatsButton_Click(object sender, RoutedEventArgs e)
+        {
+            StatsDialogBox.Visibility = Visibility.Visible;
+            CancelStats.Visibility = Visibility.Visible;
+            AddStatsButton.Visibility = Visibility.Hidden;
+            SaveStats.Visibility = Visibility.Visible;
+
+
+        }
+
+        private void CancelStats_Click(object sender, RoutedEventArgs e)
+        {
+            StatsDialogBox.Visibility = Visibility.Hidden;
+            CancelStats.Visibility = Visibility.Hidden;
+            AddStatsButton.Visibility = Visibility.Visible;
+            SaveStats.Visibility = Visibility.Hidden;
+            TeamNameTextBox.Text = "";
+            HomeScoreTextBox.Text = "";
+            VisitorScoreTextBox.Text = "";
+        }
+
+        private void SaveStats_Click(object sender, RoutedEventArgs e)
+        {
+            MatchStatsControl control = new MatchStatsControl(this);
+            control.Opponent.Text = TeamNameTextBox.Text;
+            control.OpponentScore.Text = VisitorScoreTextBox.Text;
+            control.HomeScore.Text = HomeScoreTextBox.Text;
+
+            MatchStatsUniGrid.Children.Add(control);
+            StatsDialogBox.Visibility = Visibility.Hidden;
+            CancelStats.Visibility = Visibility.Hidden;
+            AddStatsButton.Visibility = Visibility.Visible;
+            SaveStats.Visibility = Visibility.Hidden;
+            TeamNameTextBox.Text = "";
+            HomeScoreTextBox.Text = "";
+            VisitorScoreTextBox.Text = "";
+        }
+
+        private void EditGoals_Click(object sender, RoutedEventArgs e)
+        {
+            GoalsAmountLabel.Visibility = Visibility.Hidden;
+            GoalsTextBox.Text = GoalsAmountLabel.Content.ToString();
+            GoalsTextBox.Visibility = Visibility.Visible;
+            EditGoals.Visibility = Visibility.Hidden;
+            SaveGoals.Visibility = Visibility.Visible;
+        }
+
+        private void EditWins_Click(object sender, RoutedEventArgs e)
+        {
+            WinsAmountLabel.Visibility = Visibility.Hidden;
+            WinsTextBox.Text = WinsAmountLabel.Content.ToString();
+            WinsTextBox.Visibility = Visibility.Visible;
+            EditWins.Visibility = Visibility.Hidden;
+            SaveWins.Visibility = Visibility.Visible;
+        }
+
+        private void SaveWins_Click(object sender, RoutedEventArgs e)
+        {
+            WinsAmountLabel.Visibility = Visibility.Visible;
+            WinsAmountLabel.Content = WinsTextBox.Text;
+            WinsTextBox.Visibility = Visibility.Hidden;
+            EditWins.Visibility = Visibility.Visible;
+            SaveWins.Visibility = Visibility.Hidden;
+
+            matches = int.Parse(WinsTextBox.Text) + int.Parse(LossAmountLabel.Content.ToString()) + int.Parse(DrawsAmountLabel.Content.ToString());
+            PlayedAmount.Content = matches;
+        }
+
+        private void EditLosses_Click(object sender, RoutedEventArgs e)
+        {
+            LossAmountLabel.Visibility = Visibility.Hidden;
+            LossesTextBox.Text = LossAmountLabel.Content.ToString();
+            LossesTextBox.Visibility = Visibility.Visible;
+            EditLosses.Visibility = Visibility.Hidden;
+            SaveLoss.Visibility = Visibility.Visible;
+        }
+
+        private void SaveLoss_Click(object sender, RoutedEventArgs e)
+        {
+            LossAmountLabel.Visibility = Visibility.Visible;
+            LossAmountLabel.Content = LossesTextBox.Text;
+            LossesTextBox.Visibility = Visibility.Hidden;
+            EditLosses.Visibility = Visibility.Visible;
+            SaveLoss.Visibility = Visibility.Hidden;
+
+            matches = int.Parse(WinsAmountLabel.Content.ToString()) + int.Parse(LossesTextBox.Text) + int.Parse(DrawsAmountLabel.Content.ToString());
+            PlayedAmount.Content = matches;
+        }
+
+        private void EditDraws_Click(object sender, RoutedEventArgs e)
+        {
+            DrawsAmountLabel.Visibility = Visibility.Hidden;
+            DrawsTextBox.Text = DrawsAmountLabel.Content.ToString();
+            DrawsTextBox.Visibility = Visibility.Visible;
+            EditDraws.Visibility = Visibility.Hidden;
+            SaveDraws.Visibility = Visibility.Visible;
+        }
+
+        private void SaveDraws_Click(object sender, RoutedEventArgs e)
+        {
+            DrawsAmountLabel.Visibility = Visibility.Visible;
+            DrawsAmountLabel.Content = DrawsTextBox.Text;
+            DrawsTextBox.Visibility = Visibility.Hidden;
+            EditDraws.Visibility = Visibility.Visible;
+            SaveDraws.Visibility = Visibility.Hidden;
+
+            matches = int.Parse(WinsAmountLabel.Content.ToString()) + int.Parse(LossAmountLabel.Content.ToString()) + int.Parse(DrawsTextBox.Text);
+            PlayedAmount.Content = matches;
+        }
+
+        private void SaveGoals_Click(object sender, RoutedEventArgs e)
+        {
+            GoalsAmountLabel.Visibility = Visibility.Visible;
+            GoalsAmountLabel.Content = GoalsTextBox.Text;
+            GoalsTextBox.Visibility = Visibility.Hidden;
+            EditGoals.Visibility = Visibility.Visible;
+            SaveGoals.Visibility = Visibility.Hidden;
+        }
+
         private void startDM(object sender, RoutedEventArgs e)
         {
             this.DMParentGrid.Visibility = Visibility.Visible;
           //  this.DMNotification.Visibility = Visibility.Hidden;
+        }
+
+        private void CreateAccountBack_Click(object sender, RoutedEventArgs e)
+        {
+            CreateAccountGrid.Visibility = Visibility.Hidden;
+            BdayDay.Text = "DD";
+            BdayMonth.Text = "MM";
+            BdayYear.Text = "YYYY";
+
         }
 
         private void CreateGroupChat(object sender, RoutedEventArgs e)
@@ -295,10 +488,17 @@ namespace WpfApp1
             NamePlace.Visibility = Visibility.Hidden;
 
             ExitProfile.Visibility = Visibility.Hidden;
+
+            ProfileButton.IsEnabled = false;
+            MessageButton.IsEnabled = true;
+            StatisticsButton.IsEnabled = true;
+
+            SliderTeam.Value = SliderTeam.Value;
         }
 
         private void Player1Button_Click(object sender, RoutedEventArgs e)
         {
+            ProfileButton.IsEnabled = false;
             BackgroundGrid.Visibility = Visibility.Visible;
 
             DefaultProfileGrid.Visibility = Visibility.Visible;
@@ -318,17 +518,13 @@ namespace WpfApp1
             PhoneText.Content = "(403)223-5721";
             BioText.Content = "This is my third year playing field hockey.";
 
-            SliderTeam.Value = 4;
-            SliderEffort.Value = 4;
-            SliderTechnique.Value = 1;
-            SliderPower.Value = 2;
-            ProfileNotes.Text = "She could use some assistance with her technique. -Tina";
 
             ExitProfile.Visibility = Visibility.Visible;
         }
 
         private void Coach1Button_Click(object sender, RoutedEventArgs e)
         {
+            ProfileButton.IsEnabled = false;
             BackgroundGrid.Visibility = Visibility.Visible;
 
             DefaultProfileGrid.Visibility = Visibility.Visible;
@@ -341,18 +537,19 @@ namespace WpfApp1
             ProfilePhotoImage.Visibility = Visibility.Visible;
             NamePlace.Visibility = Visibility.Visible;
 
-            NamePlace.Content = "Tina Ermin";
-            NamePlaceProfile.Content = "Tina Ermin";
-            AgeText.Content = "24";
-            EmailText.Content = "terminator@ucalgary.ca";
-            PhoneText.Content = "(403)412-2242";
-            BioText.Content = "Your #1 junior coach!";
+            NamePlace.Content = NameInput.Content;
+            NamePlaceProfile.Content = NameInput.Content;
+            AgeText.Content = 2018-bdayyear;
+            EmailText.Content = EmailInput.Content;
+            PhoneText.Content = PhoneInput.Content;
+            BioText.Content = BiographyInput.Content;
 
             ExitProfile.Visibility = Visibility.Visible;
         }
 
         private void Coach2Button_Click(object sender, RoutedEventArgs e)
         {
+            ProfileButton.IsEnabled = false;
             BackgroundGrid.Visibility = Visibility.Visible;
 
             DefaultProfileGrid.Visibility = Visibility.Visible;
@@ -393,8 +590,8 @@ namespace WpfApp1
             MessageGrid.Visibility = Visibility.Visible;
 
             ProfileButton.IsEnabled = true;
-            MessageButton.IsEnabled = true;
-            StatisticsButton.IsEnabled = false;
+            MessageButton.IsEnabled = false;
+            StatisticsButton.IsEnabled = true;
         }
 
         private void StatisticsButton_Click(object sender, RoutedEventArgs e)
@@ -416,6 +613,7 @@ namespace WpfApp1
 
         private void menuItemButton4_Click(object sender, RoutedEventArgs e)
         {
+            Coach1TextBlock.Text = NameInput.Content.ToString();
             this.MyTeamGrid.Visibility = Visibility.Visible;
             BackgroundGrid.Visibility = Visibility.Hidden;
 
@@ -432,16 +630,6 @@ namespace WpfApp1
             ExitProfile.Visibility = Visibility.Hidden;
         }
 
-        private void OpenTeamStats(object sender, RoutedEventArgs e)
-        {
-            //this.TeamStatsParenGrid.Visibility = Visibility.Visible;
-        }
-
-        private void backtoMMfromStats(object sender, RoutedEventArgs e)
-        {
-            //this.TeamStatsParenGrid.Visibility = Visibility.Hidden;
-
-        }
 
         private void AddButton_Click_1(object sender, RoutedEventArgs e)
         {
@@ -534,7 +722,7 @@ namespace WpfApp1
             if (dfg.ShowDialog() == true)
             {
                 Console.WriteLine(dfg.FileName);
-                UploadPhotoPlan.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(dfg.FileName, UriKind.Relative)) };
+                VideoPreview.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(dfg.FileName, UriKind.Relative)) };
                 ResourcePath = dfg.FileName;
             }
         }
@@ -564,16 +752,635 @@ namespace WpfApp1
 
         private void AddEventClick(object sender, RoutedEventArgs e)
         {
-            this.AddEventParentGrid.Visibility = Visibility.Hidden;
-            //TODO: more stuff here
-            EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text);
-            EventsUniformGridDay1.Children.Add(EUC);
+
+            string date, day = "";
+            date = EventDateInput.Text;
+            for (int i = 0; date[i] != '/'; i++)
+            {
+                day += date[i];
+                if (date[i + 1] != '/')
+                {
+                    day += date[i + 1];
+                    break;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            if (day != "DD" && day.Length < 3)
+            {
+                int daynum = int.Parse(day);
+                if (daynum > 31 || daynum < 1)
+                {
+                    System.Windows.MessageBox.Show("Invalid Date", "Error");
+                }
+                else if(daynum == 1)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day1++;
+                    if (day1 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    } else
+                    {
+                        EventsUniformGridDay1.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 2)
+                {
+                    EventUserControl EUC3 = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day2++;
+                    if (day2 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay2.Children.Add(EUC3);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 3)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day3++;
+                    if (day3 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay3.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 4)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day4++;
+                    if (day4 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay4.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 5)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day5++;
+                    if (day5 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay5.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 6)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day6++;
+                    if (day6 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay6.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 7)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day7++;
+                    if (day7 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay7.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 8)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day8++;
+                    if (day8 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay8.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 9)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day9++;
+                    if (day9 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay9.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 10)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day10++;
+                    if (day10 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay10.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 11)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day11++;
+                    if (day11 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay11.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 12)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day12++;
+                    if (day12 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay12.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 13)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day13++;
+                    if (day13 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay13.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 14)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day14++;
+                    if (day14 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay14.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 15)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day15++;
+                    if (day15 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay15.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 16)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day16++;
+                    if (day16 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay16.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 17)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day17++;
+                    if (day17 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay17.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 18)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day18++;
+                    if (day18 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay18.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 19)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day19++;
+                    if (day19 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay19.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 20)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day20++;
+                    if (day20 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay20.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 21)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day21++;
+                    if (day21 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay21.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 22)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day22++;
+                    if (day22 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay22.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 23)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day23++;
+                    if (day23 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay23.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 24)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day24++;
+                    if (day24 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay24.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 25)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day25++;
+                    if (day25 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay25.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 26)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day26++;
+                    if (day26 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay26.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 27)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day27++;
+                    if (day27 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay27.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 28)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day28++;
+                    if (day28 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay28.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 29)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day29++;
+                    if (day29 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay29.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 30)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day30++;
+                    if (day30 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay30.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+                else if (daynum == 31)
+                {
+                    EventUserControl EUC = new EventUserControl(EventDateInput.Text, NewEventPlaceBox.Text, NewEventTitleBox.Text, NewEventDetailsBox.Text, EventTimeInputBox.Text, this);
+                    day31++;
+                    if (day31 > 3)
+                    {
+                        System.Windows.MessageBox.Show("Event Limit Reached!", "Mental Health System");
+                    }
+                    else
+                    {
+                        EventsUniformGridDay31.Children.Add(EUC);
+                        this.AddEventParentGrid.Visibility = Visibility.Hidden;
+                        EventDateInput.Text = "DD/MM/YY";
+                        NewEventPlaceBox.Text = "";
+                        NewEventTitleBox.Text = "";
+                        NewEventDetailsBox.Text = "";
+                        EventTimeInputBox.Text = "";
+                    }
+                }
+            } else
+            {
+                System.Windows.MessageBox.Show("Invalid Date", "Error");
+            }
+
+        }
+
+        private void EventDetailsClose_Click(object sender, RoutedEventArgs e)
+        {
+            EventDetailsGrid.Visibility = Visibility.Hidden;
+            BackgroundDimEvent.Visibility = Visibility.Hidden;
         }
 
         private void VideoResourceButton_Click(object sender, RoutedEventArgs e)
         {
             ResourceTitleTextBox.Visibility = Visibility.Visible;
-            VideoPreview.Visibility = Visibility.Hidden;
+            VideoPreview.Visibility = Visibility.Visible;
             ResourceVideoURLBox.Visibility = Visibility.Visible;
             ResourceTextBox.Visibility = Visibility.Hidden;
             PreviewURLButton.Visibility = Visibility.Visible;

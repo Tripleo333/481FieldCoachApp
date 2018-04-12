@@ -4,10 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CoachingApp"
-             mc:Ignorable="d" d:DesignWidth="300" Width="1912.8" Height="684">
+             mc:Ignorable="d" d:DesignWidth="300" Width="1912.8" Height="684" BorderBrush="Black">
     <Grid x:Name="NewsPageControlGrid" Background="White" Height="Auto" Margin="0,0,0,28">
-        <Rectangle x:Name="HeaderShape" Height="104.4" Stroke="Black" VerticalAlignment="Top" Fill="#FFAEAEB0" StrokeThickness="0"/>
-        <Label x:Name="TitleLabel" Content="Title" Height="93.2" VerticalAlignment="Top" FontSize="48" Margin="18.104,14.8,-18.104,0" RenderTransformOrigin="0.5,0.5">
+        <Rectangle x:Name="HeaderShape" Height="104.4" Stroke="Black" VerticalAlignment="Top" Fill="White" StrokeThickness="0"/>
+        <Label x:Name="TitleLabel" Content="Title" Height="93.2" VerticalAlignment="Top" FontSize="55" Margin="18.104,8.8,-18.104,0" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Historic" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
+            </Label.Effect>
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -19,7 +22,7 @@
         </Label>
         <TextBox x:Name="TitleTextBox" Height="68.6" Margin="10,17.467,172.8,0" TextWrapping="Wrap" Text="Title&#xD;&#xA;" VerticalAlignment="Top" FontSize="48" Visibility="Hidden"/>
         <ScrollViewer x:Name="NewsScrollViewLabel" Margin="0,104.4,0,0" Height="360.6" VerticalAlignment="Top" d:LayoutOverrides="TopMargin, BottomMargin">
-            <TextBox x:Name="NewsTextBlock" Height="271.2" TextWrapping="Wrap" Text="Text" Width="1840.65" FontSize="24" IsEnabled="False" />
+            <TextBox x:Name="NewsTextBlock" Height="271.2" TextWrapping="Wrap" Text="Text" Width="1840.65" FontSize="36" IsEnabled="False" BorderBrush="{x:Null}" />
         </ScrollViewer>
         <ScrollViewer x:Name="NewsScrollViewTextBox" Margin="0,104.4,0,0" Visibility="Hidden">
             <TextBox x:Name="NewsTextBox" TextWrapping="Wrap" Text="TextBox" RenderTransformOrigin="0.5,0.5" Width="1842.8" Height="439.6" FontSize="24" d:LayoutOverrides="Width, Height">
@@ -33,15 +36,23 @@
                 </TextBox.RenderTransform>
             </TextBox>
         </ScrollViewer>
-        <Button x:Name="EditButton" Content="Edit" HorizontalAlignment="Right" Height="68.6" Margin="0,17.467,24.933,0" VerticalAlignment="Top" Width="124.8" FontSize="36" Click="EditButton_Click"/>
+        <Button x:Name="EditButton" Content="EDIT" HorizontalAlignment="Right" Height="68.6" Margin="0,17.467,24.933,0" VerticalAlignment="Top" Width="124.8" FontSize="36" Click="EditButton_Click" Background="{x:Null}" Foreground="#FF646464" BorderBrush="Black">
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
         <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Right" Height="68.6" Margin="0,17.467,24.933,0" VerticalAlignment="Top" Width="124.8" FontSize="36" Visibility="Hidden" Click="SaveButton_Click"/>
-        <Rectangle x:Name="HeaderShape_Comment" Fill="#FF42849C" Height="86" Margin="0,0,0,105" Stroke="Black" StrokeThickness="0" VerticalAlignment="Bottom"/>
+        <Rectangle x:Name="HeaderShape_Comment" Fill="#FFE0E0E0" Height="86" Margin="0,0,0,105" Stroke="Black" StrokeThickness="0" VerticalAlignment="Bottom"/>
         <TextBox x:Name="CommentTextBox" Height="46" Margin="28,0,236.8,126" TextWrapping="Wrap" Text="Say something..." VerticalAlignment="Bottom" FontSize="30" FontStyle="Italic"/>
-        <Button x:Name="PostComment" Content="Comment&#xD;&#xA;" HorizontalAlignment="Right" Height="46" Margin="0,0,24.933,124.84" VerticalAlignment="Bottom" Width="161.867" FontSize="28" Click="PostComment_Click"/>
-        <ScrollViewer x:Name="CommentScroll" Height="105" VerticalAlignment="Bottom">
+        <Button x:Name="PostComment" Content="Comment&#xD;&#xA;" HorizontalAlignment="Right" Height="46" Margin="0,0,24.933,124.84" VerticalAlignment="Bottom" Width="161.867" FontSize="28" Click="PostComment_Click" BorderBrush="{x:Null}">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
+        <ScrollViewer x:Name="CommentScroll" Height="105" VerticalAlignment="Bottom" VerticalScrollBarVisibility="Hidden">
             <UniformGrid x:Name="CommentSection" Height="Auto" Background="#FFE0E0E0" Columns="1" Width="1912.8"/>
         </ScrollViewer>
-        <Rectangle x:Name="Separator" Fill="Black" Height="5.5" Margin="0,0,0,-5.5" Stroke="Black" StrokeThickness="0" VerticalAlignment="Bottom"/>
+        <Rectangle x:Name="Separator" Fill="Black" Height="2" Margin="0,0,0,-15.5" Stroke="Black" StrokeThickness="0" VerticalAlignment="Bottom" Opacity="0.2" Visibility="Hidden"/>
 
     </Grid>
 </UserControl>

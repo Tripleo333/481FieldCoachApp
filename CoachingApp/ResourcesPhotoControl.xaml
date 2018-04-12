@@ -6,8 +6,11 @@
              xmlns:local="clr-namespace:CoachingApp"
              mc:Ignorable="d" d:DesignWidth="300" Width="1912.18" Height="814">
     <Grid x:Name="PlannerControlGrid" Width="1912.8" Background="White" Margin="0,10,-0.62,10">
-        <Rectangle x:Name="HeaderShape" Height="104.4" Stroke="Black" VerticalAlignment="Top" Fill="#FFAEAEB0" StrokeThickness="0"/>
-        <Label x:Name="TitleLabel" Content="Title" Height="93.2" VerticalAlignment="Top" FontSize="48" Margin="18.104,14.8,-18.104,0" RenderTransformOrigin="0.5,0.5">
+        <Rectangle x:Name="HeaderShape" Height="104.4" Stroke="Black" VerticalAlignment="Top" Fill="#FFDADADA" StrokeThickness="0"/>
+        <Label x:Name="TitleLabel" Content="Title" Height="93.2" VerticalAlignment="Top" FontSize="55" Margin="18.104,14.8,-18.104,0" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Historic" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
+            </Label.Effect>
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -18,16 +21,24 @@
             </Label.RenderTransform>
         </Label>
         <TextBox x:Name="TitleTextBox" Height="68.6" Margin="10,17.467,172.8,0" TextWrapping="Wrap" Text="Title&#xA;" VerticalAlignment="Top" FontSize="48" Visibility="Hidden"/>
-        <Button x:Name="EditButton" Content="Edit" HorizontalAlignment="Right" Height="68.6" Margin="0,17.467,24.933,0" VerticalAlignment="Top" Width="124.8" FontSize="36" Click="EditButton_Click"/>
+        <Button x:Name="EditButton" Content="EDIT" HorizontalAlignment="Right" Height="68.6" Margin="0,17.467,24.933,0" VerticalAlignment="Top" Width="124.8" FontSize="36" Click="EditButton_Click" BorderBrush="#FF0F0F0F" Background="{x:Null}" Foreground="#FF646464" Opacity="0.7">
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
         <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Right" Height="68.6" Margin="0,17.467,24.933,0" VerticalAlignment="Top" Width="124.8" FontSize="36" Visibility="Hidden" Click="SaveButton_Click"/>
-        <Rectangle x:Name="HeaderShape_Comment" Fill="#FF42849C" Height="86" Margin="0,0,0,105" Stroke="Black" StrokeThickness="0" VerticalAlignment="Bottom"/>
+        <Rectangle x:Name="HeaderShape_Comment" Fill="#FFE0E0E0" Height="86" Margin="0,0,0,105" Stroke="Black" StrokeThickness="0" VerticalAlignment="Bottom"/>
         <TextBox x:Name="CommentTextBox" Height="46" Margin="28,0,236.8,126" TextWrapping="Wrap" Text="Say something..." VerticalAlignment="Bottom" FontSize="30" FontStyle="Italic"/>
-        <Button x:Name="PostComment" Content="Comment&#xA;" HorizontalAlignment="Right" Height="46" Margin="0,0,24.933,124.84" VerticalAlignment="Bottom" Width="161.867" FontSize="28" Click="PostComment_Click"/>
+        <Button x:Name="PostComment" Content="Comment&#xA;" HorizontalAlignment="Right" Height="46" Margin="0,0,24.933,124.84" VerticalAlignment="Bottom" Width="161.867" FontSize="28" Click="PostComment_Click" BorderBrush="{x:Null}">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
         <ScrollViewer x:Name="CommentScroll" Height="105" VerticalAlignment="Bottom">
             <UniformGrid x:Name="CommentSection" Height="Auto" Background="#FFE0E0E0" Columns="1" Width="1912.8"/>
         </ScrollViewer>
-        <Rectangle x:Name="Separator" Fill="Black" Height="5.5" Margin="0,0,0,-5.5" Stroke="Black" StrokeThickness="0" VerticalAlignment="Bottom"/>
-        <Rectangle x:Name="ResourcePhoto" Fill="#FFEEEEEE" Margin="536,151,536.933,241" Stroke="Black" StrokeThickness="0"/>
+        <Rectangle x:Name="Separator" Fill="Black" Height="2" Margin="0,0,0,-6.333" Stroke="Black" StrokeThickness="0" VerticalAlignment="Bottom" Opacity="0.2"/>
+        <Rectangle x:Name="ResourcePhoto" Fill="#FFEEEEEE" Margin="579.526,151,580.459,241" Stroke="Black" StrokeThickness="0"/>
 
     </Grid>
 </UserControl>

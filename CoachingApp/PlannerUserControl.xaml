@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:CoachingApp"
              mc:Ignorable="d" d:DesignWidth="300" Width="1912.8" Height="967">
     <Grid x:Name="PlannerControlGrid" Width="1912.8" Background="White" Margin="0,13,0,10">
-        <Rectangle x:Name="HeaderShape" Height="104.4" Stroke="Black" VerticalAlignment="Top" Fill="#FFDADADA" StrokeThickness="0"/>
+        <Rectangle x:Name="HeaderShape" Height="104.4" Stroke="Black" VerticalAlignment="Top" Fill="White" StrokeThickness="0"/>
         <Label x:Name="TitleLabel" Content="Title" Height="105.071" VerticalAlignment="Top" FontSize="55" Margin="26.267,12.8,163.611,0" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Historic" FontWeight="Bold">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
@@ -39,7 +39,11 @@
                 <DropShadowEffect ShadowDepth="2"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Right" Height="68.6" Margin="0,17.467,24.933,0" VerticalAlignment="Top" Width="124.8" FontSize="36" Visibility="Hidden" Click="SaveButton_Click"/>
+        <Button x:Name="SaveButton" Content="SAVE" HorizontalAlignment="Right" Height="68.6" Margin="0,17.467,24.933,0" VerticalAlignment="Top" Width="124.8" FontSize="36" Visibility="Hidden" Click="SaveButton_Click" Background="{x:Null}" BorderBrush="Black" Foreground="#FF646464">
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
         <Rectangle x:Name="HeaderShape_Comment" Fill="#FFE0E0E0" Height="86" Margin="0,0,0,105" Stroke="Black" StrokeThickness="0" VerticalAlignment="Bottom"/>
         <TextBox x:Name="CommentTextBox" Height="46" Margin="28,0,236.8,126" TextWrapping="Wrap" Text="Say something..." VerticalAlignment="Bottom" FontSize="30" FontStyle="Italic"/>
         <Button x:Name="PostComment" Content="Comment&#xA;" HorizontalAlignment="Right" Height="46" Margin="0,0,24.933,124.84" VerticalAlignment="Bottom" Width="161.867" FontSize="28" Click="PostComment_Click" BorderBrush="{x:Null}">

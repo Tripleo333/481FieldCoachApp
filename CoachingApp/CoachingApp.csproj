@@ -85,6 +85,12 @@
     <Compile Include="StartChatControl.xaml.cs">
       <DependentUpon>StartChatControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TeamMemberControl.xaml.cs">
+      <DependentUpon>TeamMemberControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TeamMemberProfile.xaml.cs">
+      <DependentUpon>TeamMemberProfile.xaml</DependentUpon>
+    </Compile>
     <Page Include="CommentUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -138,6 +144,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="StartChatControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TeamMemberControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TeamMemberProfile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -230,6 +244,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="SCOOP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="player_Simran_Rai%28CanUseForProfilePic%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="remove-151678_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="delete-button-png-delete-icon-16.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

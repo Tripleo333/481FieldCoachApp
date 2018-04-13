@@ -10,7 +10,7 @@
         <Grid.Effect>
             <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
         </Grid.Effect>
-        <TextBlock x:Name="SmarticleSpectacles" HorizontalAlignment="Left" Margin="99.332,19,0,10" TextWrapping="Wrap" Text="Smarticle Spectacles" Width="239.334" FontSize="24"/>
+        <TextBlock x:Name="SmarticleSpectacles" HorizontalAlignment="Left" Margin="99.332,19,0,10" TextWrapping="Wrap" Text="UofC Dinos" Width="239.334" FontSize="24"/>
         <TextBlock x:Name="vs" HorizontalAlignment="Left" Margin="338.666,19,0,10" TextWrapping="Wrap" Text="v.s." Width="40.334" FontSize="24" FontWeight="Bold" FontStyle="Italic"/>
         <TextBlock x:Name="Opponent" Margin="396,19,451.501,10" TextWrapping="Wrap" Text="Opponent" FontSize="24"/>
         <TextBlock x:Name="HomeScore" HorizontalAlignment="Left" Margin="10,2.203,0,17.797" TextWrapping="Wrap" Width="79.332" FontSize="48" FontWeight="Bold"/>

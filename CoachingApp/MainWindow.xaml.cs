@@ -23,11 +23,13 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        String LoginName, resourceType, PlannerPath, ResourcePath;
+        String LoginName, resourceType, PlannerPath, ResourcePath, PhotoPath;
         int day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, day11;
         int day12, day13, day14, day15, day16, day17, day18, day19, day20, day21;
         int day22, day23, day24, day25, day26, day27, day28, day29, day30, day31;
-        int bdayyear = 1994, matches = 5;
+        int bdayyear = 1994,  matches = 5;
+        TeamMemberControl MainUser;
+        bool savestate = false;
 
         public MainWindow()
         {
@@ -49,18 +51,29 @@ namespace WpfApp1
             //this.TeamStatsParenGrid.Visibility = Visibility.Hidden;
             this.AddEventParentGrid.Visibility = Visibility.Hidden;
 
+
         }
 
         private void Login(object sender, RoutedEventArgs e)
         {
-            if (this.EmailTextBox.Text == "omar")
+            if (this.EmailTextBox.Text == "simkrai" && PasswordLogin.Password.ToString() == "fieldhockey")
             {
                 //                this.EmailTextBox.Visibility = Visibility.Hidden;
                 this.LoginGrid.Visibility = Visibility.Hidden;
                 this.CoachMainPageGrid.Visibility = Visibility.Visible;
                 LoginName = EmailTextBox.Text;
                 HelloTextblock.Text += LoginName + "!";
+                TeamMemberControl tmc = new TeamMemberControl(this, "Sarah Graham", "2/4/1999", "(587)321-1247","sarahgraham1@gmail.com","I love trying out new sports!",4,4,2,3,"Needs assistance with positioning", 0, "");
+                PlayersUniGrid.Children.Add(tmc);
 
+
+                MainUser = new TeamMemberControl(this, NameInput.Content.ToString(), BirthdayInput.Content.ToString(), PhoneInput.Content.ToString(), EmailInput.Content.ToString(), BiographyInput.Content.ToString(), 0, 0, 0, 0, "", 3,"");
+                CoachesUniGrid.Children.Add(MainUser);
+
+                TeamMemberControl coach1 = new TeamMemberControl(this, "Jess Weissman", "18/11/1987", "(403)553-2135", "jweiss@outlook.ca", "Taught as a junior coach for 2 years and decided to take my passion to the next step!", 0, 0, 0, 0, "", 1, "");
+                TeamMemberControl coach2 = new TeamMemberControl(this, "Peter Buchelli", "18/11/1986", "(403)122-6523", "gmagnet@gmail.com", "I love what I do, and I do what I love.", 0, 0, 0, 0, "", 1, "");
+                CoachesUniGrid.Children.Add(coach1);
+                CoachesUniGrid.Children.Add(coach2);
             }
         }
 
@@ -116,6 +129,7 @@ namespace WpfApp1
             AddNewsButton.Visibility = Visibility.Hidden;
             BackButton.Visibility = Visibility.Hidden;
             NewsfeedLabel.Visibility = Visibility.Hidden;
+            NewsfeedScrollView.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -125,6 +139,7 @@ namespace WpfApp1
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
+            savestate = true;
             NameTextBox.Text = NameInput.Content.ToString();
             NameTextBox.Visibility = Visibility.Visible;
             NameInput.Visibility = Visibility.Hidden;
@@ -194,6 +209,7 @@ namespace WpfApp1
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            savestate = false;
             NameInput.Content = NameTextBox.Text;
             NameTextBox.Visibility = Visibility.Hidden;
             NameInput.Visibility = Visibility.Visible;
@@ -226,18 +242,39 @@ namespace WpfApp1
 
         private void BackButtonProfile_Click(object sender, RoutedEventArgs e)
         {
-            MyProfileGrid.Visibility = Visibility.Hidden;
+            if (savestate == false)
+            {
+                MyProfileGrid.Visibility = Visibility.Hidden;
+            } else if (savestate == true)
+            {
+                ConfirmationBox.Visibility = Visibility.Visible;
+                ProfileDimGrid.Visibility = Visibility.Visible;
+            }
+                
         }
 
         private void UploadProfPhoto_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog dfg = new Microsoft.Win32.OpenFileDialog();
-            dfg.Filter = "JPG | *.jpg; PNG | *.png; GIF | *.gif";
+            dfg.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
             if (dfg.ShowDialog() == true)
             {
                 Console.WriteLine(dfg.FileName);
-                ProfilePhoto.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(dfg.FileName, UriKind.Relative)) };
+                //ProfilePhoto.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(dfg.FileName, UriKind.Relative)) };
+                CoachImage.Source = new BitmapImage(new Uri(dfg.FileName));
+                CoachImage.Stretch = Stretch.UniformToFill;
+                ProfilePhotoCoach.Source = new BitmapImage(new Uri(dfg.FileName));
+                ProfilePhotoCoach.Stretch = Stretch.UniformToFill;
+                MainUser.personImage.Source = new BitmapImage(new Uri(dfg.FileName));
+                MainUser.personImage.Stretch = Stretch.UniformToFill;
+                PhotoPath = dfg.FileName;
             }
+
+        }
+
+        public string getpath()
+        {
+            return PhotoPath;
         }
 
         private void BackButtonPlanner_Click(object sender, RoutedEventArgs e)
@@ -251,6 +288,7 @@ namespace WpfApp1
             BackButtonPlanner.Visibility = Visibility.Hidden;
             AddPlanButton.Visibility = Visibility.Hidden;
             PlannerDialogBox.Visibility = Visibility.Visible;
+            PlannerScrollView.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
         }
 
         private void ShareButton_Click(object sender, RoutedEventArgs e)
@@ -259,6 +297,7 @@ namespace WpfApp1
             ResourcesLabel.Visibility = Visibility.Hidden;
             ShareButton.Visibility = Visibility.Hidden;
             BackButtonResources.Visibility = Visibility.Hidden;
+            ResourcesScrollView.VerticalScrollBarVisibility = ScrollBarVisibility.Hidden;
         }
 
         private void BackButtonResources_Click(object sender, RoutedEventArgs e)
@@ -324,7 +363,112 @@ namespace WpfApp1
             AddStatsButton.Visibility = Visibility.Hidden;
             SaveStats.Visibility = Visibility.Visible;
 
+        }
 
+        private void menuItemButton4_Click(object sender, RoutedEventArgs e)
+        {
+            MyTeamGrid.Visibility = Visibility.Visible;
+        }
+
+        private void AddMemberClose_Click(object sender, RoutedEventArgs e)
+        {
+            BackgroundGrid.Visibility = Visibility.Hidden;
+            AddMemberGrid.Visibility = Visibility.Hidden;
+            MemberName.Text = "";
+            MemberEmail.Text = "";
+            CoachOrPlayer.Value = 0;
+
+        }
+
+        private void SendRefLink_Click(object sender, RoutedEventArgs e)
+        {
+            BackgroundGrid.Visibility = Visibility.Hidden;
+            AddMemberGrid.Visibility = Visibility.Hidden;
+
+            
+            TeamMemberControl tmc = new TeamMemberControl(this, MemberName.Text, "", "", MemberEmail.Text, "", 0,0,0,0,"",CoachOrPlayer.Value, "");
+            tmc.personName.Text = MemberName.Text;
+            if (CoachOrPlayer.Value == 0)
+            {
+                PlayersUniGrid.Children.Add(tmc);
+            } else
+            {
+                CoachesUniGrid.Children.Add(tmc);
+            }
+            tmc.TeamHandler.
+            MemberName.Text = "";
+            MemberEmail.Text = "";
+            CoachOrPlayer.Value = 0;
+        }
+
+        private void AddMemberButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddMemberGrid.Visibility = Visibility.Visible;
+            BackgroundGrid.Visibility = Visibility.Visible;
+        }
+
+        private void YesConfirm_Click(object sender, RoutedEventArgs e)
+        {
+            savestate = false;
+            NameInput.Content = NameTextBox.Text;
+            NameTextBox.Visibility = Visibility.Hidden;
+            NameInput.Visibility = Visibility.Visible;
+
+            PhoneInput.Content = PhoneTextBox.Text;
+            PhoneTextBox.Visibility = Visibility.Hidden;
+            PhoneInput.Visibility = Visibility.Visible;
+
+            EmailInput.Content = EmailTextBox1.Text;
+            EmailTextBox1.Visibility = Visibility.Hidden;
+            EmailInput.Visibility = Visibility.Visible;
+
+            BiographyInput.Content = BiographyTextBox.Text;
+            BiographyTextBox.Visibility = Visibility.Hidden;
+            BiographyInput.Visibility = Visibility.Visible;
+
+            BirthdayInput.Visibility = Visibility.Visible;
+            BirthdayInput.Content = BdayDayTextBox.Text + '/' + BdayMonthTextBox.Text + '/' + BdayYearTextBox.Text;
+            BdayDayTextBox.Visibility = Visibility.Hidden;
+            BdayMonthTextBox.Visibility = Visibility.Hidden;
+            BdayYearTextBox.Visibility = Visibility.Hidden;
+            bdayyear = int.Parse(BdayYearTextBox.Text);
+            BdayDayTextBox.Text = "";
+            BdayMonthTextBox.Text = "";
+            BdayYearTextBox.Text = "";
+
+            EditButton.Visibility = Visibility.Visible;
+            SaveButton.Visibility = Visibility.Hidden;
+            ConfirmationBox.Visibility = Visibility.Hidden;
+            ProfileDimGrid.Visibility = Visibility.Hidden;
+            MyProfileGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void NoConfirm_Click(object sender, RoutedEventArgs e)
+        {
+            savestate = false;
+            NameTextBox.Visibility = Visibility.Hidden;
+            NameInput.Visibility = Visibility.Visible;
+
+            PhoneTextBox.Visibility = Visibility.Hidden;
+            PhoneInput.Visibility = Visibility.Visible;
+
+            EmailTextBox1.Visibility = Visibility.Hidden;
+            EmailInput.Visibility = Visibility.Visible;
+
+            BiographyTextBox.Visibility = Visibility.Hidden;
+            BiographyInput.Visibility = Visibility.Visible;
+
+            BirthdayInput.Visibility = Visibility.Visible;
+            BdayDayTextBox.Visibility = Visibility.Hidden;
+            BdayMonthTextBox.Visibility = Visibility.Hidden;
+            BdayYearTextBox.Visibility = Visibility.Hidden;
+
+            EditButton.Visibility = Visibility.Visible;
+            SaveButton.Visibility = Visibility.Hidden;
+
+            ConfirmationBox.Visibility = Visibility.Hidden;
+            ProfileDimGrid.Visibility = Visibility.Hidden;
+            MyProfileGrid.Visibility = Visibility.Hidden;
         }
 
         private void CancelStats_Click(object sender, RoutedEventArgs e)
@@ -333,7 +477,7 @@ namespace WpfApp1
             CancelStats.Visibility = Visibility.Hidden;
             AddStatsButton.Visibility = Visibility.Visible;
             SaveStats.Visibility = Visibility.Hidden;
-            TeamNameTextBox.Text = "";
+            TeamNameTextBox.Text = "Team Name";
             HomeScoreTextBox.Text = "";
             VisitorScoreTextBox.Text = "";
         }
@@ -350,7 +494,7 @@ namespace WpfApp1
             CancelStats.Visibility = Visibility.Hidden;
             AddStatsButton.Visibility = Visibility.Visible;
             SaveStats.Visibility = Visibility.Hidden;
-            TeamNameTextBox.Text = "";
+            TeamNameTextBox.Text = "Team Name";
             HomeScoreTextBox.Text = "";
             VisitorScoreTextBox.Text = "";
         }
@@ -445,9 +589,9 @@ namespace WpfApp1
         private void CreateAccountBack_Click(object sender, RoutedEventArgs e)
         {
             CreateAccountGrid.Visibility = Visibility.Hidden;
-            BdayDay.Text = "DD";
-            BdayMonth.Text = "MM";
-            BdayYear.Text = "YYYY";
+            BdayDayCA.Text = "DD";
+            BdayMonthCA.Text = "MM";
+            BdayYearCA.Text = "YYYY";
 
         }
 
@@ -471,163 +615,6 @@ namespace WpfApp1
         private void BackButtonTeam_Click(object sender, RoutedEventArgs e)
         {
             this.MyTeamGrid.Visibility = Visibility.Hidden;
-        }
-
-        private void ExitProfile_Click(object sender, RoutedEventArgs e)
-        {
-            BackgroundGrid.Visibility = Visibility.Hidden;
-
-            DefaultProfileGrid.Visibility = Visibility.Hidden;
-            StatsGrid.Visibility = Visibility.Hidden;
-            MessageGrid.Visibility = Visibility.Hidden;
-
-            ProfileButton.Visibility = Visibility.Hidden;
-            StatisticsButton.Visibility = Visibility.Hidden;
-            MessageButton.Visibility = Visibility.Hidden;
-            ProfilePhotoImage.Visibility = Visibility.Hidden;
-            NamePlace.Visibility = Visibility.Hidden;
-
-            ExitProfile.Visibility = Visibility.Hidden;
-
-            ProfileButton.IsEnabled = false;
-            MessageButton.IsEnabled = true;
-            StatisticsButton.IsEnabled = true;
-
-            SliderTeam.Value = SliderTeam.Value;
-        }
-
-        private void Player1Button_Click(object sender, RoutedEventArgs e)
-        {
-            ProfileButton.IsEnabled = false;
-            BackgroundGrid.Visibility = Visibility.Visible;
-
-            DefaultProfileGrid.Visibility = Visibility.Visible;
-            StatsGrid.Visibility = Visibility.Hidden;
-            MessageGrid.Visibility = Visibility.Hidden;
-
-            ProfileButton.Visibility = Visibility.Visible;
-            StatisticsButton.Visibility = Visibility.Visible;
-            MessageButton.Visibility = Visibility.Visible;
-            ProfilePhotoImage.Visibility = Visibility.Visible;
-            NamePlace.Visibility = Visibility.Visible;
-
-            NamePlace.Content = "Sarah Graham";
-            NamePlaceProfile.Content = "Sarah Graham";
-            AgeText.Content = "19";
-            EmailText.Content = "sarahgman@ucalgary.ca";
-            PhoneText.Content = "(403)223-5721";
-            BioText.Content = "This is my third year playing field hockey.";
-
-
-            ExitProfile.Visibility = Visibility.Visible;
-        }
-
-        private void Coach1Button_Click(object sender, RoutedEventArgs e)
-        {
-            ProfileButton.IsEnabled = false;
-            BackgroundGrid.Visibility = Visibility.Visible;
-
-            DefaultProfileGrid.Visibility = Visibility.Visible;
-            StatsGrid.Visibility = Visibility.Hidden;
-            MessageGrid.Visibility = Visibility.Hidden;
-
-            ProfileButton.Visibility = Visibility.Visible;
-            StatisticsButton.Visibility = Visibility.Hidden;
-            MessageButton.Visibility = Visibility.Visible;
-            ProfilePhotoImage.Visibility = Visibility.Visible;
-            NamePlace.Visibility = Visibility.Visible;
-
-            NamePlace.Content = NameInput.Content;
-            NamePlaceProfile.Content = NameInput.Content;
-            AgeText.Content = 2018-bdayyear;
-            EmailText.Content = EmailInput.Content;
-            PhoneText.Content = PhoneInput.Content;
-            BioText.Content = BiographyInput.Content;
-
-            ExitProfile.Visibility = Visibility.Visible;
-        }
-
-        private void Coach2Button_Click(object sender, RoutedEventArgs e)
-        {
-            ProfileButton.IsEnabled = false;
-            BackgroundGrid.Visibility = Visibility.Visible;
-
-            DefaultProfileGrid.Visibility = Visibility.Visible;
-            StatsGrid.Visibility = Visibility.Hidden;
-            MessageGrid.Visibility = Visibility.Hidden;
-
-            ProfileButton.Visibility = Visibility.Visible;
-            StatisticsButton.Visibility = Visibility.Hidden;
-            MessageButton.Visibility = Visibility.Visible;
-            ProfilePhotoImage.Visibility = Visibility.Visible;
-            NamePlace.Visibility = Visibility.Visible;
-
-            NamePlace.Content = "Brenda Muier";
-            NamePlaceProfile.Content = "Brenda Muier";
-            AgeText.Content = "49";
-            EmailText.Content = "brenma@ucalgary.ca";
-            PhoneText.Content = "(587)343-1431";
-            BioText.Content = "20 years of field hockey experience";
-
-            ExitProfile.Visibility = Visibility.Visible;
-        }
-
-        private void ProfileButton_Click(object sender, RoutedEventArgs e)
-        {
-            DefaultProfileGrid.Visibility = Visibility.Visible;
-            StatsGrid.Visibility = Visibility.Hidden;
-            MessageGrid.Visibility = Visibility.Hidden;
-
-            ProfileButton.IsEnabled = false;
-            MessageButton.IsEnabled = true;
-            StatisticsButton.IsEnabled = true;
-        }
-
-        private void MessageButton_Click(object sender, RoutedEventArgs e)
-        {
-            DefaultProfileGrid.Visibility = Visibility.Hidden;
-            StatsGrid.Visibility = Visibility.Hidden;
-            MessageGrid.Visibility = Visibility.Visible;
-
-            ProfileButton.IsEnabled = true;
-            MessageButton.IsEnabled = false;
-            StatisticsButton.IsEnabled = true;
-        }
-
-        private void StatisticsButton_Click(object sender, RoutedEventArgs e)
-        {
-            DefaultProfileGrid.Visibility = Visibility.Hidden;
-            StatsGrid.Visibility = Visibility.Visible;
-            MessageGrid.Visibility = Visibility.Hidden;
-
-            ProfileButton.IsEnabled = true;
-            MessageButton.IsEnabled = true;
-            StatisticsButton.IsEnabled = false;
-        }
-
-        private void SendMessageButton_Click(object sender, RoutedEventArgs e)
-        {
-            System.Windows.MessageBox.Show("Successfully Sent!", "Message");
-            MessageBox.Text = "Say Something...";
-        }
-
-        private void menuItemButton4_Click(object sender, RoutedEventArgs e)
-        {
-            Coach1TextBlock.Text = NameInput.Content.ToString();
-            this.MyTeamGrid.Visibility = Visibility.Visible;
-            BackgroundGrid.Visibility = Visibility.Hidden;
-
-            DefaultProfileGrid.Visibility = Visibility.Hidden;
-            StatsGrid.Visibility = Visibility.Hidden;
-            MessageGrid.Visibility = Visibility.Hidden;
-
-            ProfileButton.Visibility = Visibility.Hidden;
-            StatisticsButton.Visibility = Visibility.Hidden;
-            MessageButton.Visibility = Visibility.Hidden;
-            ProfilePhotoImage.Visibility = Visibility.Hidden;
-            NamePlace.Visibility = Visibility.Hidden;
-
-            ExitProfile.Visibility = Visibility.Hidden;
         }
 
 
@@ -689,9 +676,9 @@ namespace WpfApp1
         private void ResourceDialogCloseButton_Click(object sender, RoutedEventArgs e)
         {
             ResourcesDialogBox.Visibility = Visibility.Hidden;
-            ResourceTextBox.Text = "";
-            ResourceTitleTextBox.Text = "";
-            ResourceVideoURLBox.Text = "";
+            ResourceTextBox.Text = "Enter Text";
+            ResourceTitleTextBox.Text = "Enter Title";
+            ResourceVideoURLBox.Text = "Enter URL";
             ShareButton.Visibility = Visibility.Visible;
             ResourcesLabel.Visibility = Visibility.Visible;
             BackButtonResources.Visibility = Visibility.Visible;
@@ -701,6 +688,9 @@ namespace WpfApp1
             ResourceVideoURLBox.Visibility = Visibility.Hidden;
             ResourceTextBox.Visibility = Visibility.Hidden;
             PreviewURLButton.Visibility = Visibility.Hidden;
+
+            TextResourceButton.Background = Brushes.LightGray;
+            VideoResourceButton.Background = Brushes.LightGray;
         }
 
         private void TextResourceButton_Click(object sender, RoutedEventArgs e)
@@ -712,13 +702,15 @@ namespace WpfApp1
             PreviewURLButton.Visibility = Visibility.Hidden;
             ShareResourceButton.IsEnabled = true;
             resourceType = "Text";
+            TextResourceButton.Background = Brushes.Gray;
+            VideoResourceButton.Background = Brushes.LightGray;
         }
 
         private void PreviewURLButton_Click(object sender, RoutedEventArgs e)
         {
             // TEMPORARY
             Microsoft.Win32.OpenFileDialog dfg = new Microsoft.Win32.OpenFileDialog();
-            dfg.Filter = "JPG | *.jpg; PNG | *.png; GIF | *.gif";
+            dfg.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
             if (dfg.ShowDialog() == true)
             {
                 Console.WriteLine(dfg.FileName);
@@ -743,6 +735,11 @@ namespace WpfApp1
         private void ExitCreateEvent_Click(object sender, RoutedEventArgs e)
         {
             this.AddEventParentGrid.Visibility = Visibility.Hidden;
+            EventDateInput.Text = "DD/MM/YY";
+            NewEventPlaceBox.Text = "";
+            NewEventTitleBox.Text = "";
+            NewEventDetailsBox.Text = "";
+            EventTimeInputBox.Text = "";
         }
 
         private void AddNewCalendarEvent_Click(object sender, RoutedEventArgs e)
@@ -755,7 +752,7 @@ namespace WpfApp1
 
             string date, day = "";
             date = EventDateInput.Text;
-            for (int i = 0; date[i] != '/'; i++)
+            for (int i = 0; date[i] != '/';)
             {
                 day += date[i];
                 if (date[i + 1] != '/')
@@ -1386,6 +1383,8 @@ namespace WpfApp1
             PreviewURLButton.Visibility = Visibility.Visible;
             ShareResourceButton.IsEnabled = true;
             resourceType = "Video";
+            TextResourceButton.Background = Brushes.LightGray;
+            VideoResourceButton.Background = Brushes.Gray;
         }
 
         private void ShareResourceButton_Click(object sender, RoutedEventArgs e)
@@ -1396,9 +1395,9 @@ namespace WpfApp1
                 text.TitleLabel.Content = ResourceTitleTextBox.Text;
                 text.NewsTextBlock.Text = ResourceTextBox.Text;
                 ResourcesUniGrid.Children.Insert(0, text);
-                ResourceTextBox.Text = "";
-                ResourceTitleTextBox.Text = "";
-                ResourceVideoURLBox.Text = "";
+                ResourceTextBox.Text = "Enter Text";
+                ResourceTitleTextBox.Text = "Enter Title";
+                ResourceVideoURLBox.Text = "Enter URL";
                 ResourceTitleTextBox.Visibility = Visibility.Hidden;
                 VideoPreview.Visibility = Visibility.Hidden;
                 ResourceVideoURLBox.Visibility = Visibility.Hidden;
@@ -1409,6 +1408,8 @@ namespace WpfApp1
                 ResourcesLabel.Visibility = Visibility.Visible;
                 BackButtonResources.Visibility = Visibility.Visible;
                 ShareButton.Visibility = Visibility.Visible;
+                TextResourceButton.Background = Brushes.LightGray;
+                VideoResourceButton.Background = Brushes.LightGray;
             }
             else if (resourceType == "Video" && ResourcePath != null)
             {
@@ -1416,9 +1417,9 @@ namespace WpfApp1
                 video.TitleLabel.Content = ResourceTitleTextBox.Text;
                 video.ResourcePhoto.Fill = new ImageBrush { ImageSource = new BitmapImage(new Uri(ResourcePath, UriKind.Relative)) };
                 ResourcesUniGrid.Children.Insert(0, video);
-                ResourceTextBox.Text = "";
-                ResourceTitleTextBox.Text = "";
-                ResourceVideoURLBox.Text = "";
+                ResourceTextBox.Text = "Enter Text";
+                ResourceTitleTextBox.Text = "Enter Title";
+                ResourceVideoURLBox.Text = "Enter URL";
                 ResourceTitleTextBox.Visibility = Visibility.Hidden;
                 VideoPreview.Visibility = Visibility.Hidden;
                 ResourceVideoURLBox.Visibility = Visibility.Hidden;
@@ -1428,6 +1429,8 @@ namespace WpfApp1
                 ResourcesLabel.Visibility = Visibility.Visible;
                 BackButtonResources.Visibility = Visibility.Visible;
                 ShareButton.Visibility = Visibility.Visible;
+                TextResourceButton.Background = Brushes.LightGray;
+                VideoResourceButton.Background = Brushes.LightGray;
             } else if (resourceType == "Video" && ResourcePath == null)
 
             {
@@ -1438,7 +1441,7 @@ namespace WpfApp1
         private void UploadPlanButton_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog dfg = new Microsoft.Win32.OpenFileDialog();
-            dfg.Filter = "JPG | *.jpg; PNG | *.png; GIF | *.gif";
+            dfg.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
             if (dfg.ShowDialog() == true)
             {
                 Console.WriteLine(dfg.FileName);

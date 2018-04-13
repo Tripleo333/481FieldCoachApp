@@ -1,0 +1,110 @@
+﻿<UserControl x:Class="CoachingApp.TeamMemberProfile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CoachingApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="1418.467" Height="955.2" Background="#FFFF3E3E">
+    <Grid x:Name="MainGrid" Background="#FFF1F1F1">
+        <Image x:Name="MemberProfile" Margin="99.166,0,0,474.645" Stretch="Fill" Source="generic-user-purple.png" HorizontalAlignment="Left" Width="428.321" VerticalAlignment="Bottom" Height="419.924" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox x:Name="NamePlace" HorizontalAlignment="Left" Height="90.915" Margin="69.166,0,0,353.2" TextWrapping="Wrap" Text="Name" VerticalAlignment="Bottom" Width="487.001" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="48" TextAlignment="Center" Foreground="#FFF49F11" FontFamily="Segoe UI Historic" RenderTransformOrigin="0.495,0.164" IsEnabled="False"/>
+        <Button x:Name="ProfileButton" Content="Profile" HorizontalAlignment="Left" Height="57.825" Margin="174,0,0,268.375" Width="266" FontSize="30" BorderBrush="{x:Null}" VerticalAlignment="Bottom" Click="ProfileButton_Click">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="MessagesButton" Content="Messages" HorizontalAlignment="Left" Height="57.825" Margin="174,0,0,168.375" Width="266" FontSize="30" BorderBrush="{x:Null}" VerticalAlignment="Bottom" Click="MessagesButton_Click">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="StatisticsButton" Content="Statistics" HorizontalAlignment="Left" Height="57.825" Margin="174,0,0,66.375" Width="266" FontSize="30" BorderBrush="{x:Null}" VerticalAlignment="Bottom" Click="StatisticsButton_Click">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="CloseButton" Content="X" HorizontalAlignment="Right" Height="94" VerticalAlignment="Top" Width="107.59" FontSize="48" Background="#FFDDDDDD" Opacity="0.4" BorderBrush="{x:Null}" Margin="0,10,10,0" Click="CloseButton_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Path x:Name="Separator" Data="M648,104 L648,910.94645" HorizontalAlignment="Left" Margin="610,60.631,0,44.375" Stretch="Fill" Width="16" Stroke="Black" Fill="Black" Opacity="0.4"/>
+        <Grid x:Name="ProfileGrid" Margin="610,134,0,44.375">
+            <Label x:Name="label" Content="Name:" HorizontalAlignment="Left" Height="66" Margin="36,80,0,0" VerticalAlignment="Top" Width="115" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
+            <Label x:Name="label_Copy" Content="Birthday:" HorizontalAlignment="Left" Height="66" Margin="36,173,0,0" VerticalAlignment="Top" Width="194" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
+            <Label x:Name="label_Copy1" Content="Phone:" HorizontalAlignment="Left" Height="66" Margin="36,272,0,0" VerticalAlignment="Top" Width="125" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
+            <Label x:Name="label_Copy2" Content="Email:" HorizontalAlignment="Left" Margin="36,383,0,327.825" Width="115" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
+            <Label x:Name="label_Copy3" Content="Biography:" HorizontalAlignment="Left" Margin="36,0,0,222.825" Width="194" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold" Height="66" VerticalAlignment="Bottom"/>
+            <Path Data="M36,151 L738.04558,151" Fill="Black" Height="1" Margin="36,151,69.421,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Opacity="0.2"/>
+            <Path Data="M36,151 L738.04558,151" Fill="Black" Height="1" Margin="36,352,69.421,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Opacity="0.2"/>
+            <Path Data="M36,151 L738.04558,151" Fill="Black" Height="1" Margin="36,256,69.421,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Opacity="0.2"/>
+            <Path Data="M36,151 L738.04558,151" Fill="Black" Height="1" Margin="36,0,69.421,307.825" Stretch="Fill" Stroke="Black" VerticalAlignment="Bottom" Opacity="0.2"/>
+            <TextBlock x:Name="BioTextBlock" Height="207.825" Margin="46,0,30.467,10" TextWrapping="Wrap" Text="Bio" VerticalAlignment="Bottom" FontSize="36" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="EmailTextBlock" Margin="156,388,22.467,323" TextWrapping="Wrap" FontSize="36" FontFamily="Segoe UI Light" Text="Email"/>
+            <TextBlock x:Name="PhoneTextBlock" Margin="168.467,277,10,0" TextWrapping="Wrap" FontSize="36" FontFamily="Segoe UI Light" Height="65.825" VerticalAlignment="Top" Text="000"/>
+            <TextBlock x:Name="BirthdayTextBlock" Margin="205,178,-17.533,0" TextWrapping="Wrap" FontSize="36" FontFamily="Segoe UI Light" Height="65.825" VerticalAlignment="Top" Text="Birthday"/>
+            <TextBlock x:Name="NameTextBlock" Margin="168.467,85,-17.533,0" TextWrapping="Wrap" FontSize="36" FontFamily="Segoe UI Light" Height="64.825" VerticalAlignment="Top" Text="Name"/>
+        </Grid>
+        <Grid x:Name="MessagesGrid" Margin="610,134,0,44.375" Visibility="Hidden">
+            <Label x:Name="SendMessageTo" Content="Send a message to" Height="93" Margin="26.5,10,47.467,0" VerticalAlignment="Top" FontSize="48" FontFamily="Segoe UI Light" Foreground="#FFF49F11"/>
+            <TextBox x:Name="MessageTextBox" Margin="32.5,116.5,28,198.325" TextWrapping="Wrap" FontSize="36" FontFamily="Segoe UI Light"/>
+            <Button x:Name="SendMessageButton" Content="Send" Height="69.666" Margin="298.967,0,300.5,73.492" VerticalAlignment="Bottom" FontSize="36" BorderBrush="{x:Null}">
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
+                </Button.Effect>
+            </Button>
+        </Grid>
+        <Grid x:Name="StatisticsGrid" Margin="610,134,0,44.375" Visibility="Hidden">
+            <Label Content="Teamwork" Height="60.134" Margin="36,43.933,0,0" VerticalAlignment="Top" FontSize="36" HorizontalAlignment="Left" Width="184" FontFamily="Segoe UI Semibold" Foreground="#FFF49F11"/>
+            <Label Content="Effort" Height="55.134" Margin="36,174.366,0,0" VerticalAlignment="Top" FontSize="36" HorizontalAlignment="Left" Width="184" FontFamily="Segoe UI Semibold" Foreground="#FFF49F11" RenderTransformOrigin="0.511,0.666"/>
+            <Label Content="Technique" Height="60.134" Margin="36,297.933,0,0" VerticalAlignment="Top" FontSize="36" HorizontalAlignment="Left" Width="184" FontFamily="Segoe UI Semibold" Foreground="#FFF49F11"/>
+            <Label Content="Power" Margin="36,0,0,288.758" FontSize="36" HorizontalAlignment="Left" Width="184" FontFamily="Segoe UI Semibold" Foreground="#FFF49F11" RenderTransformOrigin="0.402,1.465" Height="60.134" VerticalAlignment="Bottom"/>
+            <Path Data="M36,151 L738.04558,151" Fill="Black" Height="1" Margin="36,266,69.421,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Opacity="0.2"/>
+            <Path Data="M36,151 L738.04558,151" Fill="Black" Height="1" Margin="36,0,69.421,257.825" Stretch="Fill" Stroke="Black" VerticalAlignment="Bottom" Opacity="0.2"/>
+            <Path Data="M36,151 L738.04558,151" Fill="Black" Height="1" Margin="36,0,69.421,381.825" Stretch="Fill" Stroke="Black" VerticalAlignment="Bottom" Opacity="0.2"/>
+            <Path Data="M36,151 L738.04558,151" Fill="Black" Height="1" Margin="36,144,69.421,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Opacity="0.2"/>
+            <Slider x:Name="TeamworkSlider" Height="34.5" Margin="278.5,69.567,103.921,0" VerticalAlignment="Top" Maximum="13">
+                <Slider.Effect>
+                    <DropShadowEffect/>
+                </Slider.Effect>
+            </Slider>
+            <Slider x:Name="EffortSlider" Height="34.5" Margin="278.5,195,103.921,0" VerticalAlignment="Top" Maximum="13">
+                <Slider.Effect>
+                    <DropShadowEffect/>
+                </Slider.Effect>
+            </Slider>
+            <Slider x:Name="TechniqueSlider" Height="34.5" Margin="278.5,323.567,103.921,0" VerticalAlignment="Top" Maximum="13">
+                <Slider.Effect>
+                    <DropShadowEffect/>
+                </Slider.Effect>
+            </Slider>
+            <Slider x:Name="PowerSlider" Height="34.5" Margin="278.5,0,103.921,288.758" VerticalAlignment="Bottom" Maximum="13">
+                <Slider.Effect>
+                    <DropShadowEffect/>
+                </Slider.Effect>
+            </Slider>
+            <Label Content="Coach Notes" Margin="36,0,0,166.758" FontSize="36" HorizontalAlignment="Left" Width="226" FontFamily="Segoe UI Semibold" Foreground="#FFF49F11" RenderTransformOrigin="0.402,1.465" Height="60.134" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="CoachNotes" Height="134.825" Margin="36,0,69.421,10" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="24"/>
+        </Grid>
+        <Image x:Name="DeleteButtonPic" Margin="409.365,0,0,750.645" Stretch="Fill" Source="delete-button-png-delete-icon-16.jpg" HorizontalAlignment="Left" Width="146.802" VerticalAlignment="Bottom" Height="143.924" RenderTransformOrigin="0.563,0.565"/>
+        <Button x:Name="DeleteButton" Content="Button" HorizontalAlignment="Left" Height="143.924" Margin="409.365,60.631,0,0" VerticalAlignment="Top" Width="146.802" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Opacity="0" Click="DeleteButton_Click"/>
+        <Label x:Name="label1" Content="STATUS:" Height="43.369" Margin="631,60.631,681.467,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+        <TextBlock x:Name="StatusBlock" HorizontalAlignment="Right" Height="43.369" Margin="0,65.631,378.467,0" TextWrapping="Wrap" Text="PENDING REGISTRATION" VerticalAlignment="Top" Width="298" FontSize="24" Foreground="#FF615E68" FontStyle="Italic"/>
+        <Grid x:Name="DeleteDim" Background="#FF828282" Opacity="0.8" Visibility="Hidden"/>
+        <Grid x:Name="DeletePrompt" Margin="310,358,316.467,353.2" Background="#FFF9F9F9" Visibility="Hidden">
+            <Label x:Name="label2" Content="Are you sure you want to delete this member?" Margin="32,34,40,64" FontSize="36" FontFamily="Segoe UI Light"/>
+            <Button x:Name="YesDelete" Content="Yes" HorizontalAlignment="Right" Margin="0,111.125,82,34.875" Width="216" FontSize="48" BorderBrush="{x:Null}" Click="YesDelete_Click">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="2"/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="NoDelete" Content="No" Margin="242,111.125,334,34.875" FontSize="48" BorderBrush="{x:Null}" Click="NoDelete_Click">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="2"/>
+                </Button.Effect>
+            </Button>
+        </Grid>
+
+    </Grid>
+</UserControl>

@@ -28,6 +28,7 @@ namespace CoachingApp
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
             TitleTextBox.Text = TitleLabel.Content.ToString();
+            TitleLabel.Visibility = Visibility.Hidden;
             TitleTextBox.Visibility = Visibility.Visible;
             EditButton.Visibility = Visibility.Hidden;
             SaveButton.Visibility = Visibility.Visible;
@@ -37,6 +38,7 @@ namespace CoachingApp
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             TitleLabel.Content = TitleTextBox.Text;
+            TitleLabel.Visibility = Visibility.Visible;
             TitleTextBox.Visibility = Visibility.Hidden;
             EditButton.Visibility = Visibility.Visible;
             SaveButton.Visibility = Visibility.Hidden;
@@ -47,6 +49,7 @@ namespace CoachingApp
             CommentUserControl comment = new CommentUserControl();
             comment.Comment.Text = CommentTextBox.Text;
             CommentSection.Children.Add(comment);
+            CommentTextBox.Text = "Say something...";
         }
     }
 }

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-\\cs-fs01\Profiles\ug\vincealfonso.delaroc\Desktop\481FieldCoachApp-master\CoachingApp\obj\Debug\
+\\cs-fs01\Profiles\ug\vincealfonso.delaroc\Desktop\proj\481FieldCoachApp-master\CoachingApp\obj\Debug\
 CoachingApp
 none
 false
 DEBUG;TRACE
-\\cs-fs01\Profiles\ug\vincealfonso.delaroc\Desktop\481FieldCoachApp-master\CoachingApp\App.xaml
-12-973331806
+\\cs-fs01\Profiles\ug\vincealfonso.delaroc\Desktop\proj\481FieldCoachApp-master\CoachingApp\App.xaml
+141445660182
 
-19223297270
+21932177324
 14-1609446650
-CommentUserControl.xaml;EventUserControl.xaml;MainWindow.xaml;MatchStatsControl.xaml;MessageElementControl.xaml;messageUserControl.xaml;NewsPageControl.xaml;PlannerUserControl.xaml;ResourcesPhotoControl.xaml;sendMessageUserControl.xaml;Simple Styles.xaml;StartChatControl.xaml;
+CommentUserControl.xaml;EventUserControl.xaml;MainWindow.xaml;MatchStatsControl.xaml;MessageElementControl.xaml;messageUserControl.xaml;NewsPageControl.xaml;PlannerUserControl.xaml;ResourcesPhotoControl.xaml;sendMessageUserControl.xaml;Simple Styles.xaml;StartChatControl.xaml;TeamMemberControl.xaml;TeamMemberProfile.xaml;
 
 True
 

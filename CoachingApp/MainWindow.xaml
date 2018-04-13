@@ -9,8 +9,12 @@
         mc:Ignorable="d"
         Title="MainWindow" WindowStyle="None" Width="1920" Height="1080">
     <Grid x:Name="Parent_Grid" HorizontalAlignment="Left" Height="1090.917" Margin="-8,-10.917,-8,-8" VerticalAlignment="Top" Width="1928">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="163*"/>
+            <RowDefinition Height="928*"/>
+        </Grid.RowDefinitions>
 
-        <Grid x:Name="LoginGrid" Background="#FFEFF2F1" Margin="0,0,0,0" Width="1920" Height="1080" d:IsHidden="True">
+        <Grid x:Name="LoginGrid" Background="#FFEFF2F1" Margin="4,5.458" Width="1920" Height="1080" Grid.RowSpan="2">
             <Image x:Name="___Image___Scoop_" VerticalAlignment="Top" Height="541.5" Source="SCOOP.png" Margin="427.17,0,396.83,0"/>
             <TextBox x:Name="EmailTextBox" HorizontalAlignment="Left" Margin="671,500,0,509" TextWrapping="NoWrap" Width="604" FontSize="48"/>
             <TextBlock HorizontalAlignment="Left" Height="59" Margin="671,436,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Width="344" FontSize="36" FontFamily="Segoe UI Semibold"/>
@@ -33,31 +37,32 @@
             </Button>
 
         </Grid>
-        <Grid x:Name="CreateAccountGrid" HorizontalAlignment="Left" Height="1092" Margin="2.667,0,0,-1.083" VerticalAlignment="Top" Width="1925.333" Background="#FFEFF2F1" d:IsHidden="True">
-            <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Text="Create an Account" Foreground="#FFF49F11" TextAlignment="Center" Margin="675.666,40,642.999,0" HorizontalAlignment="Center" Width="606.668" FontFamily="Segoe UI Semilight"/>
-            <TextBox x:Name="EmailTextBox_Copy" Height="71" Margin="673,240,643,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="604" FontSize="48" HorizontalAlignment="Center" FontFamily="Segoe UI Light"/>
-            <TextBlock Height="59" Margin="675.667,174.5,900.333,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Width="344" FontSize="36" HorizontalAlignment="Center" FontFamily="Segoe UI Semilight"/>
-            <TextBlock Height="59" Margin="675.667,344,900.333,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Width="344" FontSize="36" HorizontalAlignment="Center" FontFamily="Segoe UI Semilight"/>
-            <PasswordBox Height="66" Margin="673,408,643,0" VerticalAlignment="Top" Width="604" FontSize="36" HorizontalAlignment="Center" FontFamily="Segoe UI Light"/>
-            <Button Content="Login" Height="60" Margin="842.5,963,812.5,0" VerticalAlignment="Top" Width="265" FontSize="36" Click="Login" HorizontalAlignment="Center"/>
-            <Button Content="Create Account" Height="78" Margin="811.166,945,769.667,0" VerticalAlignment="Top" FontSize="36" Click="Create_Account_Click2" FontWeight="Bold" BorderBrush="{x:Null}">
+        <Grid x:Name="CreateAccountGrid" HorizontalAlignment="Left" Height="1092" Margin="2.667,0,0,-1.083" VerticalAlignment="Top" Width="1925.333" Background="#FFEFF2F1" Grid.RowSpan="2" d:IsHidden="True">
+            <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Text="Create an Account" Foreground="#FFF49F11" TextAlignment="Center" Margin="621.666,66.198,710.999,0" FontFamily="Segoe UI Semilight" Height="93.557"/>
+            <TextBox x:Name="UsernameCATextBox" Height="59.985" Margin="664.172,244.332,750.866,0" TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="48" FontFamily="Segoe UI Light"/>
+            <TextBlock Height="49.847" Margin="666.425,190.261,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe UI Semilight" HorizontalAlignment="Left" Width="290.632"/>
+            <TextBlock Height="49.847" Margin="664.172,339.323,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe UI Semilight" HorizontalAlignment="Left" Width="290.632"/>
+            <PasswordBox x:Name="PasswordCATextBox" Height="55.761" Margin="664.171,394.17,750.866,0" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe UI Light"/>
+            <Button Content="Create Account" Height="78" Margin="759.166,980,821.667,0" VerticalAlignment="Top" FontSize="36" Click="Create_Account_Click2" FontWeight="Bold" BorderBrush="{x:Null}">
                 <Button.Effect>
                     <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
                 </Button.Effect>
             </Button>
-            <TextBox x:Name="EmailTextBox_Copy1" Height="71" Margin="675.667,584.5,640.333,0" TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="48" FontFamily="Segoe UI Light"/>
-            <TextBlock Height="59" Margin="675.667,520.5,900.333,0" TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top" Width="344" FontSize="36" HorizontalAlignment="Center" FontFamily="Segoe UI Semilight"/>
-            <TextBlock Height="59" Margin="675.667,710.5,900.333,0" TextWrapping="Wrap" Text="Birthday:" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe UI Semilight"/>
-            <TextBox x:Name="BdayDay" Height="71" Margin="675.667,774.5,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="48" HorizontalAlignment="Left" Width="139" Text="DD" FontFamily="Segoe UI Light"/>
-            <TextBox x:Name="BdayMonth" Height="71" Margin="842.5,774.5,938.5,0" TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="48" Text="MM" FontFamily="Segoe UI Light"/>
-            <TextBox x:Name="BdayYear" Height="71" Margin="0,774.5,643,0" TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="48" HorizontalAlignment="Right" Width="270.5" Text="YYYY" FontFamily="Segoe UI Light"/>
+            <TextBox x:Name="NameCATextBox" Height="59.985" Margin="666.426,544.822,744.106,0" TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="48" FontFamily="Segoe UI Light"/>
+            <TextBlock Height="49.847" Margin="666.425,490.751,0,0" TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe UI Semilight" HorizontalAlignment="Left" Width="290.632" d:LayoutOverrides="VerticalAlignment"/>
+            <TextBlock Height="49.846" Margin="666.426,642.516,0,0" TextWrapping="Wrap" Text="Birthday:" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe UI Semilight" HorizontalAlignment="Left" Width="295.137"/>
+            <TextBox x:Name="BdayDayCA" Height="59.985" Margin="666.426,696.587,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="48" HorizontalAlignment="Left" Width="117.435" Text="DD" FontFamily="Segoe UI Light"/>
+            <TextBox x:Name="BdayMonthCA" Height="59.985" Margin="807.376,696.587,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="48" Text="MM" FontFamily="Segoe UI Light" HorizontalAlignment="Left" Width="121.942"/>
+            <TextBox x:Name="BdayYearCA" Height="59.985" Margin="952.692,696.587,744.106,0" TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="48" Text="YYYY" FontFamily="Segoe UI Light"/>
             <Button x:Name="CreateAccountBack" Content="Back" HorizontalAlignment="Left" Width="170" FontSize="36" Height="89.108" VerticalAlignment="Top" Click="CreateAccountBack_Click" BorderBrush="{x:Null}" FontWeight="Bold">
                 <Button.Effect>
                     <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
                 </Button.Effect>
             </Button>
+            <TextBlock Height="49.847" Margin="664.172,793.944,0,0" TextWrapping="Wrap" Text="My Team:" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe UI Semilight" HorizontalAlignment="Left" Width="295.139"/>
+            <TextBox x:Name="TeamNameCA" Height="59.985" Margin="666.426,868.015,744.106,0" TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="48" FontFamily="Segoe UI Light"/>
         </Grid>
-        <Grid x:Name="AccountCreatedSucGrid" Height="1080" Background="#FFEFF2F1" Width="1924" HorizontalAlignment="Left" Margin="4,5.458,0,5.458" d:IsHidden="True">
+        <Grid x:Name="AccountCreatedSucGrid" Height="1080" Background="#FFEFF2F1" Width="1924" HorizontalAlignment="Left" Margin="4,5.458,0,5.458" Grid.RowSpan="2" d:IsHidden="True">
             <TextBlock Height="126" Margin="260.5,177,264.5,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Text="Your account has been created successfully!" Foreground="#FFF49F11" FontFamily="Segoe UI Historic"/>
             <Button x:Name="gotoLoginPage" Content="Login&#xA;" Height="88" Margin="809.5,548,809.5,0" VerticalAlignment="Top" FontSize="48" Click="loginPageButton" Background="#FFDDDDDD" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
                 <Button.Effect>
@@ -65,10 +70,12 @@
                 </Button.Effect>
             </Button>
         </Grid>
-        <Grid x:Name="CoachMainPageGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFEFF2F1" Width="1920" Height="1080" d:IsHidden="True">
+        <Grid x:Name="CoachMainPageGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFEFF2F1" Width="1920" Height="1085.459" Margin="4,5.458,4,0" Grid.RowSpan="2" d:IsHidden="True">
             <Grid x:Name="titleBarGrid"  HorizontalAlignment="Center" Height="160" VerticalAlignment="Top" Margin="0,100,0,0" Background="#00000000" Width="1920" >
                 <Rectangle x:Name="BottomBoarderRect" Stroke="Black" VerticalAlignment="Bottom" Height="5" Fill="Black" Width="1500" HorizontalAlignment="Center" />
-                <Image x:Name="CoachImage" HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="176" Source="C:\Users\Admin\source\repos\481Project\CoachingApp\Photos\stockCoachPhoto.jpg"/>
+                <Border BorderBrush="Black" BorderThickness="0.5" HorizontalAlignment="Right" Width="234" Margin="0,-75.542,246,28">
+                    <Image x:Name="CoachImage" Height="189.042" VerticalAlignment="Top" Margin="8,8,8,0" OpacityMask="Black" Stretch="UniformToFill"/>
+                </Border>
                 <TextBlock x:Name="HelloTextblock" HorizontalAlignment="Left" Height="160" Margin="210,0,0,0" TextWrapping="Wrap" Text="Hello " VerticalAlignment="Top" Width="1068.667" FontSize="100" Foreground="#FFF49F11" FontFamily="Segoe UI Historic"/>
             </Grid>
             <Grid x:Name="MainMenuGrid" VerticalAlignment="Center" Margin="178,287,178,90" Height="703" Grid.RowSpan="4" Grid.ColumnSpan="2">
@@ -123,13 +130,13 @@
                     <Button x:Name="menuItemButton8" Content="" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1" Click="menuItemButton8_Click" Opacity="0"/>
                 </Grid>
             </Grid>
-            <Button Content="Logout" HorizontalAlignment="Right" VerticalAlignment="Top" Width="216" Height="95" FontSize="36" Click="mainMenuExitButton" RenderTransformOrigin="0.32,-8.491" BorderBrush="{x:Null}" FontWeight="Bold">
+            <Button Content="Logout" HorizontalAlignment="Right" VerticalAlignment="Top" Width="180" Height="95" FontSize="36" Click="mainMenuExitButton" RenderTransformOrigin="0.32,-8.491" BorderBrush="{x:Null}" FontWeight="Bold">
                 <Button.Effect>
                     <DropShadowEffect ShadowDepth="2" BlurRadius="4"/>
                 </Button.Effect>
             </Button>
         </Grid>
-        <Grid x:Name="MessagesParentGrid" Background="#FFEFF2F1" d:IsHidden="True">
+        <Grid x:Name="MessagesParentGrid" Background="#FFEFF2F1" Grid.RowSpan="2" d:IsHidden="True">
             <Grid x:Name="MessagesTitleGrid" Height="100" VerticalAlignment="Top" Margin="0,100,0,0">
                 <TextBlock FontSize="72" HorizontalAlignment="Left" Height="100" Margin="48,0,0,0" TextWrapping="Wrap" Text="Messages" VerticalAlignment="Top" Width="600" Foreground="#FFF49F11"/>
                 <Button Content="+ Start Group" HorizontalAlignment="Right" VerticalAlignment="Center" Width="510" Height="100" FontSize="72" Click="StartGroupClick"/>
@@ -146,8 +153,8 @@
                 </UniformGrid>
             </ScrollViewer>
         </Grid>
-        <Grid x:Name="NewsfeedGrid" HorizontalAlignment="Left" Height="1092" VerticalAlignment="Top" Width="1929" Background="#FFF49F11" Margin="0,0,-1,-1.083" d:IsHidden="True">
-            <ScrollViewer x:Name="NewsfeedScrollView" Margin="0,146.703,0,0" Background="#FFA2A0A0">
+        <Grid x:Name="NewsfeedGrid" HorizontalAlignment="Left" Height="1092" VerticalAlignment="Top" Width="1929" Background="#FFF49F11" Margin="0,0,-1,-1.083" Grid.RowSpan="2" d:IsHidden="True">
+            <ScrollViewer x:Name="NewsfeedScrollView" Margin="0,146.703,0,0" Background="#FFA2A0A0" VerticalScrollBarVisibility="Hidden">
                 <UniformGrid x:Name="NewsUniGrid" Height="Auto" Width="1908.5" Columns="1"/>
             </ScrollViewer>
             <Grid x:Name="NewsDialogBox" Background="#FFE4E4E4" Visibility="Hidden">
@@ -178,45 +185,69 @@
                 </Button.Effect>
             </Button>
         </Grid>
-        <Grid x:Name="MyProfileGrid" HorizontalAlignment="Left" Height="1080" Margin="0,0,-1,0" VerticalAlignment="Top" Width="1929" Background="White">
-            <Button x:Name="UploadProfPhoto" HorizontalAlignment="Left" Height="54" Margin="134,640,0,0" VerticalAlignment="Top" Width="200" Click="UploadProfPhoto_Click" Background="#FFDDDDDD" Content="Upload Photo" FontSize="24" BorderBrush="{x:Null}">
-                <Button.Effect>
-                    <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
-                </Button.Effect>
-            </Button>
+        <Grid x:Name="MyProfileGrid" HorizontalAlignment="Left" Height="1090.917" Margin="0,0,-1,0" VerticalAlignment="Top" Width="1929" Background="White" Grid.RowSpan="2" d:IsHidden="True">
             <Button x:Name="BackButtonProfile" Content="Back" HorizontalAlignment="Left" Height="88.5" Margin="37,75,0,0" VerticalAlignment="Top" Width="130.5" FontSize="36" Click="BackButtonProfile_Click" BorderBrush="{x:Null}">
                 <Button.Effect>
                     <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
                 </Button.Effect>
             </Button>
-            <Label x:Name="NameLabel" Content="Name:" HorizontalAlignment="Left" Height="75" Margin="486,255,0,0" VerticalAlignment="Top" Width="114" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
-            <Label x:Name="BirthdayLabel" Content="Birthday:" HorizontalAlignment="Left" Height="63" Margin="486,335,0,0" VerticalAlignment="Top" Width="153" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
-            <Label x:Name="BiographyLabel" Content="Biography:" HorizontalAlignment="Left" Height="75" Margin="486,640,0,0" VerticalAlignment="Top" Width="186" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
-            <TextBox x:Name="BiographyTextBox" HorizontalAlignment="Left" Height="192" Margin="486,720,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1158" Visibility="Hidden" FontFamily="Segoe UI Light" FontSize="36"/>
-            <Label x:Name="EmailLabel" Content="Email:" HorizontalAlignment="Left" Height="66" Margin="486,432,0,0" VerticalAlignment="Top" Width="117" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
-            <Label x:Name="PhoneNumberLabel" Content="Phone No:" HorizontalAlignment="Left" Height="69" Margin="486,549,0,0" VerticalAlignment="Top" Width="186" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
+            <Label x:Name="NameLabel" Content="Name:" HorizontalAlignment="Left" Height="75" Margin="586,235,0,0" VerticalAlignment="Top" Width="114" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
+            <Label x:Name="BirthdayLabel" Content="Birthday:" HorizontalAlignment="Left" Height="63" Margin="586,315,0,0" VerticalAlignment="Top" Width="160" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
+            <Label x:Name="BiographyLabel" Content="Biography:" HorizontalAlignment="Left" Height="75" Margin="586,630.153,0,0" VerticalAlignment="Top" Width="186" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
+            <TextBox x:Name="BiographyTextBox" HorizontalAlignment="Left" Height="192" Margin="586,700,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1158" Visibility="Hidden" FontFamily="Segoe UI Light" FontSize="36"/>
+            <Label x:Name="EmailLabel" Content="Email:" HorizontalAlignment="Left" Height="66" Margin="586,412,0,0" VerticalAlignment="Top" Width="117" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
+            <Label x:Name="PhoneNumberLabel" Content="Phone No:" HorizontalAlignment="Left" Height="69" Margin="586,529,0,0" VerticalAlignment="Top" Width="186" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
             <Label x:Name="MyProfileLabel" Content="My Profile" HorizontalAlignment="Left" Height="133.5" Margin="777,51.458,0,0" VerticalAlignment="Top" Width="386" FontSize="72" Foreground="#FFF49F11" FontFamily="Segoe UI Light"/>
-            <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Height="60" Margin="642,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="735" Visibility="Hidden" FontFamily="Segoe UI Light" FontSize="36"/>
-            <TextBox x:Name="EmailTextBox1" HorizontalAlignment="Left" Height="66" Margin="642,432,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="798" FontFamily="Segoe UI Light" FontSize="24" Visibility="Hidden"/>
-            <TextBox x:Name="PhoneTextBox" HorizontalAlignment="Left" Height="60" Margin="690,549,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="696" Visibility="Hidden" FontFamily="Segoe UI Light" FontSize="36"/>
-            <Label x:Name="BiographyInput" Content="I'm a coach.&#xA;" HorizontalAlignment="Left" Height="192" Margin="486,720,0,0" VerticalAlignment="Top" Width="1158" FontSize="36" FontFamily="Segoe UI Light"/>
-            <Label x:Name="PhoneInput" Content="(403) 123-4567" HorizontalAlignment="Left" Height="60" Margin="690,549,0,0" VerticalAlignment="Top" Width="867" FontSize="36" FontFamily="Segoe UI Light"/>
-            <Label x:Name="EmailInput" Content="numberonecoach@coachingsociety.com" HorizontalAlignment="Left" Height="66" Margin="690,432,0,0" VerticalAlignment="Top" Width="1002" FontSize="36" FontFamily="Segoe UI Light"/>
-            <Label x:Name="BirthdayInput" Content="1/11/1994" HorizontalAlignment="Left" Height="59" Margin="690,339,0,0" VerticalAlignment="Top" Width="906" FontSize="36" FontFamily="Segoe UI Light"/>
-            <Label x:Name="NameInput" Content="Omar" HorizontalAlignment="Left" Height="65" Margin="690,255,0,0" VerticalAlignment="Top" Width="906" FontSize="36" FontFamily="Segoe UI Light"/>
-            <Button x:Name="EditButton" Content="Edit" HorizontalAlignment="Left" Height="54" Margin="486,951,0,0" VerticalAlignment="Top" Width="153" FontSize="36" Click="EditButton_Click" BorderBrush="{x:Null}" FontWeight="Bold">
+            <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Height="60" Margin="742,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="735" Visibility="Hidden" FontFamily="Segoe UI Light" FontSize="36"/>
+            <TextBox x:Name="EmailTextBox1" HorizontalAlignment="Left" Height="66" Margin="742,412,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="798" FontFamily="Segoe UI Light" FontSize="36" Visibility="Hidden"/>
+            <TextBox x:Name="PhoneTextBox" HorizontalAlignment="Left" Height="60" Margin="790,529,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="696" Visibility="Hidden" FontFamily="Segoe UI Light" FontSize="36"/>
+            <Label x:Name="BiographyInput" Content="I'm a coach.&#xA;" HorizontalAlignment="Left" Height="192" Margin="586,710.153,0,0" VerticalAlignment="Top" Width="1158" FontSize="36" FontFamily="Segoe UI Light"/>
+            <Label x:Name="PhoneInput" Content="(403) 432-1324" HorizontalAlignment="Left" Height="60" Margin="790,529,0,0" VerticalAlignment="Top" Width="867" FontSize="36" FontFamily="Segoe UI Light"/>
+            <Label x:Name="EmailInput" Content="numberonecoach@coachingsociety.com" HorizontalAlignment="Left" Height="66" Margin="790,412,0,0" VerticalAlignment="Top" Width="1002" FontSize="36" FontFamily="Segoe UI Light"/>
+            <Label x:Name="BirthdayInput" Content="4/11/1995" HorizontalAlignment="Left" Height="59" Margin="790,319,0,0" VerticalAlignment="Top" Width="906" FontSize="36" FontFamily="Segoe UI Light"/>
+            <Label x:Name="NameInput" Content="Simran Rai" HorizontalAlignment="Left" Height="65" Margin="790,235,0,0" VerticalAlignment="Top" Width="906" FontSize="36" FontFamily="Segoe UI Light"/>
+            <Button x:Name="EditButton" Content="Edit" HorizontalAlignment="Left" Height="54" Margin="586,961,0,0" VerticalAlignment="Top" Width="153" FontSize="36" Click="EditButton_Click" BorderBrush="{x:Null}" FontWeight="Bold" RenderTransformOrigin="1.085,0.221">
                 <Button.Effect>
                     <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
                 </Button.Effect>
             </Button>
-            <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Height="54" Margin="486,951,0,0" VerticalAlignment="Top" Width="158" FontSize="36" Visibility="Hidden" Click="SaveButton_Click"/>
-            <Rectangle x:Name="ProfilePhoto" Stroke="#FF939393" Margin="37,255,1467,457"/>
-            <TextBox x:Name="BdayDayTextBox" HorizontalAlignment="Left" Height="42" Margin="651,347.447,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" d:LayoutOverrides="HorizontalAlignment" FontSize="24" TextAlignment="Center" Visibility="Hidden" FontFamily="Segoe UI Light"/>
-            <TextBox x:Name="BdayMonthTextBox" HorizontalAlignment="Left" Height="42" Margin="738.5,347.447,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" FontSize="24" TextAlignment="Center" d:LayoutOverrides="HorizontalAlignment" Visibility="Hidden" FontFamily="Segoe UI Light"/>
-            <TextBox x:Name="BdayYearTextBox" HorizontalAlignment="Left" Height="42" Margin="826,347.447,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118.5" FontSize="24" TextAlignment="Center" d:LayoutOverrides="HorizontalAlignment" Visibility="Hidden" FontFamily="Segoe UI Light"/>
+            <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Height="54" Margin="586,961,0,0" VerticalAlignment="Top" Width="158" FontSize="36" Click="SaveButton_Click" FontWeight="Bold" BorderBrush="{x:Null}" Visibility="Hidden">
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
+                </Button.Effect>
+            </Button>
+            <TextBox x:Name="BdayDayTextBox" HorizontalAlignment="Left" Height="50.553" Margin="751,327.447,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" d:LayoutOverrides="HorizontalAlignment" FontSize="36" TextAlignment="Center" FontFamily="Segoe UI Light" Visibility="Hidden"/>
+            <TextBox x:Name="BdayMonthTextBox" HorizontalAlignment="Left" Height="50.553" Margin="838.5,327.447,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" FontSize="36" TextAlignment="Center" d:LayoutOverrides="HorizontalAlignment" FontFamily="Segoe UI Light" Visibility="Hidden"/>
+            <TextBox x:Name="BdayYearTextBox" HorizontalAlignment="Left" Height="50.553" Margin="926,327.447,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118.5" FontSize="36" TextAlignment="Center" FontFamily="Segoe UI Light" Visibility="Hidden"/>
+            <Path Data="M486,330 L1344.5409,330" Fill="#FFF4F4F5" Height="1" Margin="586,305,483.459,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Opacity="0.15"/>
+            <Path Data="M486,330 L1344.5409,330" Fill="#FFF4F4F5" Height="1" Margin="586,393.333,483.459,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Opacity="0.15"/>
+            <Path Data="M486,330 L1344.5409,330" Fill="#FFF4F4F5" Height="1" Margin="586,0,483.459,471.5" Stretch="Fill" Stroke="Black" VerticalAlignment="Bottom" Opacity="0.15"/>
+            <Path Data="M486,330 L1344.5409,330" Fill="#FFF4F4F5" Height="1" Margin="586,499.667,483.459,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Opacity="0.15"/>
+            <Button x:Name="UploadProfPhoto" HorizontalAlignment="Left" Height="54" Margin="178,673.215,0,0" VerticalAlignment="Top" Width="200" Click="UploadProfPhoto_Click" Background="#FFDDDDDD" Content="Upload Photo" FontSize="24" BorderBrush="{x:Null}">
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
+                </Button.Effect>
+            </Button>
+            <Border BorderBrush="Black" BorderThickness="0.5" HorizontalAlignment="Left" Width="425" Margin="75,240.5,0,471.5">
+                <Image x:Name="ProfilePhotoCoach" Height="360.417" VerticalAlignment="Top" Margin="8,8,8,0" OpacityMask="Black" Stretch="UniformToFill"/>
+            </Border>
+            <Grid x:Name="ProfileDimGrid" Margin="0,-9.083,0,-1.083" Background="#FF787878" Opacity="0.7" Visibility="Hidden"/>
+            <Grid x:Name="ConfirmationBox" Margin="560,412,549.459,440.5" Background="White" Visibility="Hidden">
+                <Label x:Name="label1" Content="Do you want to save changes before leaving?" Margin="44,30,51.541,90" FontFamily="Segoe UI Light" FontSize="36"/>
+                <Button x:Name="YesConfirm" Content="Yes" HorizontalAlignment="Right" Margin="0,0,75.541,38" Width="170" FontSize="48" Height="80" VerticalAlignment="Bottom" BorderBrush="{x:Null}" RenderTransformOrigin="-0.529,0.581" Click="YesConfirm_Click">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
+                <Button x:Name="NoConfirm" Content="No" Margin="382,0,273.541,38" FontSize="48" Height="80" VerticalAlignment="Bottom" BorderBrush="{x:Null}" RenderTransformOrigin="-0.529,0.581" Click="NoConfirm_Click">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
+            </Grid>
         </Grid>
-        <Grid x:Name="PlannerGrid" HorizontalAlignment="Left" Height="1092" VerticalAlignment="Top" Width="1929" Background="#FFF49F11" Margin="0,0,-1,-1.083" d:IsHidden="True">
-            <ScrollViewer x:Name="PlannerScrollView" Margin="0,146.5,0,10" Background="#FFA2A0A0">
+        <Grid x:Name="PlannerGrid" HorizontalAlignment="Left" Height="1092" VerticalAlignment="Top" Width="1929" Background="#FFF49F11" Margin="0,0,-1,-1.083" d:IsHidden="True" Grid.RowSpan="2">
+            <ScrollViewer x:Name="PlannerScrollView" Margin="0,146.5,0,0" Background="#FFA2A0A0" VerticalScrollBarVisibility="Hidden">
                 <UniformGrid x:Name="PlannerUniGrid" Height="Auto" Width="1910" Columns="1"/>
             </ScrollViewer>
             <Button x:Name="BackButtonPlanner" Content="Back" HorizontalAlignment="Left" Height="68.5" Margin="47.333,44.5,0,0" VerticalAlignment="Top" Width="130.5" FontSize="24" Click="BackButtonPlanner_Click" FontWeight="Bold" BorderBrush="{x:Null}">
@@ -253,15 +284,10 @@
                 </Button>
             </Grid>
         </Grid>
-        <Grid x:Name="ResourcesGrid" Height="1092" Margin="0,0,-14.5,-1.083" VerticalAlignment="Top" Background="#FFF49F11" Width="1942.5" HorizontalAlignment="Left" d:IsHidden="True">
-            <ScrollViewer x:Name="ResourcesScrollView" Margin="0,146.5,0,0" Background="#FFA2A0A0">
+        <Grid x:Name="ResourcesGrid" Height="1092" Margin="0,0,-14.5,-1.083" VerticalAlignment="Top" Background="#FFF49F11" Width="1942.5" HorizontalAlignment="Left" d:IsHidden="True" Grid.RowSpan="2">
+            <ScrollViewer x:Name="ResourcesScrollView" Margin="0,146.5,0,0" Background="#FFA2A0A0" VerticalScrollBarVisibility="Hidden">
                 <UniformGrid x:Name="ResourcesUniGrid" Height="Auto" Width="1920" Columns="1"/>
             </ScrollViewer>
-            <Button x:Name="ShareButton" Content="Share" HorizontalAlignment="Left" Height="68.5" Margin="1723,44.345,0,0" VerticalAlignment="Top" Width="171.5" FontSize="24" Click="ShareButton_Click" FontWeight="Bold" BorderBrush="{x:Null}">
-                <Button.Effect>
-                    <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
-                </Button.Effect>
-            </Button>
             <Button x:Name="BackButtonResources" Content="Back" HorizontalAlignment="Left" Height="68.5" Margin="46,44.345,0,0" VerticalAlignment="Top" Width="130.5" FontSize="24" Click="BackButtonResources_Click" FontWeight="Bold" BorderBrush="{x:Null}">
                 <Button.Effect>
                     <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
@@ -300,8 +326,13 @@
                     </Button.Effect>
                 </Button>
             </Grid>
+            <Button x:Name="ShareButton" Content="Share" HorizontalAlignment="Left" Height="68.5" Margin="1723,44.345,0,0" VerticalAlignment="Top" Width="171.5" FontSize="24" Click="ShareButton_Click" FontWeight="Bold" BorderBrush="{x:Null}">
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
+                </Button.Effect>
+            </Button>
         </Grid>
-        <Grid x:Name="DMParentGrid" Background="#FFEFF2F1" d:IsHidden="True">
+        <Grid x:Name="DMParentGrid" Background="#FFEFF2F1" Margin="0,0,-14.5,0" Grid.RowSpan="2" d:IsHidden="True">
             <Button x:Name="DMbackToMessagesList" Content="Back" HorizontalAlignment="Left" Height="99" Margin="-0.5,-1,0,0" VerticalAlignment="Top" Width="314" FontSize="36" Click="DMtoMessagesList"/>
             <TextBlock HorizontalAlignment="Left" Height="107" Margin="106,103,0,0" TextWrapping="Wrap" Text="Suzie Z." VerticalAlignment="Top" Width="1704" FontSize="72" Foreground="#FFF49F11"/>
             <ScrollViewer x:Name="messagesScrollViewer" HorizontalAlignment="Left" Height="732" Margin="98,206,0,0" VerticalAlignment="Top" Width="1712">
@@ -312,108 +343,56 @@
                 <Button x:Name="SendButton" Content="Send" Height="100" Margin="0" Width="114" FontSize="36" Click="Send_Button_Click" Background="#FF80AEFF" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
             </Grid>
         </Grid>
-        <Grid x:Name="MyTeamGrid" Margin="4,5.458,4,-1.083" Width="1920" d:IsHidden="True">
+        <Grid x:Name="MyTeamGrid" Margin="0,0,-1,-1.083" Grid.RowSpan="2" d:IsHidden="True">
             <Grid x:Name="TeamContainer" Background="White">
                 <Label x:Name="LabelPlayers" Content="Players" HorizontalAlignment="Left" Height="56.647" Margin="102.267,229.84,0,0" VerticalAlignment="Top" Width="472.8" FontSize="36" Foreground="#FFF49F11" FontWeight="Bold" FontFamily="Segoe UI Semibold"/>
-                <Label x:Name="LabelCoaches" Content="Coaches" HorizontalAlignment="Left" Height="60" Margin="102.267,0,0,348.713" VerticalAlignment="Bottom" Width="472.8" FontSize="36" Foreground="#FFF49F11" FontWeight="Bold" FontFamily="Segoe UI Semibold"/>
+                <Label x:Name="LabelCoaches" Content="Coaches" HorizontalAlignment="Left" Height="60" Margin="102.267,0,0,363.713" VerticalAlignment="Bottom" Width="472.8" FontSize="36" Foreground="#FFF49F11" FontWeight="Bold" FontFamily="Segoe UI Semibold"/>
                 <Rectangle x:Name="RectanglePlayers" Height="59.353" Margin="365.6,227.134,10,0" VerticalAlignment="Top" Fill="#FF828282" Opacity="0.1" RadiusY="29.676" RadiusX="29.676"/>
-                <Rectangle x:Name="RectangleCoaches" Height="59.353" Margin="365.6,0,0,348.713" VerticalAlignment="Bottom" Fill="#FF828282" Opacity="0.1" RadiusY="29.677" RadiusX="29.677" HorizontalAlignment="Left" Width="1544.4"/>
-                <TextBlock x:Name="Player1TextBlock" TextWrapping="Wrap" Text="Sarah Graham" VerticalAlignment="Bottom" TextAlignment="Center" Height="42.281" FontSize="36" FontWeight="Bold" HorizontalAlignment="Left" Margin="355.6,0,0,478.625" Width="266.2" FontFamily="Segoe UI Semibold"/>
-                <Image x:Name="Player1Photo" VerticalAlignment="Top" Height="188.955" Source="generic-user-purple.png" HorizontalAlignment="Left" Width="163" Margin="412.067,375.139,0,0"/>
-                <Button x:Name="Player1Button" Content="" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Opacity="0" HorizontalAlignment="Left" Width="266.2" Margin="355.6,338.334,0,478.625" Click="Player1Button_Click"/>
-                <TextBlock x:Name="Coach1TextBlock" TextWrapping="Wrap" VerticalAlignment="Bottom" TextAlignment="Center" Height="42.281" FontSize="36" FontWeight="Bold" HorizontalAlignment="Left" Margin="355.6,0,0,60.825" Width="266.2" Text="Omar" FontFamily="Segoe UI Semibold"/>
-                <Image x:Name="Coach1Photo" VerticalAlignment="Top" Height="188.955" Source="generic-user-purple.png" HorizontalAlignment="Left" Width="163" Margin="412.067,792.939,0,0"/>
-                <Button x:Name="Coach1Button" Content="" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Opacity="0" HorizontalAlignment="Left" Width="266.2" Margin="355.6,0,0,60.825" Height="263.041" VerticalAlignment="Bottom" Click="Coach1Button_Click"/>
-                <TextBlock x:Name="Coach2TextBlock" TextWrapping="Wrap" Text="Brenda Muier" VerticalAlignment="Bottom" TextAlignment="Center" Height="42.281" FontSize="36" FontWeight="Bold" Margin="708.4,0,965.4,60.825" FontFamily="Segoe UI Semibold"/>
-                <Image x:Name="Coach2Photo" VerticalAlignment="Top" Height="188.955" Source="generic-user-purple.png" HorizontalAlignment="Left" Width="163" Margin="746.867,792.939,0,0"/>
-                <Button x:Name="Coach2Button" Content="" Background="Black" BorderBrush="{x:Null}" Foreground="{x:Null}" Opacity="0" Margin="708.4,0,965.4,60.825" Height="263.041" VerticalAlignment="Bottom" Click="Coach2Button_Click"/>
+                <Rectangle x:Name="RectangleCoaches" Height="59.353" Margin="365.6,0,0,363.713" VerticalAlignment="Bottom" Fill="#FF828282" Opacity="0.1" RadiusY="29.677" RadiusX="29.677" HorizontalAlignment="Left" Width="1544.4"/>
                 <Label x:Name="LabelMyTeam" Content="Smarticle Spectacles" Height="147.134" Margin="652.4,53,652.8,0" VerticalAlignment="Top" FontSize="72" FontWeight="Bold" Foreground="#FFF49F11" FontFamily="Segoe UI Light"/>
+                <UniformGrid x:Name="PlayersUniGrid" Margin="395.6,335.202,43,462.798" Height="294" Rows="1"/>
+                <UniformGrid x:Name="CoachesUniGrid" Height="294" Margin="395.6,0,43.4,29.083" VerticalAlignment="Bottom" RenderTransformOrigin="0.502,0.524" Rows="1"/>
             </Grid>
+            <Button x:Name="AddMemberButton" Content="Add Member" HorizontalAlignment="Right" Height="88.5" Margin="0,75,35.5,0" VerticalAlignment="Top" Width="266.5" FontSize="36" BorderBrush="{x:Null}" FontWeight="Bold" Click="AddMemberButton_Click">
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
+                </Button.Effect>
+            </Button>
             <Button x:Name="BackButtonTeam" Content="Back" HorizontalAlignment="Left" Height="88.5" Margin="95,75,0,0" VerticalAlignment="Top" Width="130.5" FontSize="36" Click="BackButtonTeam_Click" BorderBrush="{x:Null}" FontWeight="Bold">
                 <Button.Effect>
                     <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
                 </Button.Effect>
             </Button>
-            <Grid x:Name="BackgroundGrid" Margin="257.067,75,263.866,60.825" Background="#FF47B440" Visibility="Hidden">
+            <Grid x:Name="BackgroundGrid" Margin="257.067,75,263.866,60.825" Visibility="Hidden">
                 <Rectangle x:Name="BackgroundDim" Fill="#FF828282" Margin="-334,-86.4,-291.6,-59.025" Opacity="0.8"/>
-                <Rectangle x:Name="ProfileDialogShape" Fill="#FFE4E4E4" Margin="-10.4,0,0,0.975"/>
+                <Rectangle x:Name="ProfileDialogShape" Margin="-10.4,0,0,0.975" Visibility="Hidden"/>
             </Grid>
-            <Button x:Name="ExitProfile" Content="X&#xA;" HorizontalAlignment="Right" Margin="0,81.9,263.866,0" Width="124.536" FontSize="48" Height="81.6" VerticalAlignment="Top" Opacity="0.49" Click="ExitProfile_Click" BorderBrush="{x:Null}" Background="{x:Null}" Visibility="Hidden">
-                <Button.Effect>
-                    <DropShadowEffect BlurRadius="4" ShadowDepth="3"/>
-                </Button.Effect>
-            </Button>
-            <Image x:Name="ProfilePhotoImage" VerticalAlignment="Top" Height="308.955" Source="generic-user-purple.png" HorizontalAlignment="Left" Width="400.6" Margin="359.267,166.339,0,0" d:LayoutOverrides="VerticalAlignment" Visibility="Hidden">
-                <Image.Effect>
-                    <DropShadowEffect/>
-                </Image.Effect>
-            </Image>
-            <Button x:Name="MessageButton" Content="Message" HorizontalAlignment="Left" Height="72" Margin="407.4,0,0,308.266" VerticalAlignment="Bottom" Width="216" FontSize="24" Click="MessageButton_Click" BorderBrush="{x:Null}" FontFamily="Segoe UI Emoji" Visibility="Hidden">
-                <Button.Effect>
-                    <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
-                </Button.Effect>
-            </Button>
-            <Button x:Name="StatisticsButton" Content="Statistics" HorizontalAlignment="Left" Height="72" Margin="407.4,0,0,207.866" VerticalAlignment="Bottom" Width="216" FontSize="24" Click="StatisticsButton_Click" BorderBrush="{x:Null}" FontFamily="Segoe UI Emoji" Visibility="Hidden">
-                <Button.Effect>
-                    <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
-                </Button.Effect>
-            </Button>
-            <Label x:Name="NamePlace" Content="Name" HorizontalAlignment="Left" Margin="384.267,500.434,0,512.366" Width="345.6" FontSize="42" Foreground="#FFF49F11" FontWeight="Bold" FontFamily="Segoe UI Semilight" Visibility="Hidden"/>
-            <Grid x:Name="DefaultProfileGrid" Margin="759.867,243.334,331.866,92.666" Visibility="Hidden">
-                <Label x:Name="LabelName" Content="Name:" HorizontalAlignment="Left" Height="62.4" Margin="26,40,0,0" VerticalAlignment="Top" Width="132.8" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
-                <Label x:Name="LabelAge" Content="Age:" HorizontalAlignment="Left" Height="62.4" Margin="26,140.8,0,0" VerticalAlignment="Top" Width="110.4" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
-                <Label x:Name="LabelPhone" Content="Phone:" HorizontalAlignment="Left" Height="62.4" Margin="26,236.8,0,0" VerticalAlignment="Top" Width="132.8" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
-                <Label x:Name="LabelEmail" Content="Email:" HorizontalAlignment="Left" Margin="26,324.8,0,356.8" Width="110.4" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
-                <Label x:Name="LabelBio" Content="Bio:" HorizontalAlignment="Left" Height="62.4" Margin="26,0,0,264" VerticalAlignment="Bottom" Width="78.4" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
-                <Label x:Name="BioText" Content="I love socccer yay!" Height="196.8" Margin="26,0,36,39.6" VerticalAlignment="Bottom" FontSize="36"/>
-                <Label x:Name="EmailText" Content="email@here.com" Margin="163.8,324.8,-18.4,356.8" FontSize="36"/>
-                <Label x:Name="PhoneText" Content="(123)4567-890" Margin="163.8,236.8,0,0" FontSize="36" Height="62.4" VerticalAlignment="Top"/>
-                <Label x:Name="AgeText" Content="20" Margin="163.8,140.8,0,0" FontSize="36" Height="62.4" VerticalAlignment="Top"/>
-                <Label x:Name="NamePlaceProfile" Content="Name&#xA;" Margin="163.8,40,0,0" FontSize="36" Height="62.4" VerticalAlignment="Top" Foreground="Black"/>
-            </Grid>
-            <Grid x:Name="StatsGrid" Margin="759.867,243.334,331.866,92.666" Visibility="Hidden">
-                <Slider x:Name="SliderTeam" Height="92.8" Margin="50.8,106,0,0" Style="{DynamicResource SimpleSlider}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="316.8" Minimum="0" Maximum="5" Value="4">
-                    <Slider.Effect>
-                        <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
-                    </Slider.Effect>
-                </Slider>
-                <Slider x:Name="SliderEffort" Height="92.8" Margin="50.8,274,0,0" Style="{DynamicResource SimpleSlider}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="316.8" Minimum="0" Maximum="5" Value="4">
-                    <Slider.Effect>
-                        <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
-                    </Slider.Effect>
-                </Slider>
-                <Slider x:Name="SliderTechnique" Height="92.8" Margin="50.8,0,0,179" Style="{DynamicResource SimpleSlider}" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="316.8" Minimum="0" Maximum="5" Value="1">
-                    <Slider.Effect>
-                        <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
-                    </Slider.Effect>
-                </Slider>
-                <Slider x:Name="SliderPower" Height="92.8" Margin="50.8,0,0,10" Style="{DynamicResource SimpleSlider}" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="316.8" Minimum="0" Maximum="5" Value="2">
-                    <Slider.Effect>
-                        <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
-                    </Slider.Effect>
-                </Slider>
-                <Label x:Name="LabelTeam" Content="Teamwork" HorizontalAlignment="Left" Height="55.6" Margin="50.8,10,0,0" VerticalAlignment="Top" Width="334.8" FontSize="36" FontFamily="Segoe UI Semilight" Foreground="#FFF49F11" FontWeight="Bold"/>
-                <Label x:Name="LabelEffort" Content="Effort" HorizontalAlignment="Left" Height="55.6" Margin="50.8,178,0,0" VerticalAlignment="Top" Width="334.8" FontSize="36" FontFamily="Segoe UI Semilight" Foreground="#FFF49F11" FontWeight="Bold"/>
-                <Label x:Name="LabelTechnique" Content="Technique&#xA;" HorizontalAlignment="Left" Margin="50.8,371.8,0,316.6" Width="334.8" FontSize="36" FontFamily="Segoe UI Semilight" Foreground="#FFF49F11" FontWeight="Bold"/>
-                <Label x:Name="LabelPower" Content="Power&#xA;" HorizontalAlignment="Left" Margin="50.8,0,0,135.8" Width="334.8" FontSize="36" Height="55.6" VerticalAlignment="Bottom" FontFamily="Segoe UI Semilight" Foreground="#FFF49F11" FontWeight="Bold"/>
-                <Label x:Name="LabelNotes" Content="Coach Notes&#xA;" HorizontalAlignment="Right" Height="65.6" Margin="0,0,61.2,0" VerticalAlignment="Top" Width="307.2" FontSize="36" Foreground="#FFF49F11"/>
-                <TextBox x:Name="ProfileNotes" HorizontalAlignment="Right" Margin="0,65.6,10,57.6" TextWrapping="Wrap" Width="361.6" FontSize="22" Text="She could use some assistance with her technique. -Tina"/>
-            </Grid>
-            <Grid x:Name="MessageGrid" Margin="759.867,243.334,331.866,92.666" Visibility="Hidden">
-                <TextBox x:Name="MessageBox" Margin="0,38.4,10,339.2" TextWrapping="Wrap" Text="Say Something..." FontSize="36" FontFamily="Segoe UI Light"/>
-                <Button x:Name="SendMessageButton" Content="Send" Height="64" Margin="0,0,10,225.6" VerticalAlignment="Bottom" FontSize="36" HorizontalAlignment="Right" Width="132.8" Click="SendMessageButton_Click" BorderBrush="{x:Null}">
+            <UniformGrid x:Name="ProfileContainerGrid" Margin="247.067,75,263.866,60.825" Rows="1" Columns="1" Visibility="Hidden"/>
+            <Grid x:Name="AddMemberGrid" Margin="257.067,321,263.866,256.825" Background="#FFFDFDFD" Visibility="Hidden">
+                <Label x:Name="label" Content="Name:" HorizontalAlignment="Left" Height="114" Margin="54.933,67.917,0,0" VerticalAlignment="Top" Width="234" FontSize="48" Foreground="#FFF49F11" FontFamily="Segoe UI Light"/>
+                <Label x:Name="label_Copy" Content="Email:" HorizontalAlignment="Left" Height="85.744" Margin="54.933,205.917,0,0" VerticalAlignment="Top" Width="176" FontSize="48" Foreground="#FFF49F11" FontFamily="Segoe UI Light"/>
+                <TextBox x:Name="MemberName" Height="98" Margin="218.933,67.917,187.134,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48"/>
+                <TextBox x:Name="MemberEmail" Margin="218.933,205.917,187.134,210.258" TextWrapping="Wrap" FontSize="48"/>
+                <Button x:Name="SendRefLink" Content="Add Member" HorizontalAlignment="Right" Height="59.28" Margin="0,0,187.134,92.023" VerticalAlignment="Bottom" Width="342" FontSize="36" BorderBrush="{x:Null}" Click="SendRefLink_Click">
                     <Button.Effect>
-                        <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
+                        <DropShadowEffect/>
                     </Button.Effect>
                 </Button>
+                <Button x:Name="AddMemberClose" Content="X" HorizontalAlignment="Right" Height="78" VerticalAlignment="Top" Width="92" FontSize="36" BorderBrush="{x:Null}" Click="AddMemberClose_Click">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
+                <Label x:Name="label_Copy1" Content="Coach" Height="85.744" Margin="628.433,350.62,603.634,0" VerticalAlignment="Top" FontSize="48" Foreground="#FFF49F11" FontFamily="Segoe UI Light"/>
+                <Label x:Name="label_Copy2" Content="Player" Height="85.744" Margin="54.933,350.62,0,0" VerticalAlignment="Top" FontSize="48" Foreground="#FFF49F11" FontFamily="Segoe UI Light" HorizontalAlignment="Left" Width="176"/>
+                <Slider x:Name="CoachOrPlayer" HorizontalAlignment="Left" Height="26.14" Margin="218.933,0,0,106.758" VerticalAlignment="Bottom" Width="372" Maximum="1">
+                    <Slider.Effect>
+                        <DropShadowEffect/>
+                    </Slider.Effect>
+                </Slider>   
             </Grid>
-            <Button x:Name="ProfileButton" Content="Profile" HorizontalAlignment="Left" Height="72" Margin="407.4,0,0,409.766" VerticalAlignment="Bottom" Width="216" FontSize="24" Click="ProfileButton_Click" BorderBrush="{x:Null}" FontFamily="Segoe UI Emoji" Visibility="Hidden">
-                <Button.Effect>
-                    <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
-                </Button.Effect>
-            </Button>
         </Grid>
-        <Grid x:Name="ChooseGroupChatGrid" Background="#FFEFF2F1" Width="1920" Height="1080" d:IsHidden="True">
+        <Grid x:Name="ChooseGroupChatGrid" Background="#FFEFF2F1" Width="1920" Height="1080" Margin="4,5.458" Grid.RowSpan="2" d:IsHidden="True">
             <Grid x:Name="ChooseGCmemGrid" Height="100" VerticalAlignment="Top" Margin="0,100,0,0">
                 <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Foreground="#FFF49F11"><Run Text="     "/><Run Text="Choose Group Chat Members"/></TextBlock>
             </Grid>
@@ -435,7 +414,7 @@
             <Button Content="Create Group" HorizontalAlignment="Left" Height="96" Margin="1484.667,122.667,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="CreateGroupChat"/>
             <Button Content="Back" HorizontalAlignment="Left" Height="96" Margin="1484.667,928.595,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="BacktoMessages"/>
         </Grid>
-        <Grid x:Name="CalendarParentGrid" Background="#FFF49F11" OpacityMask="Black" d:IsHidden="True">
+        <Grid x:Name="CalendarParentGrid" Background="#FFF49F11" OpacityMask="Black" Grid.RowSpan="2" d:IsHidden="True">
             <Grid x:Name="CalendarTitleGrid" Height="100" VerticalAlignment="Top" Margin="0,75,0,0">
                 <TextBlock x:Name="CalendarTitle" TextWrapping="Wrap" FontSize="72" Foreground="White" Margin="830,-14.203,828.39,14.203" FontFamily="Segoe UI Light" d:LayoutOverrides="Width"><Run Text="Calendar"/><LineBreak/></TextBlock>
                 <Button x:Name="AddNewCalendarEvent" Content="Add Event" Width="245" Margin="0,0,43,22.822" FontSize="36" HorizontalAlignment="Right" Click="AddNewCalendarEvent_Click" BorderBrush="{x:Null}" FontWeight="Bold">
@@ -943,7 +922,7 @@
             <Grid x:Name="BackgroundGridEvent" Visibility="Hidden">
                 <Rectangle x:Name="BackgroundDimEvent" Opacity="0.8" Fill="#FF828282"/>
             </Grid>
-            <Grid x:Name="EventDetailsGrid" Margin="420,181,429,137.5" Background="#FFF0F0F0" Visibility="Hidden">
+            <Grid x:Name="EventDetailsGrid" Margin="420,181,429,137.5" Background="#FFA6A5A5" Visibility="Hidden">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1027*"/>
                     <ColumnDefinition Width="45*"/>
@@ -959,7 +938,7 @@
                 </Button>
             </Grid>
         </Grid>
-        <Grid x:Name="AddEventParentGrid" Background="#B2EFF2F1" d:IsHidden="True">
+        <Grid x:Name="AddEventParentGrid" Background="#B2EFF2F1" Grid.RowSpan="2" d:IsHidden="True">
             <Grid x:Name="AddEventGrid" Height="900" Width="1500" Background="White">
                 <Button x:Name="ExitCreateEvent" Content="X" HorizontalAlignment="Right" VerticalAlignment="Top" Width="85.5" Height="75" FontSize="36" Click="ExitCreateEvent_Click" BorderBrush="{x:Null}">
                     <Button.Effect>
@@ -990,7 +969,7 @@
                 </Button>
             </Grid>
         </Grid>
-        <Grid x:Name="TeamStatsGrid" Margin="4,5.458,4,5.459" Background="White" d:IsHidden="True" Visibility="Hidden">
+        <Grid x:Name="TeamStatsGrid" Margin="4,5.458,4,5.459" Background="White" Visibility="Hidden" Grid.RowSpan="2" d:IsHidden="True">
             <Label x:Name="TeamStatsLabel" Content="Team Statistics" Margin="716,44.345,761.5,0" FontSize="72" FontWeight="Bold" Foreground="#FFF49F11" Height="110.001" VerticalAlignment="Top" FontFamily="Segoe UI Light"/>
             <Button x:Name="BackButtonStats" Content="Back" HorizontalAlignment="Left" Height="110.001" Margin="46,44.345,0,0" VerticalAlignment="Top" Width="186.5" FontSize="36" FontWeight="Bold" Click="BackButtonStats_Click" BorderBrush="{x:Null}">
                 <Button.Effect>

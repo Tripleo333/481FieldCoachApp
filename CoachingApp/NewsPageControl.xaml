@@ -41,7 +41,11 @@
                 <DropShadowEffect ShadowDepth="2"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Right" Height="68.6" Margin="0,17.467,24.933,0" VerticalAlignment="Top" Width="124.8" FontSize="36" Visibility="Hidden" Click="SaveButton_Click"/>
+        <Button x:Name="SaveButton" Content="SAVE" HorizontalAlignment="Right" Height="68.6" Margin="0,17.467,24.933,0" VerticalAlignment="Top" Width="124.8" FontSize="36" Click="SaveButton_Click" Background="{x:Null}" BorderBrush="Black" Foreground="#FF646464" Visibility="Hidden">
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
         <Rectangle x:Name="HeaderShape_Comment" Fill="#FFE0E0E0" Height="86" Margin="0,0,0,105" Stroke="Black" StrokeThickness="0" VerticalAlignment="Bottom"/>
         <TextBox x:Name="CommentTextBox" Height="46" Margin="28,0,236.8,126" TextWrapping="Wrap" Text="Say something..." VerticalAlignment="Bottom" FontSize="30" FontStyle="Italic"/>
         <Button x:Name="PostComment" Content="Comment&#xD;&#xA;" HorizontalAlignment="Right" Height="46" Margin="0,0,24.933,124.84" VerticalAlignment="Bottom" Width="161.867" FontSize="28" Click="PostComment_Click" BorderBrush="{x:Null}">

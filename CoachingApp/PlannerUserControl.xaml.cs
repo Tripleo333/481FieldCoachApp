@@ -58,6 +58,7 @@ namespace CoachingApp
             CommentUserControl comment = new CommentUserControl();
             comment.Comment.Text = CommentTextBox.Text;
             CommentSection.Children.Add(comment);
+            CommentTextBox.Text = "Say something...";
         }
 
         private void ChangePhotoButton_Click(object sender, RoutedEventArgs e)

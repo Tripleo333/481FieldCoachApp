@@ -35,6 +35,9 @@
                     <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
                 </Button.Effect>
             </Button>
+            <Grid x:Name="CredentialsErrorGrid" Visibility="Hidden" HorizontalAlignment="Center" Height="66.667" VerticalAlignment="Top" Width="397" Margin="761.5,364.333,761.5,0" Background="#FFFF5656">
+                <TextBlock x:Name="CredErrorTextBlock" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24"><Run Text="Incorrect User"/><Run Text="Name or password"/></TextBlock>
+            </Grid>
 
         </Grid>
         <Grid x:Name="CreateAccountGrid" HorizontalAlignment="Left" Height="1092" Margin="2.667,0,0,-1.083" VerticalAlignment="Top" Width="1925.333" Background="#FFEFF2F1" Grid.RowSpan="2" d:IsHidden="True">
@@ -389,7 +392,7 @@
                     <Slider.Effect>
                         <DropShadowEffect/>
                     </Slider.Effect>
-                </Slider>   
+                </Slider>
             </Grid>
         </Grid>
         <Grid x:Name="ChooseGroupChatGrid" Background="#FFEFF2F1" Width="1920" Height="1080" Margin="4,5.458" Grid.RowSpan="2" d:IsHidden="True">

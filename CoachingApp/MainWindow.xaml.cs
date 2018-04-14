@@ -75,6 +75,10 @@ namespace WpfApp1
                 CoachesUniGrid.Children.Add(coach1);
                 CoachesUniGrid.Children.Add(coach2);
             }
+            else
+            {
+                CredentialsErrorGrid.Visibility = Visibility.Visible;
+            }
         }
 
         private void Create_Account_Click(object sender, RoutedEventArgs e)

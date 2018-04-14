@@ -106,7 +106,6 @@ C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\sendM
 C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\StartChatControl.g.cs
 C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\StartChatControl.baml
 C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\EventUserControl.g.cs
-C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\EventUserControl.baml
 \\cs-fs01\Profiles\ug\vincealfonso.delaroc\Desktop\481FieldCoachApp-master\CoachingApp\bin\Debug\CoachingApp.exe.config
 \\cs-fs01\Profiles\ug\vincealfonso.delaroc\Desktop\481FieldCoachApp-master\CoachingApp\bin\Debug\CoachingApp.exe
@@ -186,3 +185,9 @@ C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\Event
 \\cs-fs01\Profiles\ug\vincealfonso.delaroc\Desktop\proj\481FieldCoachApp-master\CoachingApp\obj\Debug\TeamMemberControl.baml
 \\cs-fs01\Profiles\ug\vincealfonso.delaroc\Desktop\proj\481FieldCoachApp-master\CoachingApp\obj\Debug\TeamMemberProfile.g.cs
 \\cs-fs01\Profiles\ug\vincealfonso.delaroc\Desktop\proj\481FieldCoachApp-master\CoachingApp\obj\Debug\TeamMemberProfile.baml
+C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\MatchStatsControl.g.cs
+C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\TeamMemberControl.g.cs
+C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\TeamMemberProfile.g.cs
+C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\MatchStatsControl.baml
+C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\TeamMemberControl.baml
+C:\Users\Admin\git\481FieldCoachApp\481FieldCoachApp\CoachingApp\obj\Debug\TeamMemberProfile.baml

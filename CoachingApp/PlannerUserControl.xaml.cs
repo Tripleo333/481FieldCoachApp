@@ -30,6 +30,7 @@ namespace CoachingApp
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
             NewsTextBox.Text = NewsTextBlock.Text;
+            TitleLabel.Visibility = Visibility.Hidden;
             TitleTextBox.Text = TitleLabel.Content.ToString();
             NewsTextBlock.Visibility = Visibility.Hidden;
             NewsTextBox.Visibility = Visibility.Visible;
@@ -43,6 +44,7 @@ namespace CoachingApp
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             NewsTextBlock.Text = NewsTextBox.Text;
+            TitleLabel.Visibility = Visibility.Visible;
             TitleLabel.Content = TitleTextBox.Text;
             NewsTextBlock.Visibility = Visibility.Visible;
             NewsTextBox.Visibility = Visibility.Hidden;

@@ -62,7 +62,6 @@ namespace WpfApp1
                 this.LoginGrid.Visibility = Visibility.Hidden;
                 this.CoachMainPageGrid.Visibility = Visibility.Visible;
                 LoginName = EmailTextBox.Text;
-                HelloTextblock.Text += LoginName + "!";
                 TeamMemberControl tmc = new TeamMemberControl(this, "Sarah Graham", "2/4/1999", "(587)321-1247","sarahgraham1@gmail.com","I love trying out new sports!",4,4,2,3,"Needs assistance with positioning", 0, "");
                 PlayersUniGrid.Children.Add(tmc);
 

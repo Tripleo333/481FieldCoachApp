@@ -79,7 +79,7 @@
                 <Border BorderBrush="Black" BorderThickness="0.5" HorizontalAlignment="Right" Width="234" Margin="0,-75.542,246,28">
                     <Image x:Name="CoachImage" Height="189.042" VerticalAlignment="Top" Margin="8,8,8,0" OpacityMask="Black" Stretch="UniformToFill"/>
                 </Border>
-                <TextBlock x:Name="HelloTextblock" HorizontalAlignment="Left" Height="160" Margin="210,0,0,0" TextWrapping="Wrap" Text="Hello " VerticalAlignment="Top" Width="1068.667" FontSize="100" Foreground="#FFF49F11" FontFamily="Segoe UI Historic"/>
+                <TextBlock x:Name="HelloTextblock" HorizontalAlignment="Left" Height="160" Margin="210,0,0,0" TextWrapping="Wrap" Text="Hello Simran" VerticalAlignment="Top" Width="1068.667" FontSize="100" Foreground="#FFF49F11" FontFamily="Segoe UI Historic"/>
             </Grid>
             <Grid x:Name="MainMenuGrid" VerticalAlignment="Center" Margin="178,287,178,90" Height="703" Grid.RowSpan="4" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
@@ -139,7 +139,7 @@
                 </Button.Effect>
             </Button>
         </Grid>
-        <Grid x:Name="MessagesParentGrid" Background="#FFEFF2F1" Grid.RowSpan="2">
+        <Grid x:Name="MessagesParentGrid" Background="#FFEFF2F1" Grid.RowSpan="2" d:IsHidden="True">
             <Grid x:Name="MessagesTitleGrid" Height="100" VerticalAlignment="Top" Margin="0,100,0,0">
                 <TextBlock FontSize="72" HorizontalAlignment="Left" Height="100" Margin="48,0,0,0" TextWrapping="Wrap" Text="Messages" VerticalAlignment="Top" Width="600" Foreground="#FFF49F11"/>
                 <Button Content="+ Start Group" HorizontalAlignment="Right" VerticalAlignment="Center" Width="510" Height="100" FontSize="72" Click="StartGroupClick"/>
@@ -149,14 +149,14 @@
             <ScrollViewer x:Name="PreviousMessagesScrollViewer" HorizontalAlignment="Center" Height="751" VerticalAlignment="Center" Width="1725" Margin="0,152,0,0">
                 <UniformGrid x:Name="UGDMs" VerticalAlignment="Top" Columns="1">
                     <Grid x:Name="MessageElement" Margin="0" Height="100" Width="1708" Visibility="Hidden">
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="48" Text="Suzie Z." VerticalAlignment="Center" Margin="100,0,0,0" Width="1608"/>
-                        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="stockCoachPhoto.jpg"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="48" Text="Sarah Graham" VerticalAlignment="Center" Margin="100,0,0,0" Width="1608"/>
+                        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="generic-user-purple.png"/>
                         <Button Content="Button" Background="Black" BorderBrush="Black" Foreground="Black" Opacity="0" OpacityMask="Black" Click="gotoSuzieDMs"/>
                     </Grid>
                 </UniformGrid>
             </ScrollViewer>
         </Grid>
-        <Grid x:Name="NewsfeedGrid" HorizontalAlignment="Left" Height="1092" VerticalAlignment="Top" Width="1929" Background="#FFF49F11" Margin="0,0,-1,-1.083" Grid.RowSpan="2">
+        <Grid x:Name="NewsfeedGrid" HorizontalAlignment="Left" Height="1092" VerticalAlignment="Top" Width="1929" Background="#FFF49F11" Margin="0,0,-1,-1.083" Grid.RowSpan="2" d:IsHidden="True">
             <ScrollViewer x:Name="NewsfeedScrollView" Margin="0,146.703,0,0" Background="#FFA2A0A0" VerticalScrollBarVisibility="Hidden">
                 <UniformGrid x:Name="NewsUniGrid" Height="Auto" Width="1908.5" Columns="1"/>
             </ScrollViewer>
@@ -188,7 +188,7 @@
                 </Button.Effect>
             </Button>
         </Grid>
-        <Grid x:Name="MyProfileGrid" HorizontalAlignment="Left" Height="1090.917" Margin="0,0,-1,0" VerticalAlignment="Top" Width="1929" Background="White" Grid.RowSpan="2">
+        <Grid x:Name="MyProfileGrid" HorizontalAlignment="Left" Height="1090.917" Margin="0,0,-1,0" VerticalAlignment="Top" Width="1929" Background="White" Grid.RowSpan="2" d:IsHidden="True">
             <Button x:Name="BackButtonProfile" Content="Back" HorizontalAlignment="Left" Height="88.5" Margin="37,75,0,0" VerticalAlignment="Top" Width="130.5" FontSize="36" Click="BackButtonProfile_Click" BorderBrush="{x:Null}">
                 <Button.Effect>
                     <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
@@ -249,7 +249,7 @@
                 </Button>
             </Grid>
         </Grid>
-        <Grid x:Name="PlannerGrid" HorizontalAlignment="Left" Height="1092" VerticalAlignment="Top" Width="1929" Background="#FFF49F11" Margin="0,0,-1,-1.083" Grid.RowSpan="2">
+        <Grid x:Name="PlannerGrid" HorizontalAlignment="Left" Height="1092" VerticalAlignment="Top" Width="1929" Background="#FFF49F11" Margin="0,0,-1,-1.083" Grid.RowSpan="2" d:IsHidden="True">
             <ScrollViewer x:Name="PlannerScrollView" Margin="0,146.5,0,0" Background="#FFA2A0A0" VerticalScrollBarVisibility="Hidden">
                 <UniformGrid x:Name="PlannerUniGrid" Height="Auto" Width="1910" Columns="1"/>
             </ScrollViewer>
@@ -287,7 +287,7 @@
                 </Button>
             </Grid>
         </Grid>
-        <Grid x:Name="ResourcesGrid" Height="1092" Margin="0,0,-14.5,-1.083" VerticalAlignment="Top" Background="#FFF49F11" Width="1942.5" HorizontalAlignment="Left" Grid.RowSpan="2">
+        <Grid x:Name="ResourcesGrid" Height="1092" Margin="0,0,-14.5,-1.083" VerticalAlignment="Top" Background="#FFF49F11" Width="1942.5" HorizontalAlignment="Left" Grid.RowSpan="2" d:IsHidden="True">
             <ScrollViewer x:Name="ResourcesScrollView" Margin="0,146.5,0,0" Background="#FFA2A0A0" VerticalScrollBarVisibility="Hidden">
                 <UniformGrid x:Name="ResourcesUniGrid" Height="Auto" Width="1920" Columns="1"/>
             </ScrollViewer>
@@ -335,9 +335,9 @@
                 </Button.Effect>
             </Button>
         </Grid>
-        <Grid x:Name="DMParentGrid" Background="#FFEFF2F1" Margin="0,0,-14.5,0" Grid.RowSpan="2">
+        <Grid x:Name="DMParentGrid" Background="#FFEFF2F1" Margin="0,0,-14.5,0" Grid.RowSpan="2" d:IsHidden="True">
             <Button x:Name="DMbackToMessagesList" Content="Back" HorizontalAlignment="Left" Height="99" Margin="-0.5,-1,0,0" VerticalAlignment="Top" Width="314" FontSize="36" Click="DMtoMessagesList"/>
-            <TextBlock HorizontalAlignment="Left" Height="107" Margin="106,103,0,0" TextWrapping="Wrap" Text="Suzie Z." VerticalAlignment="Top" Width="1704" FontSize="72" Foreground="#FFF49F11"/>
+            <TextBlock HorizontalAlignment="Left" Height="107" Margin="106,103,0,0" TextWrapping="Wrap" Text="Sarah Graham" VerticalAlignment="Top" Width="1704" FontSize="72" Foreground="#FFF49F11"/>
             <ScrollViewer x:Name="messagesScrollViewer" HorizontalAlignment="Left" Height="732" Margin="98,206,0,0" VerticalAlignment="Top" Width="1712">
                 <UniformGrid x:Name="MessagesUniformGrid" Columns="1"/>
             </ScrollViewer>
@@ -346,7 +346,7 @@
                 <Button x:Name="SendButton" Content="Send" Height="100" Margin="0" Width="114" FontSize="36" Click="Send_Button_Click" Background="#FF80AEFF" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
             </Grid>
         </Grid>
-        <Grid x:Name="MyTeamGrid" Margin="0,0,-1,-1.083" Grid.RowSpan="2">
+        <Grid x:Name="MyTeamGrid" Margin="0,0,-1,-1.083" Grid.RowSpan="2" d:IsHidden="True">
             <Grid x:Name="TeamContainer" Background="White">
                 <Label x:Name="LabelPlayers" Content="Players" HorizontalAlignment="Left" Height="56.647" Margin="102.267,229.84,0,0" VerticalAlignment="Top" Width="472.8" FontSize="36" Foreground="#FFF49F11" FontWeight="Bold" FontFamily="Segoe UI Semibold"/>
                 <Label x:Name="LabelCoaches" Content="Coaches" HorizontalAlignment="Left" Height="60" Margin="102.267,0,0,363.713" VerticalAlignment="Bottom" Width="472.8" FontSize="36" Foreground="#FFF49F11" FontWeight="Bold" FontFamily="Segoe UI Semibold"/>
@@ -397,13 +397,13 @@
         </Grid>
         <Grid x:Name="ChooseGroupChatGrid" Background="#FFEFF2F1" Width="1920" Height="1080" Margin="4,5.458" Grid.RowSpan="2" d:IsHidden="True">
             <Grid x:Name="ChooseGCmemGrid" Height="100" VerticalAlignment="Top" Margin="0,100,0,0">
-                <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Foreground="#FFF49F11"><Run Text="     "/><Run Text="Choose Group Chat Members"/></TextBlock>
+                <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Foreground="#FFF49F11"><Run Text="     "/><Run Text="S"/><Run Text="elect Member(s)"/></TextBlock>
             </Grid>
             <ScrollViewer x:Name="PreviousMessagesScrollViewer_Copy" HorizontalAlignment="Center" Height="751" VerticalAlignment="Center" Width="1725" Margin="97.5,240.5,97.5,88.5">
                 <UniformGrid x:Name="UGDMs1" VerticalAlignment="Top" Columns="1">
                     <Grid x:Name="Suzie" Height="100" Width="1708">
-                        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="stockCoachPhoto.jpg" Margin="100,0,0,0"/>
-                        <TextBlock TextWrapping="Wrap" Text="Suzie Z." VerticalAlignment="Center" FontSize="36" Width="1479" HorizontalAlignment="Right" Margin="0,26.058"/>
+                        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="generic-user-purple.png" Margin="100,0,0,0"/>
+                        <TextBlock TextWrapping="Wrap" Text="Sarah Graham" VerticalAlignment="Center" FontSize="36" Width="1479" HorizontalAlignment="Right" Margin="0,26.058"/>
                         <CheckBox x:Name="suzieCheckBox" IsChecked="False" Content="" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" Margin="0,17,0,0">
                             <CheckBox.LayoutTransform>
                                 <ScaleTransform ScaleX="4" ScaleY="4"/>
@@ -414,12 +414,12 @@
                     </Grid>
                 </UniformGrid>
             </ScrollViewer>
-            <Button Content="Create Group" HorizontalAlignment="Left" Height="96" Margin="1484.667,122.667,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="CreateGroupChat"/>
+            <Button Content="Start Chat" HorizontalAlignment="Left" Height="96" Margin="1484.667,122.667,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="CreateGroupChat"/>
             <Button Content="Back" HorizontalAlignment="Left" Height="96" Margin="1484.667,928.595,0,0" VerticalAlignment="Top" Width="388" FontSize="36" Click="BacktoMessages"/>
         </Grid>
-        <Grid x:Name="CalendarParentGrid" Background="#FFF49F11" OpacityMask="Black" Grid.RowSpan="2" d:IsHidden="True">
+        <Grid x:Name="CalendarParentGrid" Background="#FFF49F11" OpacityMask="Black" Grid.RowSpan="2">
             <Grid x:Name="CalendarTitleGrid" Height="100" VerticalAlignment="Top" Margin="0,75,0,0">
-                <TextBlock x:Name="CalendarTitle" TextWrapping="Wrap" FontSize="72" Foreground="White" Margin="830,-14.203,828.39,14.203" FontFamily="Segoe UI Light" d:LayoutOverrides="Width"><Run Text="Calendar"/><LineBreak/></TextBlock>
+                <TextBlock x:Name="CalendarTitle" TextWrapping="Wrap" FontSize="72" Foreground="White" Margin="830,-14.203,796.39,14.203" FontFamily="Segoe UI Light" Text="Schedule"/>
                 <Button x:Name="AddNewCalendarEvent" Content="Add Event" Width="245" Margin="0,0,43,22.822" FontSize="36" HorizontalAlignment="Right" Click="AddNewCalendarEvent_Click" BorderBrush="{x:Null}" FontWeight="Bold">
                     <Button.Effect>
                         <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>

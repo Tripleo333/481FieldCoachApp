@@ -254,6 +254,9 @@
   <ItemGroup>
     <Resource Include="delete-button-png-delete-icon-16.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="30706869_10216212717020016_1846125553984208896_n.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

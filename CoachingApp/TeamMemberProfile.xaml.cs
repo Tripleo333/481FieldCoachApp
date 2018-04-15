@@ -149,5 +149,20 @@ namespace CoachingApp
             MemberHandler.TeamHandler.ProfileContainerGrid.Children.Remove(this);
             MemberHandler.delete();
         }
+
+        private void ProfileMessageClick(object sender, RoutedEventArgs e)
+        {
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(WpfApp1.MainWindow))
+                {
+                    sendMessageUserControl DM = new sendMessageUserControl();
+                    DM.sendMessageTextBox.Text = MessageTextBox.Text;
+
+                    (window as WpfApp1.MainWindow).MessagesUniformGrid.Children.Add(DM);
+                    MessageTextBox.Text = "";
+                }
+            }
+        }
     }
 }

@@ -40,7 +40,7 @@
             </Grid>
 
         </Grid>
-        <Grid x:Name="CreateAccountGrid" HorizontalAlignment="Left" Height="1092" Margin="2.667,0,0,-1.083" VerticalAlignment="Top" Width="1925.333" Background="#FFEFF2F1" Grid.RowSpan="2" d:IsHidden="True">
+        <Grid x:Name="CreateAccountGrid" HorizontalAlignment="Left" Height="1092" Margin="2.667,0,0,-1.083" VerticalAlignment="Top" Width="1925.333" Background="#FFEFF2F1" Grid.RowSpan="2">
             <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Text="Create an Account" Foreground="#FFF49F11" TextAlignment="Center" Margin="621.666,66.198,710.999,0" FontFamily="Segoe UI Semilight" Height="93.557"/>
             <TextBox x:Name="UsernameCATextBox" Height="59.985" Margin="664.172,244.332,750.866,0" TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="48" FontFamily="Segoe UI Light"/>
             <TextBlock Height="49.847" Margin="666.425,190.261,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe UI Semilight" HorizontalAlignment="Left" Width="290.632"/>
@@ -65,7 +65,7 @@
             <TextBlock Height="49.847" Margin="664.172,793.944,0,0" TextWrapping="Wrap" Text="My Team:" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe UI Semilight" HorizontalAlignment="Left" Width="295.139"/>
             <TextBox x:Name="TeamNameCA" Height="59.985" Margin="666.426,868.015,744.106,0" TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="48" FontFamily="Segoe UI Light"/>
         </Grid>
-        <Grid x:Name="AccountCreatedSucGrid" Height="1080" Background="#FFEFF2F1" Width="1924" HorizontalAlignment="Left" Margin="4,5.458,0,5.458" Grid.RowSpan="2" d:IsHidden="True">
+        <Grid x:Name="AccountCreatedSucGrid" Height="1080" Background="#FFEFF2F1" Width="1924" HorizontalAlignment="Left" Margin="4,5.458,0,5.458" Grid.RowSpan="2">
             <TextBlock Height="126" Margin="260.5,177,264.5,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Text="Your account has been created successfully!" Foreground="#FFF49F11" FontFamily="Segoe UI Historic"/>
             <Button x:Name="gotoLoginPage" Content="Login&#xA;" Height="88" Margin="809.5,548,809.5,0" VerticalAlignment="Top" FontSize="48" Click="loginPageButton" Background="#FFDDDDDD" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
                 <Button.Effect>
@@ -73,7 +73,7 @@
                 </Button.Effect>
             </Button>
         </Grid>
-        <Grid x:Name="CoachMainPageGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFEFF2F1" Width="1920" Height="1085.459" Margin="4,5.458,4,0" Grid.RowSpan="2" d:IsHidden="True">
+        <Grid x:Name="CoachMainPageGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFEFF2F1" Width="1920" Height="1085.459" Margin="4,5.458,4,0" Grid.RowSpan="2">
             <Grid x:Name="titleBarGrid"  HorizontalAlignment="Center" Height="160" VerticalAlignment="Top" Margin="0,100,0,0" Background="#00000000" Width="1920" >
                 <Rectangle x:Name="BottomBoarderRect" Stroke="Black" VerticalAlignment="Bottom" Height="5" Fill="Black" Width="1500" HorizontalAlignment="Center" />
                 <Border BorderBrush="Black" BorderThickness="0.5" HorizontalAlignment="Right" Width="234" Margin="0,-75.542,246,28">
@@ -139,7 +139,7 @@
                 </Button.Effect>
             </Button>
         </Grid>
-        <Grid x:Name="MessagesParentGrid" Background="#FFEFF2F1" Grid.RowSpan="2" d:IsHidden="True">
+        <Grid x:Name="MessagesParentGrid" Background="#FFEFF2F1" Grid.RowSpan="2">
             <Grid x:Name="MessagesTitleGrid" Height="100" VerticalAlignment="Top" Margin="0,100,0,0">
                 <TextBlock FontSize="72" HorizontalAlignment="Left" Height="100" Margin="48,0,0,0" TextWrapping="Wrap" Text="Messages" VerticalAlignment="Top" Width="600" Foreground="#FFF49F11"/>
                 <Button Content="+ Start Group" HorizontalAlignment="Right" VerticalAlignment="Center" Width="510" Height="100" FontSize="72" Click="StartGroupClick"/>
@@ -148,15 +148,15 @@
             <Button Content="Back" HorizontalAlignment="Left" Height="102" Margin="0,0,0,0" VerticalAlignment="Top" Width="290.667" FontSize="72" Click="backtoMainMenuFromMessages"/>
             <ScrollViewer x:Name="PreviousMessagesScrollViewer" HorizontalAlignment="Center" Height="751" VerticalAlignment="Center" Width="1725" Margin="0,152,0,0">
                 <UniformGrid x:Name="UGDMs" VerticalAlignment="Top" Columns="1">
-                    <Grid Height="100" Width="1708">
-                        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="generic-user-purple.png"/>
-                        <TextBlock TextWrapping="Wrap" Text="Suzie Z." VerticalAlignment="Center" FontSize="36" Width="1588" HorizontalAlignment="Right"/>
-                        <Button Content="Button" Background="Black" Foreground="{x:Null}" BorderBrush="#FF707070" Opacity="0" Click="startDM"/>
+                    <Grid x:Name="MessageElement" Margin="0" Height="100" Width="1708" Visibility="Hidden">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="48" Text="Suzie Z." VerticalAlignment="Center" Margin="100,0,0,0" Width="1608"/>
+                        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="stockCoachPhoto.jpg"/>
+                        <Button Content="Button" Background="Black" BorderBrush="Black" Foreground="Black" Opacity="0" OpacityMask="Black" Click="gotoSuzieDMs"/>
                     </Grid>
                 </UniformGrid>
             </ScrollViewer>
         </Grid>
-        <Grid x:Name="NewsfeedGrid" HorizontalAlignment="Left" Height="1092" VerticalAlignment="Top" Width="1929" Background="#FFF49F11" Margin="0,0,-1,-1.083" Grid.RowSpan="2" d:IsHidden="True">
+        <Grid x:Name="NewsfeedGrid" HorizontalAlignment="Left" Height="1092" VerticalAlignment="Top" Width="1929" Background="#FFF49F11" Margin="0,0,-1,-1.083" Grid.RowSpan="2">
             <ScrollViewer x:Name="NewsfeedScrollView" Margin="0,146.703,0,0" Background="#FFA2A0A0" VerticalScrollBarVisibility="Hidden">
                 <UniformGrid x:Name="NewsUniGrid" Height="Auto" Width="1908.5" Columns="1"/>
             </ScrollViewer>
@@ -188,7 +188,7 @@
                 </Button.Effect>
             </Button>
         </Grid>
-        <Grid x:Name="MyProfileGrid" HorizontalAlignment="Left" Height="1090.917" Margin="0,0,-1,0" VerticalAlignment="Top" Width="1929" Background="White" Grid.RowSpan="2" d:IsHidden="True">
+        <Grid x:Name="MyProfileGrid" HorizontalAlignment="Left" Height="1090.917" Margin="0,0,-1,0" VerticalAlignment="Top" Width="1929" Background="White" Grid.RowSpan="2">
             <Button x:Name="BackButtonProfile" Content="Back" HorizontalAlignment="Left" Height="88.5" Margin="37,75,0,0" VerticalAlignment="Top" Width="130.5" FontSize="36" Click="BackButtonProfile_Click" BorderBrush="{x:Null}">
                 <Button.Effect>
                     <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
@@ -249,7 +249,7 @@
                 </Button>
             </Grid>
         </Grid>
-        <Grid x:Name="PlannerGrid" HorizontalAlignment="Left" Height="1092" VerticalAlignment="Top" Width="1929" Background="#FFF49F11" Margin="0,0,-1,-1.083" d:IsHidden="True" Grid.RowSpan="2">
+        <Grid x:Name="PlannerGrid" HorizontalAlignment="Left" Height="1092" VerticalAlignment="Top" Width="1929" Background="#FFF49F11" Margin="0,0,-1,-1.083" Grid.RowSpan="2">
             <ScrollViewer x:Name="PlannerScrollView" Margin="0,146.5,0,0" Background="#FFA2A0A0" VerticalScrollBarVisibility="Hidden">
                 <UniformGrid x:Name="PlannerUniGrid" Height="Auto" Width="1910" Columns="1"/>
             </ScrollViewer>
@@ -287,7 +287,7 @@
                 </Button>
             </Grid>
         </Grid>
-        <Grid x:Name="ResourcesGrid" Height="1092" Margin="0,0,-14.5,-1.083" VerticalAlignment="Top" Background="#FFF49F11" Width="1942.5" HorizontalAlignment="Left" d:IsHidden="True" Grid.RowSpan="2">
+        <Grid x:Name="ResourcesGrid" Height="1092" Margin="0,0,-14.5,-1.083" VerticalAlignment="Top" Background="#FFF49F11" Width="1942.5" HorizontalAlignment="Left" Grid.RowSpan="2">
             <ScrollViewer x:Name="ResourcesScrollView" Margin="0,146.5,0,0" Background="#FFA2A0A0" VerticalScrollBarVisibility="Hidden">
                 <UniformGrid x:Name="ResourcesUniGrid" Height="Auto" Width="1920" Columns="1"/>
             </ScrollViewer>
@@ -335,7 +335,7 @@
                 </Button.Effect>
             </Button>
         </Grid>
-        <Grid x:Name="DMParentGrid" Background="#FFEFF2F1" Margin="0,0,-14.5,0" Grid.RowSpan="2" d:IsHidden="True">
+        <Grid x:Name="DMParentGrid" Background="#FFEFF2F1" Margin="0,0,-14.5,0" Grid.RowSpan="2">
             <Button x:Name="DMbackToMessagesList" Content="Back" HorizontalAlignment="Left" Height="99" Margin="-0.5,-1,0,0" VerticalAlignment="Top" Width="314" FontSize="36" Click="DMtoMessagesList"/>
             <TextBlock HorizontalAlignment="Left" Height="107" Margin="106,103,0,0" TextWrapping="Wrap" Text="Suzie Z." VerticalAlignment="Top" Width="1704" FontSize="72" Foreground="#FFF49F11"/>
             <ScrollViewer x:Name="messagesScrollViewer" HorizontalAlignment="Left" Height="732" Margin="98,206,0,0" VerticalAlignment="Top" Width="1712">
@@ -346,7 +346,7 @@
                 <Button x:Name="SendButton" Content="Send" Height="100" Margin="0" Width="114" FontSize="36" Click="Send_Button_Click" Background="#FF80AEFF" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
             </Grid>
         </Grid>
-        <Grid x:Name="MyTeamGrid" Margin="0,0,-1,-1.083" Grid.RowSpan="2" d:IsHidden="True">
+        <Grid x:Name="MyTeamGrid" Margin="0,0,-1,-1.083" Grid.RowSpan="2">
             <Grid x:Name="TeamContainer" Background="White">
                 <Label x:Name="LabelPlayers" Content="Players" HorizontalAlignment="Left" Height="56.647" Margin="102.267,229.84,0,0" VerticalAlignment="Top" Width="472.8" FontSize="36" Foreground="#FFF49F11" FontWeight="Bold" FontFamily="Segoe UI Semibold"/>
                 <Label x:Name="LabelCoaches" Content="Coaches" HorizontalAlignment="Left" Height="60" Margin="102.267,0,0,363.713" VerticalAlignment="Bottom" Width="472.8" FontSize="36" Foreground="#FFF49F11" FontWeight="Bold" FontFamily="Segoe UI Semibold"/>
@@ -402,9 +402,9 @@
             <ScrollViewer x:Name="PreviousMessagesScrollViewer_Copy" HorizontalAlignment="Center" Height="751" VerticalAlignment="Center" Width="1725" Margin="97.5,240.5,97.5,88.5">
                 <UniformGrid x:Name="UGDMs1" VerticalAlignment="Top" Columns="1">
                     <Grid x:Name="Suzie" Height="100" Width="1708">
-                        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="generic-user-purple.png" Margin="100,0,0,0"/>
+                        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="stockCoachPhoto.jpg" Margin="100,0,0,0"/>
                         <TextBlock TextWrapping="Wrap" Text="Suzie Z." VerticalAlignment="Center" FontSize="36" Width="1479" HorizontalAlignment="Right" Margin="0,26.058"/>
-                        <CheckBox Content="" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" Margin="0,17,0,0">
+                        <CheckBox x:Name="suzieCheckBox" IsChecked="False" Content="" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" Margin="0,17,0,0">
                             <CheckBox.LayoutTransform>
                                 <ScaleTransform ScaleX="4" ScaleY="4"/>
                             </CheckBox.LayoutTransform>

@@ -30,7 +30,7 @@
             </Button.Effect>
         </Button>
         <Path x:Name="Separator" Data="M648,104 L648,910.94645" HorizontalAlignment="Left" Margin="610,60.631,0,44.375" Stretch="Fill" Width="16" Stroke="Black" Fill="Black" Opacity="0.4"/>
-        <Grid x:Name="ProfileGrid" Margin="610,134,0,44.375">
+        <Grid x:Name="ProfileGrid" Margin="610,134,0,44.375" d:IsHidden="True">
             <Label x:Name="label" Content="Name:" HorizontalAlignment="Left" Height="66" Margin="36,80,0,0" VerticalAlignment="Top" Width="115" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
             <Label x:Name="label_Copy" Content="Birthday:" HorizontalAlignment="Left" Height="66" Margin="36,173,0,0" VerticalAlignment="Top" Width="194" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
             <Label x:Name="label_Copy1" Content="Phone:" HorizontalAlignment="Left" Height="66" Margin="36,272,0,0" VerticalAlignment="Top" Width="125" FontSize="36" Foreground="#FFF49F11" FontFamily="Segoe UI Semibold"/>
@@ -49,13 +49,13 @@
         <Grid x:Name="MessagesGrid" Margin="610,134,0,44.375" Visibility="Hidden">
             <Label x:Name="SendMessageTo" Content="Send a message to" Height="93" Margin="26.5,10,47.467,0" VerticalAlignment="Top" FontSize="48" FontFamily="Segoe UI Light" Foreground="#FFF49F11"/>
             <TextBox x:Name="MessageTextBox" Margin="32.5,116.5,28,198.325" TextWrapping="Wrap" FontSize="36" FontFamily="Segoe UI Light"/>
-            <Button x:Name="SendMessageButton" Content="Send" Height="69.666" Margin="298.967,0,300.5,73.492" VerticalAlignment="Bottom" FontSize="36" BorderBrush="{x:Null}">
+            <Button x:Name="SendMessageButton" Content="Send" Height="69.666" Margin="298.967,0,300.5,73.492" VerticalAlignment="Bottom" FontSize="36" BorderBrush="{x:Null}" Click="ProfileMessageClick">
                 <Button.Effect>
                     <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
                 </Button.Effect>
             </Button>
         </Grid>
-        <Grid x:Name="StatisticsGrid" Margin="610,134,0,44.375" Visibility="Hidden">
+        <Grid x:Name="StatisticsGrid" Margin="610,134,0,44.375" Visibility="Hidden" d:IsHidden="True">
             <Label Content="Teamwork" Height="60.134" Margin="36,43.933,0,0" VerticalAlignment="Top" FontSize="36" HorizontalAlignment="Left" Width="184" FontFamily="Segoe UI Semibold" Foreground="#FFF49F11"/>
             <Label Content="Effort" Height="55.134" Margin="36,174.366,0,0" VerticalAlignment="Top" FontSize="36" HorizontalAlignment="Left" Width="184" FontFamily="Segoe UI Semibold" Foreground="#FFF49F11" RenderTransformOrigin="0.511,0.666"/>
             <Label Content="Technique" Height="60.134" Margin="36,297.933,0,0" VerticalAlignment="Top" FontSize="36" HorizontalAlignment="Left" Width="184" FontFamily="Segoe UI Semibold" Foreground="#FFF49F11"/>

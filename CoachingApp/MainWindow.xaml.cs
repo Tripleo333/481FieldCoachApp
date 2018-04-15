@@ -447,6 +447,16 @@ namespace WpfApp1
             MyProfileGrid.Visibility = Visibility.Hidden;
         }
 
+        private void Button_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void gotoSuzieDMs(object sender, RoutedEventArgs e)
+        {
+            this.DMParentGrid.Visibility = Visibility.Visible;
+        }
+
         private void NoConfirm_Click(object sender, RoutedEventArgs e)
         {
             savestate = false;
@@ -602,7 +612,11 @@ namespace WpfApp1
         private void CreateGroupChat(object sender, RoutedEventArgs e)
         {
             this.ChooseGroupChatGrid.Visibility = Visibility.Hidden;
-            this.DMParentGrid.Visibility = Visibility.Visible;
+            //            this.DMParentGrid.Visibility = Visibility.Visible;
+            if (suzieCheckBox.IsChecked == true)
+            {
+                MessageElement.Visibility = Visibility.Visible;
+            }
         }
 
         private void BacktoMessagesFromDM(object sender, RoutedEventArgs e)

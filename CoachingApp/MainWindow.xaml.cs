@@ -456,6 +456,48 @@ namespace WpfApp1
             this.DMParentGrid.Visibility = Visibility.Visible;
         }
 
+        private void EventDetailsDelete_Click(object sender, RoutedEventArgs e)
+        {
+        
+        }
+
+        private void EventEditClick(object sender, RoutedEventArgs e)
+        {
+            this.EventTitleTextBox.Text = (String) EventTitleLabel.Content;
+            this.EventTitleTextBox.Visibility = Visibility.Visible;
+
+            this.EventDetailsEdit.Visibility = Visibility.Hidden;
+            this.EventDetailsSave.Visibility = Visibility.Visible;
+
+            this.EventDateTextBox.Text = (String)EventDateLabel.Content;
+            this.EventDateTextBox.Visibility = Visibility.Visible;
+
+            this.EventDetailsTextBox.Text = (String)EventDetailsLabel.Content;
+            this.EventDetailsTextBox.Visibility = Visibility.Visible;
+
+            this.EventPlaceTextBox.Text = (String)EventPlaceLabel.Text;
+            this.EventPlaceTextBox.Visibility = Visibility.Visible;
+
+
+        }
+
+        private void EventSaveClick(object sender, RoutedEventArgs e)
+        {
+            this.EventDetailsSave.Visibility = Visibility.Hidden;
+            this.EventDetailsEdit.Visibility = Visibility.Visible;
+            this.EventTitleTextBox.Visibility = Visibility.Hidden;
+            this.EventTitleLabel.Content = this.EventTitleTextBox.Text;
+
+            this.EventDateLabel.Content = this.EventDateTextBox.Text;
+            this.EventDateTextBox.Visibility = Visibility.Hidden;
+
+            this.EventDetailsLabel.Content = this.EventDetailsTextBox.Text;
+            this.EventDetailsTextBox.Visibility = Visibility.Hidden;
+
+            this.EventPlaceLabel.Text = this.EventPlaceTextBox.Text;
+            this.EventPlaceTextBox.Visibility = Visibility.Hidden;
+        }
+
         private void NoConfirm_Click(object sender, RoutedEventArgs e)
         {
             savestate = false;

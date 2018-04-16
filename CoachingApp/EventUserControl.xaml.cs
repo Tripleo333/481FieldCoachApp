@@ -50,6 +50,7 @@ namespace CoachingApp
             DetailsHandler.EventDateLabel.Content = Time;
             DetailsHandler.EventPlaceLabel.Text = Place;
             DetailsHandler.EventDetailsLabel.Content = Description;
+            
         }
     }
 }
